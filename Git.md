@@ -39,3 +39,4 @@
 - `git pull`
 - `git push`
 - `git push -u 源 分支`
+- `git push --set-upstream`
