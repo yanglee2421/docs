@@ -37,7 +37,9 @@
 - `git remote add 源 地址`
 - `git remote remove 源`
 - `git fetch`
+- `git fetch 源`
 - `git pull`
+- `git pull 源 分支`
 - `git push`
 - `git push -u 源 分支`
 - `git push --set-upstream 源 分支`
