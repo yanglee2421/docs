@@ -1,5 +1,12 @@
 # 装包
 - 在powershell中：
+## npm
+~~~powershell
+npm config set registry https://registry.npmjs.org
+npm config set registry https://registry.npm.taobao.org
+npm i -g @vue/cli
+~~~
+## vite
 ~~~powershell
 npm create vite@latest
 npm i
@@ -9,6 +16,7 @@ npm i @element-plus/icons-vue
 npm i vue-router@next
 npm i vuex@next
 npm run dev
+npm run build
 ~~~
 # 安装`sass`
 - 在vite.config.js中
