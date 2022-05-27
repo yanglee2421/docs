@@ -10,7 +10,7 @@ npm i vue-router@next
 npm i vuex@next
 npm run dev
 ~~~
-## 安装`sass`
+# 安装`sass`
 - 在vite.config.js中
 ~~~js
 const path = require("path")
@@ -30,7 +30,7 @@ export default defineConfig({
   },
 })
 ~~~
-## 安装`element-plus`
+# 安装`element-plus`
 - 在main.js中
 ~~~js
 import ElementPlus from "element-plus"
@@ -46,7 +46,7 @@ app.use(ElementPlus, {
     locale
 })
 ~~~
-## 安装`vue-router`
+# 安装`vue-router`
 - 在ruoter.js中
 ~~~js
 import myComponent from '组件路径'
@@ -59,7 +59,7 @@ const router = createRouter({
 })
 export default router
 ~~~
-## 安装`vuex`
+# 安装`vuex`
 -在vuex.js中
 ~~~js
 import { createStore } from "vuex"
