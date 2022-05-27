@@ -17,6 +17,7 @@
 - `git diff`
 - `git diff 提交ID`
 # 重置
+- `git reset`
 - `git reset --hard 提交ID`
 # 分支
 - `git branch`
@@ -26,6 +27,7 @@
 - `git branch 分支名`
 - `git branch -d 本地分支`
 - `git branch -dr 本地的远程分支`
+- `git checkout .`
 - `git checkout 分支名`
 - `git checkout -b 分支名`
 # 合并
