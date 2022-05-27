@@ -14,6 +14,8 @@
 - `git status`
 - `git log`
 - `git log -a --graph --abbrev-commit --pretty=oneline`
+- `git diff`
+- `git diff 提交ID`
 # 重置
 - `git reset --hard 提交ID`
 # 分支
@@ -27,7 +29,7 @@
 - `git checkout 分支名`
 - `git checkout -b 分支名`
 # 合并
-- `git merge `
+- `git merge 指定分支`
 - `git merge --abbort`
 # 同步
 - `git remote`
