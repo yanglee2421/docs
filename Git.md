@@ -24,7 +24,6 @@
 - `git branch 分支名`
 - `git branch -d 本地分支`
 - `git branch -dr 本地的远程分支`
-- `git push 源 --delete 分支`
 - `git checkout 分支名`
 - `git checkout -b 分支名`
 # 合并
@@ -39,4 +38,8 @@
 - `git pull`
 - `git push`
 - `git push -u 源 分支`
-- `git push --set-upstream`
+- `git push --set-upstream 源 分支`
+- `git push 源 --delete 分支`
+# SSH
+- `ssh-keygen -t ed25519`
+- `ssh`
