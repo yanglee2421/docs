@@ -1,34 +1,11 @@
-# 字符串
-## `String`
-## `String.prototype`
-- `includes(subStr[, fromIndex])`
-- `startsWith(subStr[, fromIndex])`
-- `endsWith(subStr[, fromIndex])`
-- `repeat(int)`
-- `padStart(targetLength, padString)`
-- `padEnd(targetLength, padString)`
-- `trim()`
-- `trimStart()`or`trimLeft()`
-- `trimEnd()`or`trimRight()`
-# 数组
-## `Array`
-- `from(iterable)`
-## `Array.prototype`
-- `includes(item[, fromIndex])`
-- `entries()`
-- 返回新数组，不改变原数组
->- `flat(int)`
->- `faltMap(callback)`
->- `concat(arr[, arr, ...])`
->- `every(callback)`
-- 返改后数组，改变原数组
->- `copyWithin(target[, start[, end]])`
-# 对象
-## `Object`
-- `getOwnPropertyDescriptors(obj, 'prop')`
-- `fromEntries(arr)`
-- `assign(obj, obj2[, obj3])`
-## `Object.prototype`
+# 假值
+- `undefined`
+- `null`
+- `false`
+- `0`
+- `NaN`
+- `0n`
+- `''`
 # 独一无二的值
 ## `Symbol`
 - `(description)`
