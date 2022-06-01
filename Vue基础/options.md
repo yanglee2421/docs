@@ -1,4 +1,3 @@
-## 3. 配置项
 0. `name`
 ~~~vue
 <script>
@@ -8,7 +7,7 @@ export default {
 </script>
 ~~~
 ***
-### 1. `props`
+# 1. `props`
 - 简单用法
 ~~~vue
 <script>
@@ -32,11 +31,17 @@ export default {
                 return true
             }
         }
+    },
+    //prop是只读的，需要做修改时可以将其复制一份到data中
+    data() {
+        return {
+            num:this.variable
+        }
     }
 }
 </script>
 ~~~
-### 2. `methods`
+# 2. `methods`
 ~~~vue
 <script>
 export defalut {
@@ -46,7 +51,7 @@ export defalut {
 }
 </script>
 ~~~
-### 3. `data()`
+# 3. `data()`
 ~~~vue
 <script>
 export default {
@@ -58,7 +63,7 @@ export default {
 }
 </script>
 ~~~
-### 4. `computed`
+# 4. `computed`
 - 方法内`this`后的属性的依赖发生变化时，方法会被执行一次
 ~~~vue
 <script>
@@ -79,7 +84,7 @@ export default {
 }
 </script>
 ~~~
-### 5. `watch`
+# 5. `watch`
 - 普通用法
 ~~~vue
 <script>
@@ -106,7 +111,7 @@ export default {
 }
 </script>
 ~~~
-### 6. `components`
+# 6. `components`
 ~~~vue
 <script>
 export default {
@@ -116,7 +121,7 @@ export default {
 } 
 </script>
 ~~~
-### 7. `emits`
+# 7. `emits`
 ~~~vue
 <script>
 export default {
@@ -131,7 +136,7 @@ export default {
 }
 </script>
 ~~~
-### 8. `directives`
+# 8. `directives`
 - 把生命周期钩子封装成一个类名
 - 每个钩子里都有四个参数
     - `el`，DOM元素
@@ -165,7 +170,7 @@ export default {
 }
 </script>
 ~~~
-### 9. Vue生命周期
+# 9. Vue生命周期
 ~~~vue
 <script>
 export default {
@@ -194,7 +199,7 @@ export default {
 }
 </script>
 ~~~
-### 10. `provide()`
+# 10. `provide()`
 - 非响应式
 ~~~vue
 <script>
@@ -220,7 +225,7 @@ export default {
 }
 </script>
 ~~~
-### 11. `inject`
+# 11. `inject`
 - 接收`provide`传递的参数
 ~~~vue
 <script>
@@ -230,3 +235,18 @@ export default {
 </script>
 ~~~
 - 传递的过程中并不会为参数添加`get()`和`set()`，原本有就有，反之则无
+# 12. `mixin`
+- 组件间复用配置项
+~~~js
+import options1 from './file'
+import options2 from './file'
+export default {
+    mixin:[options1, options2]
+}
+/*
+除生命周期以外的配置项发生冲突时
+以组件本身的为主
+生命周期则会共存
+同一个阶段内，先执行组件自身的，后执行mixin引入的
+*/
+~~~

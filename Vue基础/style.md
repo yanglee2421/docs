@@ -8,10 +8,11 @@
 </style>
 ~~~
 # 2. `v-bind`
+- 本质依然是控制元素的内联样式
 ~~~vue
 <style>
 .box {
-    height:v-bind()
+    height:v-bind(vari)
 }
 </style>
 ~~~
