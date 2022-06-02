@@ -250,3 +250,36 @@ export default {
 同一个阶段内，先执行组件自身的，后执行mixin引入的
 */
 ~~~
+# `filters`
+- 不需要传参时
+~~~html
+<p>{{ time | fmtTime }}</p>
+<script>
+    export default {
+        filters:{
+            fmtTime(value){
+                return value + ''
+        }
+    }
+}
+</script>
+~~~
+- 需要传参时
+~~~html
+<p>{{ time | fmtTime(params) }}</p>
+<script>
+    export default {
+        filters:{
+            fmtTime(value, params){
+                return value + params
+            }
+        }
+    }
+</script>
+~~~
+- 允许串连
+~~~html
+<p>{{ value | filter1 | filter2 }}</p>
+~~~
+- `v-bind`可以
+- `v-model`不行

@@ -45,7 +45,7 @@ app.provide('variable', '值')
 ~~~js
 app.unmount()
 ~~~
-### 8. `use(plug[, option])`
+### 8. `use(plugin[, options])`
 - 在Vue安装插件，类似注册全局组件
     - `element-plus`
     - `vue-router`
