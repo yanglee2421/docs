@@ -25,6 +25,11 @@ app.component(mycomponents.name, mycomponents)
     })
     ~~~
 ### 4. `mixin`
+~~~js
+import { mixin1, mixin2 } from "./file"
+app.mixin(mixin1)
+app.mixin(mixin2)
+~~~
 ### 5. `mount`
 - 用于注册根组件实例
 ~~~js
