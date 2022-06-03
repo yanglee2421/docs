@@ -38,6 +38,7 @@
 - `git remote -v`
 - `git remote add 源 地址`
 - `git remote remove 源`
+- `git remote rename 旧名 新名`
 - `git fetch`
 - `git fetch 源`
 - `git pull`
@@ -45,7 +46,7 @@
 - `git push`
 - `git push -u 源 分支`
 - `git push --set-upstream 源 分支`
-- `git push 源 --delete 分支`
+- `git push 源 -d 分支`
 # SSH
 - `ssh-keygen -t ed25519`
 - `ssh`
