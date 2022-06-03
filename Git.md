@@ -24,12 +24,13 @@
 - `git branch -r`
 - `git branch -a`
 - `git branch -vv`
-- `git branch 分支名`
-- `git branch -d 本地分支`
-- `git branch -dr 本地的远程分支`
+- `git branch 分支`
+- `git branch -d 分支`
+- `git branch -dr 源/分支`
+- `git branch --set-upstream-to=源/分支`
 - `git checkout .`
-- `git checkout 分支名`
-- `git checkout -b 分支名`
+- `git checkout 分支`
+- `git checkout -b 分支`
 # 合并
 - `git merge 指定分支`
 - `git merge --abbort`
