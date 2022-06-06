@@ -24,12 +24,13 @@
 - `git branch -r`
 - `git branch -a`
 - `git branch -vv`
-- `git branch 分支名`
-- `git branch -d 本地分支`
-- `git branch -dr 本地的远程分支`
+- `git branch 分支`
+- `git branch -d 分支`
+- `git branch -dr 源/分支`
+- `git branch --set-upstream-to=源/分支`
 - `git checkout .`
-- `git checkout 分支名`
-- `git checkout -b 分支名`
+- `git checkout 分支`
+- `git checkout -b 分支`
 # 合并
 - `git merge 指定分支`
 - `git merge --abbort`
@@ -38,6 +39,7 @@
 - `git remote -v`
 - `git remote add 源 地址`
 - `git remote remove 源`
+- `git remote rename 旧名 新名`
 - `git fetch`
 - `git fetch 源`
 - `git pull`
@@ -45,7 +47,7 @@
 - `git push`
 - `git push -u 源 分支`
 - `git push --set-upstream 源 分支`
-- `git push 源 --delete 分支`
+- `git push 源 -d 分支`
 # SSH
 - `ssh-keygen -t ed25519`
 - `ssh`
