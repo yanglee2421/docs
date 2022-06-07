@@ -17,6 +17,8 @@ npm i -g @vue/cli
 - `npm view package versions`
 ## 配置远程服务器
 - `npm config set registry url`
+## 清空缓存
+- `npm cache clean --force`
 # vite
 - `npm create vite@last`
 - `npm run dev`
