@@ -1,7 +1,7 @@
 # 对象
 ## `Object`
-- `getOwnPropertyDescriptors(obj, 'prop')`
-- `fromEntries(arr)`
 - `assign(obj, obj2[, obj3])`
+- `fromEntries(arr)`
+- `getOwnPropertyDescriptors(obj, 'prop')`
 ## `Object.prototype`
 - `toString()`

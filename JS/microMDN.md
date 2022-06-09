@@ -1,11 +1,3 @@
-# 假值
-1. `undefined`
-2. `null`
-3. `false`
-4. `0`
-5. `NaN`
-6. `0n`
-7. `''`
 # 独一无二的值
 ## `Symbol`
 - `(description)`
