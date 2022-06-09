@@ -20,7 +20,7 @@ npm i -g @vue/cli
 ## 清空缓存
 - `npm cache clean --force`
 # vite
-- `npm create vite@last`
+- `npm create vite@latest`
 - `npm run dev`
 - `npm run build`
 # vue/cli
