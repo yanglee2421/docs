@@ -8,7 +8,7 @@
 >- `every(callback)`
 - 返回新数组，不改变原数组
 >- `flat(int)`
->- `faltMap(callback)`
+>- `flatMap(callback)`
 >- `concat(arr[, arr, ...])`
 - 返改后数组，改变原数组
 >- `copyWithin(target[, start[, end]])`
