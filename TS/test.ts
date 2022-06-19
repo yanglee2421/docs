@@ -1,8 +1,6 @@
 console.log('hello world')
-enum Gender {
-    male, female
+let obj: { [key: string]: unknown } = {
+    name: '张三'
 }
-let i: (i: number, j: number) => number
-i = (a, b) => {
-    return a + b
-}
+obj.name = "李四"
+console.log(obj);
