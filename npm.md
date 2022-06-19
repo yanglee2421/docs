@@ -6,6 +6,7 @@ npm i -g @vue/cli
 ~~~
 ## 初始化
 - `npm init`
+- `npm init -y`
 ## 安装
 - `npm i`
 - `npm i -D`
