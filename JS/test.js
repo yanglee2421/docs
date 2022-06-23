@@ -1,7 +1,4 @@
 "use strict"
-true && (a = 4399)
-console.log(a);
-if (b = 123) {
-    console.log(789);
-}
-console.log(b);
+const test = parseInt("-123456")
+const res = Number.isNaN(test)
+console.log(test >= 0);
