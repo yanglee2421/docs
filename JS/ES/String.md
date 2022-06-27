@@ -10,3 +10,4 @@
 - `trim()`
 - `trimStart()`or`trimLeft()`
 - `trimEnd()`or`trimRight()`
+- `split(subStr)`
