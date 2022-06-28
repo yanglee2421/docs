@@ -1,6 +1,25 @@
-console.log('hello world')
-let obj: { [key: string]: unknown } = {
-    name: '张三'
+interface inter {
+    name: string
+    age: number
 }
-obj.name = "李四"
-console.log(obj);
+class Person implements inter {
+    name: string
+    age: number
+    constructor(name: string, age: number) {
+        this.name = name
+        this.age = age
+    }
+}
+const obj: inter = {
+    name: "string",
+    age: 123,
+}
+class Animal {
+    private _name = "123"
+    get name() {
+        return this._name
+    }
+    set name(value) {
+        this._name = value
+    }
+}
