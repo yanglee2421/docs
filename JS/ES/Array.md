@@ -6,6 +6,7 @@
 >- `includes(item[, fromIndex])`
 >- `entries()`
 >- `every(callback)`
+>- `reduce((prev,current) => { return value }, initialValue)`
 - 返回新数组，不改变原数组
 >- `flat(int)`
 >- `flatMap(callback)`
