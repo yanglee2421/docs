@@ -1,8 +1,9 @@
 {
     //编译哪个路径下的ts文件
     "include": [
-        "./TS/**/*.ts",
-        "./TS/**/*.tsx"
+        "./*.ts",
+        "./*.d.ts",
+        "./*.tsx",
     ],
     "compilerOptions": {
         //目标JS的ES版本
