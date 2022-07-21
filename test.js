@@ -1,3 +1,4 @@
 //开启严格模式
 import des from "./mod.js"
-JSON.stringify
+const res = JSON.stringify(123)
+console.log(typeof res)
