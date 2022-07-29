@@ -199,16 +199,15 @@ export default {
 }
 </script>
 ~~~
-# 10. `provide()`
+# 10. `provide、inject`
 - 非响应式
 ~~~vue
 <script>
 export default {
-    provide(){
-        return {
-            variable:'值'
-        }
-    }
+    provide:{
+        key:'值'
+    },
+    inject:["key"]
 }
 </script>
 ~~~
@@ -219,18 +218,15 @@ import { computed } from 'vue'
 export default {
     provide(){
         return {
-            variable:computed(() => this.variable)
+            key:() => this.variable
+        }
+    },
+    inject:{ newName:"key" },
+    computed:{
+        useName(){
+            return this.newName()
         }
     }
-}
-</script>
-~~~
-# 11. `inject`
-- 接收`provide`传递的参数
-~~~vue
-<script>
-export default {
-    inject:['variable']
 }
 </script>
 ~~~
