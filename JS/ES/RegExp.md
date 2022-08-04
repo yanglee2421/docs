@@ -9,7 +9,7 @@
  * 用来正确处理大于\uFFFF的Unicode字符
  * 
  */
-const reg = /u{4e00}/u
+const reg = /\u{4e00}/u
 ~~~
 # 转义
 - `\d`
