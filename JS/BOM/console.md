@@ -1,0 +1,11 @@
+# 输出
+- `log(...i)`
+- `dir(object)`
+- `info(...i)`
+- `warn(...i)`
+# 计时
+- `time(timerName)`
+- `timeLog(timerName)`
+- `timeEnd(timerName)`
+# 清空
+- `clear()`
