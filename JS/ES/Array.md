@@ -7,6 +7,7 @@
 >- `entries()`
 >- `every(callback)`
 >- `reduce((prev,current) => { return value }, initialValue)`
+>- `indexOf(item, [fromIndex])`
 - 返回新数组，不改变原数组
 >- `flat(int)`
 >- `flatMap(callback)`
