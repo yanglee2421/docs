@@ -1,4 +1,5 @@
 # state
+- 一参写成对象时
 ~~~jsx
 class MyC extends React.Component {
     state = {
@@ -6,7 +7,25 @@ class MyC extends React.Component {
     }
     func = () => {
         const { isShow } = this.state
-        this.setState({isShow:!isShow})
+        this.setState({isShow:!isShow}, () => {
+            console.log("相当于vue中的nextTick")
+        })
+    }
+}
+~~~
+- 一参写成函数时
+~~~jsx
+class MyC extends React.Component {
+    state = {
+        isShow:true,
+    }
+    func = () => {
+        const { isShow } = this.state
+        this.setState(
+        (state, props) => { return { isShow:!isShow } },
+        () => {
+            console.log("相当于vue中的nextTick")
+        })
     }
 }
 ~~~
