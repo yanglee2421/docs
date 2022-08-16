@@ -1,3 +1,5 @@
-const arr: Record<number, any> = []
-arr[1] = 123
-console.log(arr)
+const func = () => {
+    return 888
+}
+type _res = ReturnType<typeof func>
+const res: _res = 888
