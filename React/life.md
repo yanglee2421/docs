@@ -35,6 +35,7 @@ class MyC extends React.Component {
 }
 ~~~
 # 生命周期（新）
+- 挂载流程
 ~~~jsx
 class MyC extends React.Component {
     // 实例化
@@ -48,7 +49,27 @@ class MyC extends React.Component {
     render() {}
     // 挂载完成
     compnoentDidMount() {}
-    // 组件将要卸载
-    componentWillUnmount() {}
+}
+~~~
+- 更新流程
+~~~jsx
+class MyC extends React.Component {
+    // 实例化
+    constructor(){}
+    // 从props获取派生state
+    static getDerivedStateFromProps(props) {
+        // 必须返回状态对象或null
+        return props||null
+    }
+    // 是否更新
+    shouldComponentUpdate() {
+        return true
+    }
+    // 渲染组件
+    render() {}
+    // 更新前获取快照
+    getSnapshotBeforeUpdate() {}
+    // 更新完成
+    componentDidUpdate() {}
 }
 ~~~
