@@ -7,9 +7,7 @@ class MyC extends React.Component {
     // 组件将要挂载
     componentWillMount() {}
     // 渲染组件
-    render() {
-        return (<h1></h1>)
-    }
+    render() {}
     // 挂载完成
     compnoentDidMount() {}
     // 组件将要卸载（由ReactDOM.unmountComponentAtNode方法触发）
@@ -29,9 +27,7 @@ class MyC extends React.Component {
     // 组件将要更新（forceUpdate触发的更新由此开始）
     componentWillUpdate() {}
     // 渲染组件
-    render() {·
-        return (<h1></h1>)
-    }
+    render() {}
     // 更新完成
     componentDidUpdate() {}
     // 组件将要卸载
@@ -43,12 +39,13 @@ class MyC extends React.Component {
 class MyC extends React.Component {
     // 实例化
     constructor(){}
-    // 组件将要挂载
-    componentWillMount() {}
-    // 渲染组件
-    render() {
-        return (<h1></h1>)
+    // 从props获取派生state
+    static getDerivedStateFromProps(props) {
+        // 必须返回状态对象或null
+        return props||null
     }
+    // 渲染组件
+    render() {}
     // 挂载完成
     compnoentDidMount() {}
     // 组件将要卸载
