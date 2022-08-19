@@ -34,5 +34,24 @@ app.post("/path/:params", (req, res) => {
 # 静态文件
 ~~~js
 app.use(express.static(__dirname + "/path"))
+app.use("/vPath", express.static("path"))
 ~~~
-# 
+# 链式路由
+~~~js
+app.route(/\/path/i)
+    .get((req, res) => {})
+    .post((req, res) => {})
+~~~
+# 响应方式、
+|方法|描述|
+|-|-|
+|download()|下载文件|
+|end()|结束响应进程|
+|json()|返回json|
+|jsonp()|返回jsonp|
+|redirect()|重定向|
+|render()|呈现视图模板|
+|send()|发送各种类型的响应|
+|sendFile()|以八位元流形式发送文件|
+|sendStatus()|设置响应状态码并以响应主体形式发送其字符串表示|
+|stauts()|设置响应状态码|
