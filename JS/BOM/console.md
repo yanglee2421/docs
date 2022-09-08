@@ -3,6 +3,7 @@
 - `dir(object)`
 - `info(...i)`
 - `warn(...i)`
+- `error(...i)`
 # 计时
 - `time(timerName)`
 - `timeLog(timerName)`
