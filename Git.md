@@ -10,6 +10,11 @@
 - `git add .`
 # 提交
 - `git commit -m'提交信息'`
+# 删除
+- `rm 仅删除工作区文件-不暂存.txt`
+- `git rm 删除工作区文件-且暂存.txt`
+- `git rm -f 删除工作区和暂存区文件-且暂存.txt`
+- `git rm -cached 删除暂存区文件-且暂存.txt`
 # 状态
 - `git status`
 - `git log`
@@ -17,6 +22,7 @@
 - `git diff`
 - `git diff 提交ID`
 # 重置
+- `git checkout .`
 - `git reset`
 - `git reset --hard 提交ID`
 # 分支
@@ -28,7 +34,6 @@
 - `git branch -d 分支`
 - `git branch -dr 源/分支`
 - `git branch --set-upstream-to=源/分支`
-- `git checkout .`
 - `git checkout 分支`
 - `git checkout -b 分支`
 # 合并
