@@ -11,10 +11,10 @@
 # 提交
 - `git commit -m'提交信息'`
 # 删除
-- `rm 仅删除工作区文件-不暂存.txt`
-- `git rm 删除工作区文件-且暂存.txt`
-- `git rm -f 删除工作区和暂存区文件-且暂存.txt`
-- `git rm -cached 删除暂存区文件-且暂存.txt`
+- `rm 仅删除工作区-不暂存.txt`
+- `git rm 删除工作区-且暂存.txt`
+- `git rm -f 强制删除工作区-且暂存.txt`
+- `git rm -cached 删除暂存区-且暂存.txt`
 # 状态
 - `git status`
 - `git log`
