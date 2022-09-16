@@ -5,8 +5,8 @@
 ~~~js
 navigator.clipboard.wtriteText("内容").then(res=>{
     console.log(res)
-})
+}).catch(err=>{})
 navigator.clipboard.readText().then(res=>{
     console.log(res)
-})
+}).catch(err=>{})
 ~~~
