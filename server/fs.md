@@ -1,27 +1,93 @@
-# fs 模块
+# fs 模块（需要引入）
 
-- 不用下载，需要引入
+## 简单文件
 
-```ts
-export namespace fs {
-  interface _options {
-    encoding:string
-    mode: 0o111 | 0o222 | 0o444 | 0o333 | 0o555 | 0o666;
-    flag:"a"|"w"
-  }
-  interface _callback{
-    (err,res):void
-  }
-  export const writeFile = (
-    path: string,
-    options = {
-        encoding:"utf8",
-        mode:0o666,
-        flag:"w"
-    }: _options,
-    callback: _callback
-  ) => {
-    return undefined;
-  };
-}
+- 写
+
+```js
+fs.writeFile(path, data, options, callback);
+/**
+ * path：文件路径
+ * data：要写入的数据
+ * options：配置对象（可选）
+ *  -encoding：编码方式（默认：utf8）
+ *  -mode：文件操作权限（默认：0o666）
+ *   --0o111：是否可执行
+ *   --0o222：是否可写
+ *   --0o444：是否可读
+ *  -flag：写入方式对象（默认值："w"）
+ *   --"w"：覆写
+ *   --"a"：追写
+ * callback(err:null|Error)
+ */
 ```
+
+- 读
+
+```js
+fs.readFile(path, options, callback);
+/**
+ * path：文件路径
+ * options：配置对象（可选）
+ * callback(err, data)
+ *  -err：错误信息
+ *  -data：文件内容（默认类型是一个Buffer）
+ */
+```
+
+## 流式文件
+
+- 写
+
+```js
+const ws = fs.createWriteStream(path[, options]);
+ws.on("open", () => {
+  console.log("流打开了");
+});
+ws.on("close", () => {
+  console.log("流关闭了");
+});
+ws.write("文件内容");
+ws.close();
+/**
+ * path：文件的路径
+ * options：配置对象
+ *  -flags：见下方详情（默认值："w"）
+ *  -encoding：编码方式（默认值："utf8"）
+ *  -fd：文件统一标识符（仅Linux支持）
+ *  -mode：同上
+ *  -autoClose：自动关闭文件（默认值：true）
+ *  -emitClose：强制关闭文件（默认值：false）
+ *  -start：写入文件的起始位置（number类型）
+ */
+```
+
+- 读
+
+```js
+const rs = fs.createReadStream(path, options, callback);
+rs.on("open", () => {
+  console.log("读取流开启了");
+});
+rs.on("data", (data) => {
+  data.length = 65536;
+});
+rs.on("close", () => {
+  console.log("读取流关闭了");
+});
+/**
+ * path：同上
+ * options：配置对象（可选）
+ *  -flags
+ *  -encodeing
+ *  -fd
+ *  -mode
+ *  -autoClose
+ *  -emitClose
+ *  -start
+ *  -end
+ *  -highWaterMark：每次读取数据的大小（默认：64 * 1024）
+ */
+```
+
+- flags[详情](https://nodejs.org/dist/latest-v16.x/docs/api/fs.html#file-system-flags)
