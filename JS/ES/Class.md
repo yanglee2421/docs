@@ -1,17 +1,44 @@
 # 类
+
 ## 静态属性
-~~~ts
+
+```js
 class Person {
-    /*
-    这是构造函数的属性，且仅读
-    (readonly关键字在原生JS中不受支持)
-    */
-    static readonly age:number = 18
-    //这是所有实例都有的属性
-    age:number = 19
-    //这是单个实例独自拥有的属性
-    constructor(age:number){
-        this.age:number = age
-    }
+  static name = "人";
+  static callName = () => {
+    // 这个this指向构造函数本身
+    console.log(this.name);
+  };
 }
-~~~
+Person.name; //"人"
+```
+
+## 扩展
+
+```js
+class Person {
+  constractor(name) {
+    this.name = name;
+  }
+}
+class Man extends Person {
+  constractor(name, age) {
+    super(name);
+    this.age = age;
+  }
+}
+```
+
+## 存取器、私有属性
+
+```js
+class Person {
+  #name = "人";
+  get name() {
+    return this.#name;
+  }
+  set name(value) {
+    this.#name = value;
+  }
+}
+```
