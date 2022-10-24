@@ -1,31 +1,47 @@
 # 初始化
+
 - `git init`
 - `git init 文件夹`
 - `git clone 网址`
+
 # 配置
+
 - `git config --global user.name "用户名"`
 - `git config --global user.email "邮箱"`
+- `git config --global http.proxy http://127.0.0.1:7890`
 - `git config --list`
+
 # 暂存
+
 - `git add .`
+
 # 提交
+
 - `git commit -m'提交信息'`
+
 # 删除
+
 - `rm 仅删除工作区-不暂存.txt`
 - `git rm 删除工作区-且暂存.txt`
 - `git rm -f 强制删除工作区-且暂存.txt`
 - `git rm -cached 删除暂存区-且暂存.txt`
+
 # 状态
+
 - `git status`
 - `git log`
 - `git log -a --graph --abbrev-commit --pretty=oneline`
 - `git diff`
 - `git diff 提交ID`
+
 # 重置
+
 - `git checkout .`
 - `git reset`
 - `git reset --hard 提交ID`
+
 # 分支
+
 - `git branch`
 - `git branch -r`
 - `git branch -a`
@@ -36,10 +52,14 @@
 - `git branch --set-upstream-to=源/分支`
 - `git checkout 分支`
 - `git checkout -b 分支`
+
 # 合并
+
 - `git merge 指定分支`
 - `git merge --abbort`
+
 # 同步
+
 - `git remote`
 - `git remote -v`
 - `git remote add 源 地址`
@@ -53,6 +73,8 @@
 - `git push -u 源 分支`
 - `git push --set-upstream 源 分支`
 - `git push 源 -d 分支`
+
 # SSH
+
 - `ssh-keygen -t ed25519`
 - `ssh`
