@@ -41,4 +41,10 @@ class Person {
     this.#name = value;
   }
 }
+const obj = {
+  get name() {
+    return "";
+  },
+  set name(value) {},
+};
 ```

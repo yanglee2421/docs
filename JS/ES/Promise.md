@@ -1,8 +1,22 @@
 # Promise
 
+## 构造器
+
+- `(callback)`
+
+```js
+const promise = new Promise((resolve, reject) => {
+  if (true) {
+    resolve(res);
+  } else {
+    reject(err);
+  }
+});
+```
+
 ## 实例方法
 
-- then
+- `then(callback,callback)`
 
 ```js
 const p = new Promise((resolve, reject) => {
@@ -21,7 +35,7 @@ p.then(
  */
 ```
 
-- catch
+- `catch(callback(reject))`
 
 ```js
 /**
@@ -33,24 +47,84 @@ Promise.reject("err").catch((reason) => {
 });
 ```
 
-- finally
+- `finally(callback)`
 
 ```js
 /**
  * promise被敲定（无论为resolve或reject）时，
  * 将回调推入微任务队列
- * 接收不到result和reason
+ * 接收不到 result 和 reason
  */
+Promise.resolve().then().catch().finally();
 ```
 
 ## 静态方法
 
-- resolve：返回一个 resolve
-- reject：返回一个 reject
-- all：全为 resolve 时，才返回 resolve
-- allSettled：全部敲定时，返回所有敲定的结果
-- any：任意一个为 resolve 时， 返回 resolve
-- race：任意一个敲定时，返回该 promise 的结果
+- `resolve(any)`
+
+```js
+/**
+ * 返回一个状态为 resolve 的 promise
+ */
+const promise = Promise.resolve("成功时的结果");
+```
+
+- `reject(any)`
+
+```js
+/**
+ * 返回一个状态为 reject 的 promise
+ */
+const promise = Promise.reject("拒绝时的结果");
+```
+
+- `all(promise[])`
+
+```js
+/**
+ * 全为 resolve 时，才返回 resolve
+ */
+Promise.all([promise0, promise1])
+  .then(([res0, res1]) => {})
+  .catch()
+  .finally();
+```
+
+- `allSettled(promise[])`
+
+```js
+/**
+ * 全部敲定时，返回所有敲定的结果
+ */
+Promise.allSettled([promise0, promise1])
+  .then(([res0, res1]) => {})
+  .catch()
+  .finally();
+```
+
+- `any(promise[])`
+
+```js
+/**
+ * 任意一个为 resolve 时， 返回 resolve
+ */
+Promise.any([promise0, promise1])
+  .then((res) => {})
+  .catch()
+  .finally();
+```
+
+- `race(promise[])`
+
+```js
+/**
+ * 任意一个敲定时，返回该 promise 的结果
+ */
+Promise.race([promise0, promise1])
+  .then((res) => {})
+  .catch()
+  .finally();
+```
 
 ## async、await
 
@@ -58,5 +132,9 @@ Promise.reject("err").catch((reason) => {
 - await：将所在函数的分成两段，await 以左视为同步进程， await 右侧的 promise 敲定时，将 await 以下的部分推入微任务队列
 
 ```js
-
+async function fun() {
+  console.log("同步");
+  const res = await Promise.resolve();
+  return res;
+}
 ```

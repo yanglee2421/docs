@@ -1,19 +1,38 @@
 # 独一无二的值
+
+## 假值（falsy）
+
+1. `undefined`
+2. `null`
+3. `false`
+4. `0`
+5. `NaN`
+6. `0n`
+7. `""`
+
 ## `Symbol`
+
 - `(description)`
 - `for(description)`
 - `keyFor(sym)`
 - `asyncIterator`
 - `iterator`
 - `toStringTag`
+
 ## `Symbol.prototype`
+
 - `description`
 - `toString()`
 - `valueOf()`
+
 # 集合
+
 ## `Set`
+
 - `(arr)`
+
 ## `Set.prototype`
+
 - `size`
 - `add(value)`
 - `has(value)`
@@ -23,10 +42,15 @@
 - `keys()`
 - `values()`
 - `forEach(callback)`
+
 # 映射
+
 ## `Map`
+
 - `()`
+
 ## `Map.prototype`
+
 - `size`
 - `set(key, value)`
 - `has(key)`
@@ -37,16 +61,3 @@
 - `values()`
 - `entries()`
 - `forEach(callback)`
-# 承诺
-## `Promise`
-- `(callback(resolve, reject))`
-- `resolve(resolve)`
-- `reject(reject)`
-- `all(iterable)`
-- `allSettled(iterable)`
-- `any(iterable)`
-- `race(iterable)`
-## `Promise.prototype`
-- `then(callback(resolve))`
-- `catch(callback(reject))`
-- `finally(callback)`
