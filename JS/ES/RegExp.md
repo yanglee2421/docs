@@ -1,28 +1,28 @@
-# 标志
+# 正则表达式
+
+## 标志
+
 - `g`
 - `i`
 - `m`
 - `s`
-- `u`
-~~~js
+- `u`开启 unicode 模式
+
+```js
 /**
  * 用来正确处理大于\uFFFF的Unicode字符
- * 
  */
-const reg = /\u{4e00}/u
-~~~
-# 转义
-- `\d`
-- `\p`or`\P`
-~~~js
+const reg = /\u{4e00}/u;
 /**
- * unicode属性类
- * 需要开启u标志
+ * unicode属性类（需要开启u标志）
  */
-/\p{Script=Greek}/ //匹配希腊文
-/\p{sc=Han}/ //匹配所有汉字
-/\p{Number}/ //Unicode中所有表示数字的字符
-/\p{Block=Arrows}/ //unicode中所有表示箭头的字符
-/\p{White_Space}/ //unicode中所有的空格
-~~~
-# 
+/\p{Script=Greek}/u //匹配希腊文
+/\p{sc=Han}/u //匹配所有汉字
+/\P{Number}/u //Unicode中所有表示数字的字符
+/\P{Block=Arrows}/u //unicode中所有表示箭头的字符
+/\P{White_Space}/u //unicode中所有的空格
+```
+
+## 转义
+
+- `\d`
