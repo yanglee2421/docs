@@ -1,12 +1,30 @@
 # RegExp
 
+## 构造器
+
+```js
+const reg = new RegExp("string", "sign");
+```
+
+## 实例方法
+
+- `test(string)`
+
 ## 标志
 
-- `g`
-- `i`
-- `m`
-- `s`
-- `u`开启 unicode 模式
+| 标志 |       作用        |
+| :--: | :---------------: |
+| `g`  |     全局匹配      |
+| `i`  |                   |
+| `u`  | 开启 unicode 模式 |
+| `m`  |                   |
+| `s`  |                   |
+
+## 转义
+
+- `\d`
+
+## Unicode 属性类
 
 ```js
 /**
@@ -22,7 +40,3 @@ const reg = /\u{4e00}/u;
 /\P{Block=Arrows}/u //unicode中所有表示箭头的字符
 /\P{White_Space}/u //unicode中所有的空格
 ```
-
-## 转义
-
-- `\d`
