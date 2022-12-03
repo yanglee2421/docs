@@ -8,15 +8,22 @@ const mySet = new Set();
 
 ## 实例属性
 
-- `size`
+### `size`
 
 ## 实例方法
 
-- `add(value)`
-- `has(value)`
-- `delete(value)`
-- `clear()`
-- `entries()`
-- `keys()`
-- `values()`
-- `forEach(callback)`
+### `add(value)`
+
+### `has(value)`
+
+### `delete(value)`
+
+### `clear()`
+
+### `entries()`
+
+### `keys()`
+
+### `values()`
+
+### `forEach(callback)`

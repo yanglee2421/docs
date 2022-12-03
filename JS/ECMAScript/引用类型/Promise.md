@@ -14,21 +14,21 @@ const promise = new Promise((resolve, reject) => {
 
 ## 静态方法
 
-- `resolve(any)`
+### `resolve(any)`
 
 ```js
 // 返回一个状态为 resolve 的 promise
 const promise = Promise.resolve("成功时的结果");
 ```
 
-- `reject(any)`
+### `reject(any)`
 
 ```js
 // 返回一个状态为 reject 的 promise
 const promise = Promise.reject("拒绝时的结果");
 ```
 
-- `all(promise[])`
+### `all(promise[])`
 
 ```js
 // 全为 resolve 时，才返回 resolve
@@ -38,7 +38,7 @@ Promise.all([promise0, promise1])
   .finally();
 ```
 
-- `allSettled(promise[])`
+### `allSettled(promise[])`
 
 ```js
 // 全部敲定时，返回所有敲定的结果
@@ -48,7 +48,7 @@ Promise.allSettled([promise0, promise1])
   .finally();
 ```
 
-- `any(promise[])`
+### `any(promise[])`
 
 ```js
 // 任意一个为 resolve 时， 返回该promise的结果
@@ -58,7 +58,7 @@ Promise.any([promise0, promise1])
   .finally();
 ```
 
-- `race(promise[])`
+### `race(promise[])`
 
 ```js
 // 任意一个敲定时，返回该 promise 的结果
@@ -70,7 +70,7 @@ Promise.race([promise0, promise1])
 
 ## 实例方法
 
-- `then(callback,callback)`
+### `then(callback,callback)`
 
 ```js
 const p = new Promise((resolve, reject) => {
@@ -89,7 +89,7 @@ p.then(
  */
 ```
 
-- `catch(callback(reject))`
+### `catch(callback(reject))`
 
 ```js
 // then的一种简写
@@ -99,7 +99,7 @@ Promise.reject("err").catch((reason) => {
 });
 ```
 
-- `finally(callback)`
+### `finally(callback)`
 
 ```js
 /**
@@ -112,8 +112,9 @@ Promise.resolve().then().catch().finally();
 
 ## async、await
 
-- async：将此函数的返回值包装为 promise，并开启 await 关键字
-- await：将所在函数的分成两段，await 以左视为同步进程， await 右侧的 promise 敲定时，将 await 以下的部分推入微任务队列
+### async：将此函数的返回值包装为 promise，并开启 await 关键字
+
+### await：将所在函数的分成两段，await 以左视为同步进程， await 右侧的 promise 敲定时，将 await 以下的部分推入微任务队列
 
 ```js
 async function fun() {

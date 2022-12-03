@@ -8,20 +8,24 @@ const sym = Symbol("描述");
 
 ## 静态属性
 
-- `asyncIterator`
-- `iterator`
-- `toStringTag`
+### `asyncIterator`
+
+### `iterator`
+
+### `toStringTag`
 
 ## 静态方法
 
-- `for(description)`
-- `keyFor(sym)`
+### `for(description)`
+
+### `keyFor(sym)`
 
 ## 实例属性
 
-- `description`
+### `description`
 
 ## 实例方法
 
-- `toString()`
-- `valueOf()`
+### `toString()`
+
+### `valueOf()`

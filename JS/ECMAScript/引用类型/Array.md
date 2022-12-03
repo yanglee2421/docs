@@ -10,15 +10,26 @@
 
 ## 实例方法
 
-- 返回的不是数组
-  > - `includes(item[, fromIndex])`
-  > - `entries()`
-  > - `every(callback)`
-  > - `reduce((prev,current) => { return value }, initialValue)`
-  > - `indexOf(item, [fromIndex])`
-- 返回新数组，不改变原数组
-  > - `flat(int)`
-  > - `flatMap(callback)`
-  > - `concat(arr[, arr, ...])`
-- 返改后数组，改变原数组
-  > - `copyWithin(target[, start[, end]])`
+### 返回的不是数组
+
+#### `includes(item[, fromIndex])`
+
+#### `entries()`
+
+#### `every(callback)`
+
+#### `reduce((prev,current) => { return value }, initialValue)`
+
+#### `indexOf(item, [fromIndex])`
+
+### 返回新数组
+
+#### `flat(int)`
+
+#### `flatMap(callback)`
+
+#### `concat(arr[, arr, ...])`
+
+### 返回原数组
+
+#### `copyWithin(target[, start[, end]])`

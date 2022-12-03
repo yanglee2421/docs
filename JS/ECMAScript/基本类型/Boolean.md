@@ -1,6 +1,6 @@
 # Boolean
 
-## falsy
+## falsy、truthy
 
 ```js
 /**
@@ -15,15 +15,18 @@ false;
 NaN;
 0n;
 ("");
-```
-
-## truthy
-
-```js
 /**
  * 进行布尔运算时视为true
  * js中的值除以上八个以外全是truthy
  */
+```
+
+## 函数本身
+
+```js
+const boolean = Boolean("用来生成布尔的值");
+boolean == true; //true
+boolean === true; //true
 ```
 
 ## 构造器
@@ -32,12 +35,4 @@ NaN;
 const boolean = new Boolean("用来生成布尔的值");
 boolean == true; //true
 boolean === true; //false
-```
-
-## 静态方法
-
-```js
-const boolean = Boolean("用来生成布尔的值");
-boolean == true; //true
-boolean === true; //true
 ```

@@ -8,7 +8,7 @@ new Error("可读的错误信息");
 
 ## 实例属性
 
-- message
+### message
 
 ```js
 const err = new Error("错误信息");

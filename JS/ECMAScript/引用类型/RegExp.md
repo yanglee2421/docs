@@ -8,7 +8,7 @@ const reg = new RegExp("string", "sign");
 
 ## 实例方法
 
-- `test(string)`
+### `test(string)`
 
 ## 标志
 

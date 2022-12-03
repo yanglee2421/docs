@@ -2,13 +2,15 @@
 
 ## 操作符
 
-- `.`
-- `?.`
-- `delete`
+### `.`
+
+### `?.`
+
+### `delete`
 
 ## 静态方法
 
-- `is(value1, value2)`
+### `is(value1, value2)`
 
 ```js
 /**
@@ -16,15 +18,19 @@
  * 与===运算符的差如下
  */
 Object.is(NaN, NaN); //true
-Object.is(-0, +0); //false
+Object.is(###0, +0); //false
 ```
 
-- `assign(obj, obj2[, obj3])`
-- `fromEntries(arr)`
-- `getOwnPropertyDescriptors(obj, 'prop')`
-- `getOwnPropertyNames()`
+### `assign(obj, obj2[, obj3])`
+
+### `fromEntries(arr)`
+
+### `getOwnPropertyDescriptors(obj, 'prop')`
+
+### `getOwnPropertyNames()`
 
 ## 实例方法
 
-- `toString()`
-- `hasOwnProperty()`
+### `toString()`
+
+### `hasOwnProperty()`
