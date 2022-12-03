@@ -1,25 +1,23 @@
-# 字符串
+# String
 
-## `String`
+## 实例方法
 
-## `String.prototype`
+### includes
 
-### `includes(subStr[, fromIndex])`
+### startsWith
 
-### `startsWith(subStr[, fromIndex])`
+### endsWith
 
-### `endsWith(subStr[, fromIndex])`
+### repeat
 
-### `repeat(int)`
+### padStart
 
-### `padStart(targetLength, padString)`
+### padEnd
 
-### `padEnd(targetLength, padString)`
+### trim
 
-### `trim()`
+### trimStart/trimLeft
 
-### `trimStart()`or`trimLeft()`
+### trimEnd/trimRight
 
-### `trimEnd()`or`trimRight()`
-
-### `split(subStr)`
+### split

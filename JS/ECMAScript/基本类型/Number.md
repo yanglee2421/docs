@@ -2,7 +2,7 @@
 
 ## 静态方法
 
-### `isNaN(vari)`
+### isNaN
 
 ```js
 /**
@@ -15,6 +15,6 @@ Number.isNaN("NaN"); //false
 
 ## 实例方法
 
-### `toFixed(int)`
+### toFixed
 
-### `toString(int)`
+### toString

@@ -2,30 +2,29 @@
 
 ## 函数本身
 
-```js
+js
 const sym = Symbol("描述");
-```
 
 ## 静态属性
 
-### `asyncIterator`
+### asyncIterator
 
-### `iterator`
+### iterator
 
-### `toStringTag`
+### toStringTag
 
 ## 静态方法
 
-### `for(description)`
+### for
 
-### `keyFor(sym)`
+### keyFor
 
 ## 实例属性
 
-### `description`
+### description
 
 ## 实例方法
 
-### `toString()`
+### toString
 
-### `valueOf()`
+### valueOf

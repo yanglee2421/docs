@@ -112,9 +112,13 @@ Promise.resolve().then().catch().finally();
 
 ## async、await
 
-### async：将此函数的返回值包装为 promise，并开启 await 关键字
+### async
 
-### await：将所在函数的分成两段，await 以左视为同步进程， await 右侧的 promise 敲定时，将 await 以下的部分推入微任务队列
+> 将此函数的返回值包装为 promise，并开启 await 关键字
+
+### await
+
+> 将所在函数的分成两段，await 以左视为同步进程， await 右侧的 promise 敲定时，将 await 以下的部分推入微任务队列
 
 ```js
 async function fun() {
