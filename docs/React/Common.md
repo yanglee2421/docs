@@ -56,6 +56,22 @@ const MyComp02 = React.forwardRef((props, ref) => {
 });
 ```
 
+### Suspense
+
+```jsx
+/**
+ * 异步组件
+ */
+const MyComp = React.lazy(() => import("./MyComp"));
+export default () => {
+  return (
+    <React.Suspense fallback={<p>MyComp未加载时显示这段文字</p>}>
+      <MyComp></MyComp>
+    </React.Suspense>
+  );
+};
+```
+
 ## ReactDom
 
 ### CreateRoot
