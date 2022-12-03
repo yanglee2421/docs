@@ -1,6 +1,6 @@
 # 监视器
 
-- `IntersectionObserver`
+## 监视可见情况
 
 ```js
 const el = document.querySelector("div")!;
@@ -20,9 +20,10 @@ const observer = new IntersectionObserver(
   }
 );
 observer.observe(el);
+observer.disconnect();
 ```
 
-- `ResizeObserver`
+## 监视尺寸改变
 
 ```js
 const reObserver = new ResizeObserver(([{ contentBoxSize }]) => {

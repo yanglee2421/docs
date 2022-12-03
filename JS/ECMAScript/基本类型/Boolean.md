@@ -1,5 +1,31 @@
 # Boolean
 
+## falsy
+
+```js
+/**
+ * 进行布尔运算时视为false
+ * js中有八个值
+ */
+undefined;
+null;
+false;
+0;
+-0;
+NaN;
+0n;
+("");
+```
+
+## truthy
+
+```js
+/**
+ * 进行布尔运算时视为true
+ * js中的值除以上八个以外全是truthy
+ */
+```
+
 ## 构造器
 
 ```js
