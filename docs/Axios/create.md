@@ -1,5 +1,10 @@
-import axios from "axios";
+# create
+
+## 实例
+
+```js
 const request = axios.create({
-  timeout: 6000,
   baseURL: "",
+  timeout: 60000,
 });
+```

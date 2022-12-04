@@ -1,14 +1,14 @@
 # 监视器
 
-## 监视可见情况
+## IntersectionObserver
 
 ```js
-const el = document.querySelector("div")!;
+const dom = document.querySelector("div")!;
 const observer = new IntersectionObserver(
   ([{ isIntersecting }]) => {
     if (isIntersecting) {
       console.log();
-      observer.unobserve(el);
+      observer.unobserve(dom);
       return;
     }
     return;
@@ -19,15 +19,16 @@ const observer = new IntersectionObserver(
     threshold: [0, 0.5, 1],
   }
 );
-observer.observe(el);
+observer.observe(dom);
 observer.disconnect();
 ```
 
-## 监视尺寸改变
+## ResizeObserver
 
 ```js
 const reObserver = new ResizeObserver(([{ contentBoxSize }]) => {
-  reObserver.unobserve(el);
+  reObserver.unobserve(dom);
 });
-reObserver.observe(el);
+reObserver.observe(dom);
+observer.disconnect();
 ```

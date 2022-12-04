@@ -1,28 +1,5 @@
 # Event
 
-## 实例属性
-
-- 以下案例属性仅 MouseEvent 具有
-
-```js
-// 相对于浏览器视口
-event.clientX;
-event.clientY;
-// 相对于DOM盒子
-event.offsetX;
-event.offsetY;
-// 相对于HTML文档
-event.pageX;
-event.pageY;
-```
-
-## 实例方法
-
-```js
-event.preventDefault();
-event.stopPropagation();
-```
-
 ## 事件监听器
 
 ```js
@@ -39,7 +16,7 @@ dom.removeEventListener("click", fun, {
 }); //移除成功
 ```
 
-## 中止控制器
+### 中止控制器
 
 ```js
 /**
@@ -51,4 +28,43 @@ dom.addEventListener("click", () => {}, {
   signal,
 });
 controller.abort();
+```
+
+## 事件对象
+
+### 阻止默认行为
+
+```js
+event.preventDefault();
+```
+
+### 停止冒泡
+
+```js
+event.stopPropagation();
+```
+
+### 事件委托
+
+```js
+// 指向触发事件的元素
+event.target;
+// 指向绑定该handler的元素
+event.currentTarget;
+```
+
+### 指针坐标
+
+- 以下案例属性仅 MouseEvent 具有
+
+```js
+// 相对于浏览器视口
+event.clientX;
+event.clientY;
+// 相对于DOM盒子
+event.offsetX;
+event.offsetY;
+// 相对于HTML文档
+event.pageX;
+event.pageY;
 ```
