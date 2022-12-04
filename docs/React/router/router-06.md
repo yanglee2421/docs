@@ -3,16 +3,18 @@
 ## 安装
 
 ```powershell
-npm i react-router
-yarn add react-router
+npm i react-router-dom
+yarn add react-router-dom
 ```
 
 ## 部署
 
+1. 编写路由列表
+2. 编写路由节点组件
+3. 在 App 中使用路由
+
 ```jsx
-/**
- * 编写路由列表
- */
+// 路由列表
 const routes = useRoutes([
   {
     path: "/",
@@ -39,9 +41,10 @@ const routes = useRoutes([
     element: <NotFound></NotFound>,
   },
 ]);
-/**
- * 编写路由节点组件
- */
+```
+
+```jsx
+// 封装高阶组件控制路由
 export default () => {
   const currentNode = useRoutes(routes);
   const location = useLocation();
@@ -61,9 +64,10 @@ export default () => {
   }, [currentNode, location]);
   return isAuth ? currentNode : null;
 };
-/**
- * 在App中使用路由
- */
+```
+
+```jsx
+// 在 App 中使用路由高阶组件
 function App() {
   return (
     <BrowserRouter>
@@ -75,10 +79,20 @@ function App() {
 
 ## Hooks
 
-- `useRoutes(RouterObject[])`
-- `useLocation()`
-- `useNavigate()`
-- `useParams()`
-- `useSearchParams()`
+### useRoutes
+
+- 参考部署
+
+```js
+const currentComp = useRoutes([]);
+```
+
+### useLocation
+
+### useNavigate
+
+### useParams
+
+### useSearchParams
 
 ## 组件

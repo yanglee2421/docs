@@ -48,7 +48,7 @@
 }
 ```
 
-### content 和 items 的单位
+### content 和 items 的可选值
 
 - 两者都有的
   1. stretch

@@ -4,9 +4,10 @@
 
 ### Context
 
+- 用于祖先向后代传参
+
 ```jsx
 /**
- * 适用于祖先向后代传参
  * 1.创建Context组件
  * 2.Context.Provider提供数据
  * 3.useContext()接收数据
@@ -33,12 +34,11 @@ function Children() {
 
 ### ForwardRef
 
+1. ref 不属于 props，不能直接转发
+2. 用于转发组件接收到的 ref 到 dom 实例上
+3. 也可以配合 useImperativeHandle()自定义曝露的对象
+
 ```jsx
-/**
- * ref不属于props，不能直接转发，需要此函数
- * 1.用于转发组件接收到的ref到dom实例上
- * 2.也可以配合useImperativeHandle()自定义曝露的对象
- */
 const MyComp = React.forwardRef((props, ref) => {
   return <div ref={ref}></div>;
 });
@@ -58,10 +58,9 @@ const MyComp02 = React.forwardRef((props, ref) => {
 
 ### Suspense
 
+- React.lazy 返回的组件需要在 React.Suspense 节点下调用
+
 ```jsx
-/**
- * 异步组件
- */
 const MyComp = React.lazy(() => import("./MyComp"));
 export default () => {
   return (
@@ -76,20 +75,18 @@ export default () => {
 
 ### CreateRoot
 
+- 把 ReactNode 挂载到真实 dom 上
+
 ```jsx
-/**
- * 把ReactNode挂载到真实dom上
- */
 ReactDom.createRoot(document.querySelector("#root")).render(<App></App>);
 ```
 
 ### Portals
 
+- 类似 Vue3 中的 teleport 组件
+- 用于手动指定 ReactNode 挂载的位置
+
 ```jsx
-/**
- * 类似Vue3中的teleport组件
- * 1.用于手动指定ReactNode挂载的位置
- */
 function Dialog() {
   return ReactDom.createPortal(
     <div>
