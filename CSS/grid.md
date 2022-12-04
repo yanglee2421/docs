@@ -1,110 +1,133 @@
-# 1. grid-box
-## 网格之外
-- `display`
->- `grid`
->- `inline-grid`
-- `repeat()`
-~~~css
-div{
-    padding:repeat(3, 10px)
-}
+# grid 布局
+
+## 网格容器
+
+- grid-template
+  1. grid-template-rows
+  2. grid-template-columns
+- grid-auto-rows
+- grid-auto-columns
+- grid-auto-flow
+- grip-template-areas
+- gap
+  1. rows-gap
+  2. columns-gap
+- place-content
+  1. align-content
+  2. justify-content
+- place-items
+  1. align-items
+  2. justify-items
+
+### 是否需要斜线
+
+- grid-template 需要用`/`分隔行和列，`/`前是行，`/`后是列
+- gap 不需要分隔
+
+```css
 .grid-box {
-    grid-template-rows:repeat(auto-fill, 100px)
+  display: grid;
+  grid-template: auto/repeat(2, minmax(100px, 1fr));
+  gap: 10px 20px;
 }
-~~~
-## 模板
-~~~css
+```
+
+### 布局流和 dense
+
+- row（default）从左往右模着排
+- column 从上向下竖着排
+- 设置 dense 表示尽可能不空置网格
+
+```css
 .grid-box {
-    grid-template-columns:100px 1fr;
-    grid-template-rows:auto 1fr auto;
-    /* 新增网格的行列 */
-    grid-auto-columns:100px;
-    grid-auto-rows:1fr;
+  grid-auto-flow: row;
+  grid-auto-flow: column;
+  /* item间不允许有空格 */
+  grid-auto-flow: row dense;
+  grid-auto-flow: column dense;
 }
-~~~
->- `100px`
->- `10%`
->- `auto`
->- `1fr`
->- `minmax(min, max)`
->- `[lineName]`
-~~~css
-.grid-box {
-    grid-template-areas:
-    'a a . b'
-    'a a . c'
-    'd . e c';
+```
+
+### content 和 items 的单位
+
+- 两者都有的
+  1. stretch
+  2. start
+  3. center
+  4. end
+- content 独占
+  1. space-between
+  2. space-around
+  3. space-evenly
+
+## 网格项
+
+- grid-row
+  1. grid-row-start
+  2. grid-row-end
+- grid-column
+  1. grid-column-start
+  2. grid-column-end
+- grid-area
+- place-self
+  1. align-self
+  2. justify-self
+
+### 斜线和 span
+
+- grid-row 和 grid-column 需要用`/`分隔 start 和 end
+- span 关键字指定 item 所占的行或列的个数
+
+```css
+.grid-item {
+  grid-row: 1 / span 2;
+  grid-column: span 1 / 3;
 }
-~~~
-- `a-start`&`a-end`
-~~~css
-.grid-box {
-    grid-template:rows/columns;
-    grid-template:none;
+```
+
+## 函数
+
+### repeat
+
+```css
+div {
+  padding: repeat(3, 10px);
 }
-~~~
-## 间距
-~~~css
-.grid-box {
-    grid-gap:10px 10px;
-    grid-row-gap:20px;
-    grid-column-gap:30px;
-    grid-gap:15px;
+```
+
+### minmax
+
+```css
+div {
+  /* 
+  最小不能小于100px
+  最大不能大于1fr
+  flex长度不能作为minValue
+   */
+  width: minmax(100px, 1fr);
 }
-~~~
-## 流
-~~~css
-.grid-box {
-    grid-auto-flow:row;
-    grid-auto-flow:column;
-    /* item间不允许有空格 */
-    grid-auto-flow:row dense;
-    grid-auto-flow:column dense;
+```
+
+### min
+
+```css
+div {
+  /*
+  选取参数中最小值返回 
+  用来指定最大值
+   */
+  height: min(100px, 50%);
 }
-~~~
-## 对齐
-~~~css
-.grid-box {
-    /* 网格在content中的对齐方式 */
-    justify-content:stretch;
-    align-content:stretch;
-    place-content:align justify;
-    /* item在网格中的对齐方式 */
-    justify-items:stretch;
-    align-items:stretch;
-    place-items:align justify;
+```
+
+### max
+
+```css
+div {
+  /*
+  选取参数中最大值返回 
+  用来指定最小值
+   */
+  height: max(100px, 50%);
 }
-~~~
->- `stretch`
->- `start`
->- `center`
->- `end`
-- `content`独有的
->- `space-between`
->- `space-evenly`
->- `space-around`
-# 2. grid-item
-## 指定
-~~~css
-.grid-items {
-    grid-row-start:1;
-    grid-row-end:2;
-    grid-row:1/2;
-    grid-column-start:2/span 2;
-    grid-column-end:2;
-    grid-column:1/2;
-    grid-area:a;
-}
-~~~
->- `number`
->- `[lineName]`
->- `span`，默认是1
-## 对齐
-~~~css
-/* 用来覆盖grid-box上的place-items */
-.grid-items {
-    justify-self:stretch;
-    align-self:stretch;
-    place-self:align justify;
-}
-~~~
+```

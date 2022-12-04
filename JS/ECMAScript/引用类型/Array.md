@@ -2,7 +2,7 @@
 
 ## 静态方法
 
-- `from(iterable)`
+- from
 
 ## 实例属性
 
@@ -12,24 +12,24 @@
 
 ### 返回的不是数组
 
-#### `includes(item[, fromIndex])`
+#### includes
 
-#### `entries()`
+#### entries
 
-#### `every(callback)`
+#### every
 
-#### `reduce((prev,current) => { return value }, initialValue)`
+#### reduce
 
-#### `indexOf(item, [fromIndex])`
+#### indexOf
 
 ### 返回新数组
 
-#### `flat(int)`
+#### flat
 
-#### `flatMap(callback)`
+#### flatMap
 
-#### `concat(arr[, arr, ...])`
+#### concat
 
 ### 返回原数组
 
-#### `copyWithin(target[, start[, end]])`
+#### copyWithin
