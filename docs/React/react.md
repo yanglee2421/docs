@@ -2,6 +2,14 @@
 
 ## memo
 
+- 默认情况下，父组件函数执行时，其子组件也会重新执行
+- 被 React.memo 返回的高阶组件仅在自身 props 和 state 发生变化时执行
+
+```jsx
+const App = () => <></>;
+export default React.memo(App);
+```
+
 ## forwardRef
 
 1. ref 不属于 props，不能直接转发
@@ -12,17 +20,12 @@
 const MyComp = React.forwardRef((props, ref) => {
   return <div ref={ref}></div>;
 });
-function App() {
-  // myCompRef.current的值为上面的div
-  const myCompRef = useRef(null);
-  return <MyComp ref={myCompRef}></MyComp>;
-}
 const MyComp02 = React.forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
     func: () => {},
     message: "要外传的信息",
   }));
-  return <div></div>;
+  return <></>;
 });
 ```
 
@@ -35,7 +38,7 @@ const MyComp = React.lazy(() => import("./MyComp"));
 export default () => {
   return (
     <React.Suspense fallback={<p>MyComp未加载时显示这段文字</p>}>
-      <MyComp></MyComp>
+      <MyComp />
     </React.Suspense>
   );
 };

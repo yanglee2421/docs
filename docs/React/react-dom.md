@@ -5,7 +5,8 @@
 - 把 ReactNode 挂载到真实 dom 上
 
 ```jsx
-ReactDom.createRoot(document.querySelector("#root")).render(<App></App>);
+const dom = document.querySelector("#root");
+ReactDom.createRoot(dom).render(<App />);
 ```
 
 ## Portals
