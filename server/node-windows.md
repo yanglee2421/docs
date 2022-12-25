@@ -14,6 +14,7 @@ const service = new Service({
   name: "node-server",
   script: "./main.js",
   description: "说明文字",
+  abortOnError: true,
   nodeOptions: [],
 });
 service.on("install", () => {
