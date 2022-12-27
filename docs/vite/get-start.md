@@ -1,21 +1,58 @@
 # 开始
 
+## 安装
+
 ```powershell
-npm create vite@latest viteApp
+yarn add -D vite
+# 快速搭建一个项目
+npm create vite@latest vite-app
+yarn create vite vite-app
 ```
 
-# css 预处理器
+## 命令
 
-```js
+```powershell
+vite#启动开发服务器
+vite build#打包项目（入口文件是index.html，main.ts需要在script[type=module]引入）
+vite preview#启动预览服务器，运行打包后的项目
+```
+
+## 路径别名
+
+```ts
+// vite.config.ts
 import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-export default defineConfig((commond, mode) => {
+import path from "path";
+export default defineConfig(({ command, mode }) => {
   return {
-    plugins: [vue()],
+    // 路径别名
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
+  };
+});
+```
+
+## CSS 预处理器
+
+```ts
+import { defineConfig } from "vite";
+import path from "path";
+export default defineConfig(({ command, mode }) => {
+  return {
+    // 路径别名
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
+    // css预处理器
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "@/assets/index.scss" as *;`,
+          additionalData: `@use "@/assets/css/index.scss" as *;`,
         },
       },
     },
@@ -23,55 +60,40 @@ export default defineConfig((commond, mode) => {
 });
 ```
 
-# 路径别名
-
-- 安装 node 类型依赖
-
-```powershell
-npm i -D @types/node
-```
-
-- 配置别名
-
-```js
-/**
- * vite.config.ts
- */
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import path from "path";
-export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-});
-```
-
-- 允许使用 es6 的模块化来导入`path`模块以解决报红
-
-```json
-/**
- * tsconfig.node.json
- */
-{
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true
-  }
-}
-```
-
-# 不同环境（模式）下的的 vite 配置
+## 代理
 
 ```ts
 import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import path from "path";
-export default defineConfig((command, mode) => {
+export default defineConfig(({ command, mode }) => {
   return {
-    plugins: [vue()],
+    // 开发服务器
+    server: {
+      port: 5173,
+      proxy: {
+        "/dev": {
+          target: "http://192.168.1.4",
+          rewrite: (path) => path.replace(/^\/dev/, ""),
+          changeOrigin: true,
+          ws: true,
+        },
+      },
+    },
+  };
+});
+```
+
+## 子应用
+
+- 作为子路由应用时
+
+```ts
+import { defineConfig } from "vite";
+export default defineConfig(({ command, mode }) => {
+  return {
+    base: "/react/",
+    build: {
+      outDir: "react-app",
+    },
   };
 });
 ```
