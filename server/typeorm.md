@@ -56,6 +56,42 @@ export class User {
 
 ### 实体管理器的 CURD
 
-```ts
+- 增
 
+```ts
+const user = new User();
+user.user_name = "";
+user.user_pwd = "";
+db.manager.save([user]).then((res) => {});
 ```
+
+- 查
+
+```ts
+db.manager.findOne(User, {
+  where: [
+    {
+      user_age: MoreThanOrEqual(18),
+      user_name: Like("张%"),
+    },
+  ],
+});
+db.manager.find(User, {
+  where: [{ user_age: MoreThanOrEqual(18) }, { user_name: Like("%张%") }],
+  skip: 20 * 0,
+  take: 20,
+  order: {
+    user_age: "desc", //倒序
+    id: "asc",
+  },
+});
+```
+
+- 删
+
+```ts
+const id = "";
+db.manager.remove(id);
+```
+
+- 改
