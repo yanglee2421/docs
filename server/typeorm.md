@@ -56,7 +56,7 @@ export class User {
 
 ### 实体管理器的 CURD
 
-- 增
+- 增&改
 
 ```ts
 const user = new User();
@@ -90,8 +90,21 @@ db.manager.find(User, {
 - 删
 
 ```ts
-const id = "";
-db.manager.remove(id);
+db.manager.remove(User, user);
 ```
 
 - 改
+
+```ts
+/**
+ * 通过user_id查找条目，并修改它的user_name和user_pwd
+ */
+db.manager.update(User, { user_id: "" }, { user_name: "张三", user_pwd: "" });
+```
+
+- 增
+
+```ts
+const user = new User();
+db.manager.insert(User, [user]);
+```
