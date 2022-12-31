@@ -32,16 +32,16 @@ database.initialize().then((db) => {
 ```ts
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-@Entity("Table_User")
-export class User {
+@Entity({ name: "Table_User" })
+export default class User {
   @PrimaryGeneratedColumn("uuid")
   user_id: string;
 
-  @Column({ type: "text" })
-  user_name: string;
+  @Column({ type: "text", length: 20 })
+  user_name: string = "default user_name";
 
-  @Column({ type: "text" })
-  user_pwd: string;
+  @Column({ type: "text", length: 16 })
+  user_pwd: string = "default user_pwd";
 }
 ```
 
