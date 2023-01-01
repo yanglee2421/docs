@@ -1,14 +1,14 @@
 # grid 布局
 
-## 网格容器
+## grid-box
 
 - grid-template
   1. grid-template-rows
   2. grid-template-columns
+- grip-template-areas
+- grid-auto-flow
 - grid-auto-rows
 - grid-auto-columns
-- grid-auto-flow
-- grip-template-areas
 - gap
   1. rows-gap
   2. columns-gap
@@ -81,7 +81,7 @@
 ```css
 .grid-item {
   grid-row: 1 / span 2;
-  grid-column: span 1 / 3;
+  grid-column: span 1 / -1;
 }
 ```
 

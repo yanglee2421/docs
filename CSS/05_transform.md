@@ -15,10 +15,24 @@
 
 ## transform-style
 
-- 用于设置平面转换还是 3D 转换
+- 用于设置子元素的转换 2D 还是 3D
 - 可选值
   1. flat
   2. preserve-3d
+
+## perspective
+
+- 3D 下摄像机的距离
+
+```css
+.trans-box {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+.trans-box > .trans-item {
+  transform: translateZ(100px);
+}
+```
 
 ## transform
 
