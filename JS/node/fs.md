@@ -1,11 +1,17 @@
 # fs 模块（需要引入）
 
+## 引入
+
+```js
+const fs = require("node:fs/promise");
+```
+
 ## 简单文件
 
 - 写
 
 ```js
-fs.writeFile(path, data, options, callback);
+fs.writeFile(path, data, options).then().catch();
 /**
  * path：文件路径
  * data：要写入的数据
@@ -18,18 +24,19 @@ fs.writeFile(path, data, options, callback);
  *  -flag：写入方式对象（默认值："w"）
  *   --"w"：覆写
  *   --"a"：追写
- * callback(err:null|Error)
  */
 ```
 
 - 读
 
 ```js
-fs.readFile(path, options, callback);
+fs.readFile(path, options)
+  .then((data) => {})
+  .catch((err) => {});
 /**
  * path：文件路径
  * options：配置对象（可选）
- * callback(err, data)
+ *
  *  -err：错误信息
  *  -data：文件内容（默认类型是一个Buffer）
  */

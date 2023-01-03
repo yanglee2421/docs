@@ -1,0 +1,70 @@
+# ESM 模块化
+
+## default
+
+```js
+// mod/index.js
+export default {};
+// use.js
+import mod from "./mod";
+```
+
+## 具名
+
+```js
+// mod.js
+export const a = "a";
+export const b = 222;
+// use.js
+import { a, b } from "./mod.js";
+```
+
+## 联合使用
+
+```js
+// mod.js
+export const a = "a";
+export default [];
+// use.js
+import arr, { a } from "./mod.js";
+Array.isArray(arr); //true
+a === "a"; //true
+```
+
+## import.meta
+
+```js
+// mod.js
+import.meta.xxx = "xxx";
+export default [];
+// use.js
+import mod from "./mod.js";
+import.meta.xxx === "xxx"; //true
+```
+
+## 统一导入
+
+```js
+// mod.js
+export const a = "a";
+export const b = 222;
+export default Array;
+// use.js
+import * as mod from "./mod.js";
+mod.a === "a"; //true
+mod.b === 222; //true
+mod.default instanceof Array; //true
+```
+
+## 动态引入
+
+```js
+// mod.js
+export const a = "a";
+export default [];
+// use.js
+import("./mod.js").then((mod) => {
+  mod.a === "a"; //true
+  Array.isArray(mod.default); //true
+});
+```
