@@ -97,3 +97,22 @@ export default defineConfig(({ command, mode }) => {
   };
 });
 ```
+
+## glob 导入
+
+```ts
+const mod = import.meta.glob(
+  [
+    // 从以下路径导入
+    "./mod/**/*.ts",
+    // 排除以下
+    "!./mod/**/exclude.js",
+  ],
+  {
+    // 是否渴望静态导入
+    eager: true,
+    // 具名导入
+    import: "default",
+  }
+);
+```

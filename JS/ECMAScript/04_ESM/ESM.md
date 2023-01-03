@@ -31,17 +31,6 @@ Array.isArray(arr); //true
 a === "a"; //true
 ```
 
-## import.meta
-
-```js
-// mod.js
-import.meta.xxx = "xxx";
-export default [];
-// use.js
-import mod from "./mod.js";
-import.meta.xxx === "xxx"; //true
-```
-
 ## 统一导入
 
 ```js
@@ -54,6 +43,29 @@ import * as mod from "./mod.js";
 mod.a === "a"; //true
 mod.b === 222; //true
 mod.default instanceof Array; //true
+```
+
+## 转发
+
+```js
+// mod.js
+export const a = "a";
+export default [];
+// forward.js
+export { default as arr } from "./mod.js";
+// use.js
+import { arr } from "./forward.js";
+```
+
+## import.meta
+
+```js
+// mod.js
+import.meta.xxx = "xxx";
+export default [];
+// use.js
+import mod from "./mod.js";
+import.meta.xxx === "xxx"; //true
 ```
 
 ## 动态引入
