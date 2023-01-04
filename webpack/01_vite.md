@@ -113,6 +113,51 @@ const mod = import.meta.glob(
     eager: true,
     // 具名导入
     import: "default",
+    // 导入为string
+    as: "raw",
   }
 );
+```
+
+## 静态资源
+
+### 直接引入
+
+```ts
+import imgUrl from "./img.png";
+document.getElementById("hero-img").src = imgUrl;
+```
+
+### 作为 url 引入
+
+```ts
+import workletURL from "./worklet.js?url";
+const worker = new Worker(workletURL);
+```
+
+### 作为字符串引入
+
+```ts
+import shaderString from "./shader.glsl?raw";
+```
+
+### Worker
+
+```ts
+// 作为构造器引入
+import MyWorker from "./work?worker";
+const myWorker = new MyWorker();
+// 引入可共享的worker构造器
+import MyWorker from "./work?sharedworker";
+const myWorker = new MyWorker();
+// 内联为 base64 字符串
+import MyWorker from "./worker?worker&inline";
+const myWorker = new MyWorker();
+```
+
+### URL 类引入
+
+```ts
+const imgUrl = new URL("./img.png", import.meta.url);
+document.getElementById("hero-img").src = imgUrl.href;
 ```
