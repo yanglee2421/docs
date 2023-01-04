@@ -1,4 +1,4 @@
-# React 对象上的 API
+# React
 
 ## memo
 
@@ -35,13 +35,13 @@ const MyComp02 = React.forwardRef((props, ref) => {
 
 ```jsx
 const MyComp = React.lazy(() => import("./MyComp"));
-export default () => {
+function App() {
   return (
     <React.Suspense fallback={<p>MyComp未加载时显示这段文字</p>}>
       <MyComp />
     </React.Suspense>
   );
-};
+}
 ```
 
 ## createContext
@@ -60,7 +60,7 @@ function App() {
   const [data, setData] = useState({ message: "一些数据" });
   return (
     <Context.Provider value={{ data, setData }}>
-      <Children></Children>
+      <Children />
     </Context.Provider>
   );
 }
