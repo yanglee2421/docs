@@ -1,4 +1,4 @@
-# React
+# React 顶层 API
 
 ## memo
 
@@ -46,7 +46,7 @@ function App() {
 
 ## createContext
 
-1. 用于祖先向后代传参
+- 用于祖先向后代传参
 
 ```jsx
 /**
@@ -72,4 +72,46 @@ function Children() {
     </Context.Customer>
   );
 }
+```
+
+## Children
+
+### map
+
+- 返回一个数组
+
+```js
+React.Children.map(children, (thisArg) => {});
+```
+
+### forEach
+
+```js
+React.Children.forEach(children, (thisArg) => {});
+```
+
+### count
+
+- 返回节点数
+
+```jsx
+React.Children.count(children);
+```
+
+### only
+
+- 若 children 中只有一个子节点则返回它
+- 若不是则抛出错误
+
+```js
+React.Children.only(children);
+```
+
+### toArray
+
+- 将 children 扁平化展开
+- 返回一个 array
+
+```js
+React.Children.toArray(children);
 ```

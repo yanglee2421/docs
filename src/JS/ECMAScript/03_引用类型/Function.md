@@ -26,3 +26,17 @@
 - 静态 this：this 指向创建它的作用域里的 this
 - 没有 arguments：使用 restProps 替代 arguments
 - 适合作为回调或匿名函数
+
+## 场景
+
+### Function
+
+- 类中的方法
+- 作为 React 组件
+- 作为方法存在
+
+### Arrow Function
+
+- 作为回调 or 匿名函数
+- 仅一句 return
+- 作为一个值（函数）存在
