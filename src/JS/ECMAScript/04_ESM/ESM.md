@@ -31,12 +31,13 @@ Array.isArray(arr); //true
 a === "a"; //true
 ```
 
-## 统一导入
+## 统一导出导入
 
 ```js
 // mod.js
-export const a = "a";
-export const b = 222;
+const a = "a";
+const b = 222;
+export { a, b };
 export default Array;
 // use.js
 import * as mod from "./mod.js";
