@@ -86,21 +86,49 @@ const MyComp02 = React.forwardRef((props, ref) => {
 6. 屏幕绘制
 7. Effect 栈
 
+## useDeferredValue
+
+```tsx
+const [state, setState] = useState("state");
+// state 更新结束后，deferredState 才开始更新
+const deferredState = useDeferredValue(state);
+```
+
 ## useTransition
 
-```jsx
-const App = () => {
-  const [value1, setValue1] = useState(0);
-  const [value2, setValue2] = useState(0);
+```tsx
+function PageDemo() {
+  // 这个更新不卡
+  const [value, setValue] = useState("");
+  // 这个更新很卡
+  const [count, setCount] = useState(0);
   const [isPending, startTransition] = useTransition();
-  const clickHandler = () => {
-    setValue1(1);
+  const handler = (e) => {
+    setValue((prev) => e.target.value.trim());
     startTransition(() => {
-      setValue2(1);
+      /**
+       * isPending 指示这次更新的状态
+       * 这次更新开始时，isPending 变为 true
+       * 这次更新结束时，isPending 变为 false
+       */
+      setCount((prev) => {
+        const begin = Date.now();
+        while (true) {
+          if (Date.now() - begin > 1000) {
+            break;
+          }
+        }
+        return prev + 1;
+      });
     });
   };
-  return <></>;
-};
+  return (
+    <>
+      <input value={value} onChange={handler} />
+      {isPending && <Spin spinning={isPending} />}
+    </>
+  );
+}
 ```
 
 ## useId
