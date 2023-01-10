@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 export default defineConfig({
+  base: "/docs/",
   lang: "zh-CN",
   title: "Yang_Lee",
   head: [["link", { rel: "shortcut icon", href: "/vite.svg" }]],
