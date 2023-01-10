@@ -1,19 +1,93 @@
-# 随记
-## Hyper Text Markup Language
-- 事件属性（`on`开头的）的值会被识别为JavaScript文本
-~~~html
-<span onclick="console.log('测试文本')">点我一下</span>
-~~~
-- `a`标签`href`属性的值也可以被识别为JavaScript文本
-~~~html
-<a href="javascript:console.log('测试文本');"></a>
-~~~
-***
-## Cascading Style Sheets
-***
-## JavaScript
-- 在JS文件第一行声明`"use strict"`，即开启严格模式，严格模式下的JS运行效率更好
-- 使用了模块化语句的JS会自动开启严格模式
-***
-## Vue2-3
-- 在Vue2使用`v-on`绑定的事件默认是组件的自定义事件，需要使用原生事件时使用`.native`修饰符，且不需要在`emits`配置项中声明自定义事件
+# Yang_Lee Docs
+
+- 此文档基于 vitepress，在此记录 vitepress 的基本使用
+
+## 搭建
+
+- 依次在 powershell 命令行执行如下：
+
+```powershell
+# desktop/
+mkdir my-docs
+cd my-docs
+# desktop/my-docs
+yarn init -y
+yarn add -D vitepress vue
+mkdir docs
+cd docs
+# desktop/my-docs/docs
+new-item index.md
+cd ../
+# desktop/my-docs
+yarn vitepress dev docs
+```
+
+## 配置文件
+
+```powershell
+# desktop/my-docs/docs
+cd .vitepress
+# desktop/my-docs/docs/.vitepress
+new-item config.ts
+```
+
+```ts
+// config.ts
+import { defineConfig } from "vitepress";
+export default defineConfig({
+  base: "/docs/",
+  lang: "zh-CN",
+  title: "Yang_Lee",
+  head: [["link", { rel: "shortcut icon", href: "vite.svg" }]],
+  themeConfig: {
+    logo: "vite.svg",
+    siteTitle: "Yang_Lee",
+    socialLinks: [
+      { icon: "github", link: "https://github.com/Swz0321" },
+      { icon: "twitter", link: "..." },
+      // You can also add custom icons by passing SVG as string:
+      {
+        icon: {
+          svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Dribbble</title><path d="M12...6.38z"/></svg>',
+        },
+        link: "...",
+      },
+    ],
+    nav: [
+      { text: "nav-1", link: "" },
+      {
+        text: "nav-2",
+        items: [
+          { text: "nav-2-1", items: [] },
+          { text: "Item B", link: "/item-2" },
+        ],
+      },
+    ],
+    sidebar: {
+      "/": [
+        {
+          text: "TypeScript",
+          collapsible: true,
+          items: [{ text: "类型", link: "" }],
+        },
+      ],
+      "/data/": [
+        {
+          text: "开始",
+          collapsible: true,
+          items: [
+            {
+              text: "Scss",
+              items: [{ text: "注释", items: [] }],
+            },
+          ],
+        },
+      ],
+    },
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Yang_Lee：xtcff082421@gmail.com",
+    },
+  },
+});
+```
