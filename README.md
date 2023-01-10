@@ -1,6 +1,7 @@
 # Yang_Lee Docs
 
-- 此文档基于 vitepress，在此记录 vitepress 的基本使用
+[Yang_Lee Docs](https://swz082421.gitee.io/docs)
+基于 vitepress，后者基本用法如下
 
 ## set up
 
