@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { sidebar_es } from "./sidebar";
 export default defineConfig({
   base: "/docs/",
   lang: "zh-CN",
@@ -20,7 +21,7 @@ export default defineConfig({
     ],
     nav: [
       { text: "Database", link: "/data/数据库.md" },
-      { text: "ECMAScript", link: "/src/JS/ECMAScript/00_概念/事件回流.md" },
+      { text: "ECMAScript", link: "/ECMAScript/index.md" },
       {
         text: "JavaScript",
         items: [
@@ -88,25 +89,7 @@ export default defineConfig({
           ],
         },
       ],
-      "/ECMAScript/": [
-        {
-          text: "ECMAScript",
-          items: [
-            {
-              text: "Event Loop",
-              link: "/src/JS/ECMAScript/00_概念/事件回流.md",
-            },
-            {
-              text: "引用类型",
-              link: "/src/JS/ECMAScript/03_引用类型/AbortContrller.md",
-            },
-            {
-              text: "ES",
-              link: "/ES2015-2022.md",
-            },
-          ],
-        },
-      ],
+      ...sidebar_es,
     },
     footer: {
       message: "Released under the MIT License.",

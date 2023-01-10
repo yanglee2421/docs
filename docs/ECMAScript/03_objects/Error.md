@@ -15,7 +15,7 @@ const err = new Error("错误信息");
 err.message; //"错误信息"
 ```
 
-## try...catch...finally
+## try...catch...finally & throw
 
 ```js
 try {
