@@ -1,1 +1,0 @@
-import{_ as e,c as i,o,a}from"./app.a780e610.js";const f=JSON.parse('{"title":"输出","description":"","frontmatter":{},"headers":[],"relativePath":"JS/console.md"}'),c={name:"JS/console.md"},d=a("",6),t=[d];function r(l,n,s,_,h,m){return o(),i("div",null,t)}const p=e(c,[["render",r]]);export{f as __pageData,p as default};

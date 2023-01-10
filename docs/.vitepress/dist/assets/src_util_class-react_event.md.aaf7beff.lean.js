@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as l}from"./app.a780e610.js";const A=JSON.parse('{"title":"事件绑定","description":"","frontmatter":{},"headers":[],"relativePath":"src/util/class-react/event.md"}'),p={name:"src/util/class-react/event.md"},o=l("",5),e=[o];function t(c,r,y,F,D,C){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{A as __pageData,d as default};

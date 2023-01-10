@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as l}from"./app.a780e610.js";const u=JSON.parse('{"title":"包含","description":"","frontmatter":{},"headers":[],"relativePath":"src/types/00_配置.md"}'),o={name:"src/types/00_配置.md"},p=l("",11),t=[p];function e(c,r,D,y,F,i){return a(),n("div",null,t)}const A=s(o,[["render",e]]);export{u as __pageData,A as default};

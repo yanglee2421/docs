@@ -1,1 +1,0 @@
-import{_ as e,c as o,o as c,a as d}from"./app.a780e610.js";const v=JSON.parse('{"title":"3. 事件绑定","description":"","frontmatter":{},"headers":[],"relativePath":"Vue3/directives.md"}'),i={name:"Vue3/directives.md"},l=d("",8),a=[l];function t(r,n,s,u,_,h){return c(),o("div",null,a)}const f=e(i,[["render",t]]);export{v as __pageData,f as default};

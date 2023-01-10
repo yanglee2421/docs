@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as n,a as l}from"./app.a780e610.js";const _=JSON.parse('{"title":"1. scoped","description":"","frontmatter":{},"headers":[],"relativePath":"Vue3/style.md"}'),e={name:"Vue3/style.md"},p=l("",5),o=[p];function t(c,r,i,y,d,D){return n(),a("div",null,o)}const C=s(e,[["render",t]]);export{_ as __pageData,C as default};
