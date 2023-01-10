@@ -2,7 +2,7 @@
 
 - 此文档基于 vitepress，在此记录 vitepress 的基本使用
 
-## 搭建
+## set up
 
 - 依次在 powershell 命令行执行如下：
 
@@ -22,7 +22,15 @@ cd ../
 yarn vitepress dev docs
 ```
 
-## 配置文件
+## cli
+
+```powershell
+yarn vitepress dev docs
+yarn vitepress build docs
+yarn vitepress preview docs
+```
+
+## config
 
 ```powershell
 # desktop/my-docs/docs
