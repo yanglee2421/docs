@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as o}from"./app.a780e610.js";const d=JSON.parse('{"title":"useStore","description":"","frontmatter":{},"headers":[],"relativePath":"src/hook/react-redux/00_useStore.md"}'),e={name:"src/hook/react-redux/00_useStore.md"},t=o("",2),l=[t];function p(r,c,y,F,i,D){return n(),a("div",null,l)}const u=s(e,[["render",p]]);export{d as __pageData,u as default};

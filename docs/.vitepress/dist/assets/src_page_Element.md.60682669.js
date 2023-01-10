@@ -1,0 +1,34 @@
+import{_ as s,c as n,o as a,a as l}from"./app.a780e610.js";const C=JSON.parse('{"title":"HTMLElemnt","description":"","frontmatter":{},"headers":[],"relativePath":"src/page/Element.md"}'),e={name:"src/page/Element.md"},o=l(`<h1 id="htmlelemnt" tabindex="-1">HTMLElemnt <a class="header-anchor" href="#htmlelemnt" aria-hidden="true">#</a></h1><ul><li>这种玩意儿能不写就不写</li><li>MVVM 框架万岁！！！</li></ul><div class="language-js"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki material-palenight"><code><span class="line"><span style="color:#676E95;font-style:italic;">/**</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * 开始时，target 是空的</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> */</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 1.获取，第一个含有 else 类的元素中的，第一个含有 oldEment 类的元素</span></span>
+<span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> oldElement </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> document</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">querySelector</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">.else &gt; .oldElement</span><span style="color:#89DDFF;">&quot;</span><span style="color:#A6ACCD;">)</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 2.将 oldElement 移动到 target 中</span></span>
+<span class="line"><span style="color:#A6ACCD;">target</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">appendCildren</span><span style="color:#A6ACCD;">(oldElement)</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 3.创建一个新元素 neoElement</span></span>
+<span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> neoElement </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> document</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">createElement</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">div</span><span style="color:#89DDFF;">&quot;</span><span style="color:#A6ACCD;">)</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 4.将 target 中的 oldElement 换成 neoElement</span></span>
+<span class="line"><span style="color:#A6ACCD;">target</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">replaceChild</span><span style="color:#A6ACCD;">(oldElement</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> neoElement)</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 5.获取所有 id 为 oldBrother 的元素，取第一个</span></span>
+<span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> oldBrother </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> document</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">querySelectors</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">#oldBrother</span><span style="color:#89DDFF;">&quot;</span><span style="color:#A6ACCD;">)[</span><span style="color:#F78C6C;">0</span><span style="color:#A6ACCD;">]</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 6.将 oldBrother 插入到 target 中，处于 neoElement 之前</span></span>
+<span class="line"><span style="color:#A6ACCD;">target</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">insertBefore</span><span style="color:#A6ACCD;">(oldBrother</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> neoElement)</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 7.移除 target 中的 neoElement</span></span>
+<span class="line"><span style="color:#A6ACCD;">target</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">removeChild</span><span style="color:#A6ACCD;">(neoElement)</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">/**</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * 8.检查 target 中是否含有neoElement</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * 返回一个布尔</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> */</span></span>
+<span class="line"><span style="color:#A6ACCD;">target</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">contains</span><span style="color:#A6ACCD;">(neoElement)</span><span style="color:#89DDFF;">;</span><span style="color:#A6ACCD;"> </span><span style="color:#676E95;font-style:italic;">//false</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">/**</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * 9.检查 target 中是否含有子元素</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * 返回一个布尔</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> */</span></span>
+<span class="line"><span style="color:#A6ACCD;">target</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">hasChildNodes</span><span style="color:#A6ACCD;">()</span><span style="color:#89DDFF;">;</span><span style="color:#A6ACCD;"> </span><span style="color:#676E95;font-style:italic;">//true</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">/**</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * 10.深层克隆一个 target</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * true：深层</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> * false：浅层</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"> */</span></span>
+<span class="line"><span style="color:#A6ACCD;">target</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">cloneNode</span><span style="color:#A6ACCD;">(</span><span style="color:#FF9CAC;">true</span><span style="color:#A6ACCD;">)</span><span style="color:#89DDFF;">;</span><span style="color:#A6ACCD;"> </span><span style="color:#676E95;font-style:italic;">//</span></span>
+<span class="line"></span></code></pre></div>`,3),t=[o];function p(c,r,y,i,D,A){return a(),n("div",null,t)}const E=s(e,[["render",p]]);export{C as __pageData,E as default};

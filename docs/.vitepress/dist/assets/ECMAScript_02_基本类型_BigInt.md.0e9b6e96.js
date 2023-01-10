@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as r}from"./app.a780e610.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ECMAScript/02_基本类型/BigInt.md"}'),a={name:"ECMAScript/02_基本类型/BigInt.md"};function n(c,o,s,i,p,_){return r(),e("div")}const f=t(a,[["render",n]]);export{m as __pageData,f as default};

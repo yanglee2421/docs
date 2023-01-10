@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.a780e610.js";const d=JSON.parse('{"title":"属性绑定","description":"","frontmatter":{},"headers":[],"relativePath":"Vue3/01_属性绑定.md"}'),o={name:"Vue3/01_属性绑定.md"},t=l("",3),p=[t];function e(c,r,D,F,y,i){return n(),a("div",null,p)}const u=s(o,[["render",e]]);export{d as __pageData,u as default};

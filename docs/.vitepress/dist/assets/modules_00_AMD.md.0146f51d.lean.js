@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as o}from"./app.a780e610.js";const d=JSON.parse('{"title":"AMD 模块化","description":"","frontmatter":{},"headers":[],"relativePath":"modules/00_AMD.md"}'),l={name:"modules/00_AMD.md"},e=o("",2),p=[e];function t(c,r,D,i,_,y){return n(),a("div",null,p)}const A=s(l,[["render",t]]);export{d as __pageData,A as default};

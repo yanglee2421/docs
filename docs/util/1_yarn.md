@@ -43,7 +43,7 @@ yarn global remove
 
 ## 查看
 
-```yarn
+```powershell
 yarn list package --depth 0
 yarn global list --depth 0
 ```

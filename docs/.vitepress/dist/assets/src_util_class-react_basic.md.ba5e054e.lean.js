@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,a as l}from"./app.a780e610.js";const i=JSON.parse('{"title":"state","description":"","frontmatter":{},"headers":[],"relativePath":"src/util/class-react/basic.md"}'),p={name:"src/util/class-react/basic.md"},o=l("",19),e=[o];function t(c,r,y,F,D,C){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{i as __pageData,d as default};

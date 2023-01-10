@@ -1,0 +1,1 @@
+import{_ as t,c as e,o}from"./app.a780e610.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ECMAScript/03_引用类型/Blob.md"}'),r={name:"ECMAScript/03_引用类型/Blob.md"};function a(c,s,n,p,_,i){return o(),e("div")}const m=t(r,[["render",a]]);export{l as __pageData,m as default};
