@@ -1,13 +1,22 @@
 import { defineConfig } from "vitepress";
-import { sidebar_es } from "./sidebar";
+import { sidebar_es, sidebar_Preprocessor } from "./sidebar";
 export default defineConfig({
+  // 打包
   base: "/docs/",
+  outDir: "docs",
+  // html
   lang: "zh-CN",
   title: "Yang_Lee",
   head: [["link", { rel: "shortcut icon", href: "vite.svg" }]],
+  // 页面
+  lastUpdated: true,
   themeConfig: {
     logo: "vite.svg",
     siteTitle: "Yang_Lee",
+    editLink: {
+      pattern: "https://github.com/swz0321/docs/:path",
+    },
+    // lastUpdatedText: "",
     socialLinks: [
       { icon: "github", link: "https://github.com/Swz0321" },
       // { icon: "twitter", link: "..." },
@@ -20,8 +29,8 @@ export default defineConfig({
       },
     ],
     nav: [
-      { text: "Database", link: "/data/数据库.md" },
-      { text: "ECMAScript", link: "/ECMAScript/index.md" },
+      { text: "ECMAScript", link: "/src/ECMAScript/index.md" },
+      { text: "Preprocessor", link: "/src/Preprocessor/index.md" },
       {
         text: "JavaScript",
         items: [
@@ -32,54 +41,7 @@ export default defineConfig({
       },
     ],
     sidebar: {
-      "/": [
-        {
-          text: "TypeScript",
-          collapsible: true,
-          items: [
-            {
-              text: "类型",
-              link: "/docs/model/00_demo.md",
-            },
-            {
-              text: "接口",
-              link: "/docs/model/00_demo.md",
-            },
-            {
-              text: "泛型",
-              link: "/docs/model/00_demo.md",
-            },
-            {
-              text: "类",
-              link: "/docs/model/00_demo.md",
-            },
-            {
-              text: "声明文件",
-              link: "/docs/model/00_demo.md",
-            },
-            {
-              text: "装饰器（beta）",
-              link: "/docs/model/00_demo.md",
-            },
-          ],
-        },
-        {
-          text: "Scss",
-          collapsible: true,
-          items: [
-            { text: "注释", link: "" },
-            { text: "变量", link: "" },
-            { text: "嵌套", link: "" },
-            { text: "指令", link: "" },
-            { text: "内置方法", link: "" },
-          ],
-        },
-        {
-          text: "Less",
-          collapsible: true,
-          items: [{ text: "xxx", link: "" }],
-        },
-      ],
+      // "/": ,
       "/data/": [
         {
           text: "开始",
@@ -90,6 +52,7 @@ export default defineConfig({
         },
       ],
       ...sidebar_es,
+      ...sidebar_Preprocessor,
     },
     footer: {
       message: "Released under the MIT License.",

@@ -1,50 +1,20 @@
-# Get Start
-
-## 这是一个文档 By Yang_Lee
-
-## ECMAScript
-
-### 基本类型
-
-- undefined
-- null
-- boolean
-- string
-- number
-- bigInt
-- symbol
-
-### 引用类型
-
-- object
-- array
-- Date
-- Reg
-
-## TypeScript
-
-### 类型
-
-### 接口
-
-### 泛型
-
-### 命名空间
-
-### 类
-
-### 装饰器
-
-## React 18
-
-## Vue
-
-## Express
-
-### REST Api
-
-### jsonwebtoken
-
-### typeOrm
-
-### node-windows
+---
+layout: home
+hero:
+  name: Yang_Lee Docs
+  text: JavaScript开发者文档
+  tagline: 从前端开始，不只是前端...
+  #   image:
+  #     src: /logo.png
+  #     alt: VitePress
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /src/ECMAScript/
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/vuejs/vitepress
+    - theme: alt
+      text: View on Gitee
+      link: https://github.com/vuejs/vitepress
+---

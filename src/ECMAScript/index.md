@@ -4,8 +4,7 @@
 
 1.  声明命令
 
-    > - `let`
-    > - `const`
+转到 [let、const](/src/ECMAScript/02_primitiveValue/00_undefined.md)
 
 2.  解构赋值
 
@@ -41,12 +40,16 @@
     }
     ```
 
-4.  箭头函数
+4.  Arrow Function
+    - Arrow Function 中 this 指向声明它的作用域的 this
+    - Arrow Function 没有 arguments 参数
 
-- 静态`this`
-- `return`简写
+```js
+const aFun = (params) => value;
+```
 
-## 5. 类
+5. 类
+   - 不再建议直接使用 Function 作为构造器
 
 ```js
 Class Person {
@@ -64,63 +67,88 @@ Class Person {
 }
 ```
 
-## 6. 简写
+6.  简写
 
-- 对象简写
-- 对象属性名的`[key]`写法
-- 方法简写
+    - 对象简写
+    - 对象属性名的`[key]`写法
+    - 方法简写
 
-## 7. 扩展运算符
+```js
+const a = "A";
+const obj1 = { a };
+const obj2 = { [a]: "a" };
+const obj3 = { fun() {} };
+```
 
-- 数组
-- 对象
-- `Set`
-- 参数
-- iterator 接口
+7.  扩展运算符
 
-## 8. 模块化
+    - 数组
+    - 对象
+    - `Set`
+    - rest 参数
+    - iterator 接口
+
+8.  模块化
 
 - import
-  - `import obj from "./file"`
-  - `import { default as name } from ""./file`
-  - `import * as obj from "./file"`
-  - `import { obj, fun } from "./file"`
-- export
-  - `export default {}`
-  - `export const obj = {} export function fun(){}`
-  - `export { obj, fun }`
-- 中转
-  - `export * as Name from "./file"`
-  - `export { default as Name } from "./file"`
 
-## 9. `Symbol`
+```js
+// default 导入
+import obj from "./file"
+// 导入别名
+import { default as name } from ""./file
+// 统一导入
+import * as obj from "./file"
+// 具名导入
+import { obj, fun } from "./file"
+```
+
+- export
+
+```js
+// 默认导出
+export default {}
+// 具名导出
+export const obj = {} export function fun(){}
+// 统一导出
+export { obj, fun }
+```
+
+- 转发
+
+```js
+export * as Name from "./file";
+export { default as Name } from "./file";
+```
+
+9. `Symbol`
 
 - 独一无二的值
-- 不能被`new`
+- Primitive Value 不需要 `new`
 
-### 9-1 创建`Symbol`
+- 9-1 创建`Symbol`
 
 > - `Symbol(Description)`
 > - `Symbol.for(Description)`
 > - `Symbol.keyFor(sym)`
 
-### 9-2 `Symbol.prototype`
+- 9-2 `Symbol.prototype`
 
 > - `description`，只读
 > - `toString()`
 > - `valueOf()`
 
-### 9-3 `Symbol`
+- 9-3 `Symbol`
 
 > - `asyncIterator`，异步迭代器方法
 > - `iterator`，迭代器方法
 > - `toStringTag`，字符串
 
-## 10. `Set、Map`
+10. `Set、Map`
 
 - `Set`，不允许重复的，没有索引（索引就是值本身）的`Array`
 
-### 10-1 `Set.prototype`
+- 10-1 `Set.prototype`
 
 > - `size`
 > - `add(value)`，返回`this`
@@ -139,7 +167,7 @@ const set2 = new Set("123456");
 
 - `Map`，允许除`String`和`Symbol`以外的类型作键名的`Object`
 
-### 10-2 `Map.protytype`
+- 10-2 `Map.protytype`
 
 > - `size`
 > - `set(key, value)`，返回`this`
@@ -152,57 +180,58 @@ const set2 = new Set("123456");
 > - `values()`，返回所有`value`的迭代对象
 > - `entries()`，返回所有`[key,value]`的迭代对象
 
-## 11. 参数
+11. 参数
 
 - 默认值
 - 剩余参数
 
-## 12. `promise`
+12. `promise`
 
 > - then()
 > - catch()
 
-# ES2016
+## ES2016
 
-## 1. 求幂运算符
+1.  求幂运算符
 
 ```js
 2 ** 3; //8
 9 ** 3; //243
 ```
 
-## 2. `Array.prototype`
+2.  `Array.prototype`
 
 > - `includes(item, fromIndex)`，判断`Array`中是否含有`item`
 
-# ES2017
+## ES2017
 
-## 1. `String.prototype`
+1.  `String.prototype`
 
 > - `padStart(targetLength, padString)`，在`this`的开头填充`padString`（默认为` `）直到`this.length === targetLength`，多的会被截掉
 > - `padEnd(targetLength, padString)`，基本同上，在尾部填充
 
-## 2. `Object.prototype`
+2.  `Object.prototype`
 
 > - `keys()`
 > - `values()`
 > - `entries()`
 
-## 3. `Object`
+3.  `Object`
 
 > - `getOwnPropertyDescriptors(obj, "prop")`，返回对`obj`的`prop`属性的描述（可写、可枚举、可删除...）
 
-## 4. `promise`
+4.  `promise`
 
 > - `async/await`
 
-# ES2018
+## ES2018
 
-## 1. 正则
+1. 正则
 
 - dotAll
 
 ```js
+// 开启 s 标志后，. 可以匹配所有字符
 const reg = /./s;
 ```
 
@@ -226,7 +255,7 @@ reg.exec(str).groups; //{ number: '123', chinese: '一二三' }
 str.match(reg).groups; //{ number: '123', chinese: '一二三' }
 ```
 
-- 先行断言 or 后行断言
+- 先行断言 & 后行断言
 
 ```js
 //先行
@@ -243,10 +272,7 @@ const reg4 = /1(?<!2)/; //仅匹配1，但1的前面不能是2
 const reg = /\p{sc=Han}/u; //匹配所有汉字
 ```
 
-## 2. `Promise`
-
-> - `finally(callback)`
-> - `for await of`
+2. promise 上的`finally(callback)`以及异步迭代器
 
 ```js
 const retPro = (par) => {
@@ -267,65 +293,48 @@ for await (let i of iterator) {
 }
 ```
 
-# ES2019
+## ES2019
 
-## 1. `try...catch...finally`
-
-- `catch()`的参数不再是强制的
+1. `try...catch...finally`
 
 ```js
 try {
   console.log("try执行了");
   throw new Error("错误信息");
+  // catch 可省略参数
 } catch {
   console.log("catch执行了");
+  // 新增 finally
 } finally {
   console.log("全部执行完了");
 }
 ```
 
-## 2. `function.prototype`
+2.  function 上的 `toString()`
+3.  Object 上的 `fromEntries(arr)`
+4.  array 上的 `flat(int)` & `flatMap(callback)`
+5.  string 的 `trimStart()` & `trimEnd()`
 
-> - `toString()`
+## ES2020
 
-## 3. `Object`
-
-> - `fromEntries(arr)`
-
-## 4. `Array.prototype`
-
-> - `flat(int)`，数组降维，`int`（1）是要降的层数，可指定为`infinity`
-> - `flatMap(callback)`，先`map(callback)`，再`flat(1)`
-
-## 5. `String.prototype`
-
-> - `trimStart()`or`trimLeft()`
-> - `trimEnd()`or`trimRight()`
-
-# ES2020
-
-## 1. `String.prototype`
-
-> - `matchAll(reg)`，`reg`必须开启`g`标志
->
-> ```powershell
-> [ '1', '2', '3', '4' ]
-> ---上是match的结果，下是matchAll的结果---
-> [ '1', index: 0, input: '1一2二3三4四', groups: undefined ]
-> [ '2', index: 2, input: '1一2二3三4四', groups: undefined ]
-> [ '3', index: 4, input: '1一2二3三4四', groups: undefined ]
-> [ '4', index: 6, input: '1一2二3三4四', groups: undefined ]
-> ```
-
-## 2. 动态`import`
+1.  string 的`matchAll(reg)`（需要 g 标志）
 
 ```js
-import("./file").then((res) => {
-  console.log(res);
-});
+[ '1', '2', '3', '4' ]
+// ---上是match的结果，下是matchAll的结果---
+[ '1', index: 0, input: '1一2二3三4四', groups: undefined ]
+[ '2', index: 2, input: '1一2二3三4四', groups: undefined ]
+[ '3', index: 4, input: '1一2二3三4四', groups: undefined ]
+[ '4', index: 6, input: '1一2二3三4四', groups: undefined ]
 ```
 
-## 3. `BigInt`
+2.  动态引入
+
+```js
+import("./file").then((mod) => mod);
+```
+
+3.  BigInt
 
 - 安全整数的范围 -2^53-1 ~ 2^53-1
 
@@ -337,27 +346,46 @@ let num2 = BigInt(1);
 //不能直接与number进行+-*/运算
 ```
 
-## 4. `Promise`
+4.  Promise
 
-> - `allSettled(iterable)`，全部得出结果时，返回结果构成的`array`
+```js
+// 全部得出结果时，返回结果构成的 array
+Promise.allSettled([new Promise(() => {})]);
+```
 
-## 5. `globalThis`
+5.  globalThis
 
-## 6. `?.`
+```js
+globalThis === window;
+// browser true|node false
+globalThis === global;
+// browser false|node true
+```
 
-> - `obj?.property`
-> - `fun?.()`
+6.  可选链操作符
 
-## 7. `??`
+```js
+const a = obj?.prop;
+obj?.fun?.();
+arr?.[1];
+```
 
-# ES2021
+7. 非空运算符`??`
 
-## `String.prototype`
+```js
+// 仅 undefined 和 null 视为falsey
+const a = "" ?? 1;
+// returns ""
+```
+
+## ES2021
+
+1. `String.prototype`
 
 > - `replaceAll(oldStr, newStr)`
 > - `any(iterable)`，有一个成功就返回成功实例|`race(iterable)`，返回第一个的状态，无论成败
 
-## 逻辑赋值运算符
+2. 逻辑赋值运算符
 
 ```js
 x &&= y; // 相当于 x && (x = y)，x为真值就x=y
@@ -365,7 +393,7 @@ x ||= y; // 相当于 x || (x = y)，x为假值就x=y
 x ??= y; // 相当于 x ?? (x = y)，x为null或undefined就x=y
 ```
 
-## 数字分隔符
+3. 数字分隔符
 
 ```js
 const a = 1_000;
@@ -374,10 +402,12 @@ const b = 1_000_000;
 console.log(b); // 1000000
 ```
 
-# ES2022
+## ES2022
 
-## 1. 顶层`await`
+1.  顶层`await`
 
-## 2. `Array.prototype`
+2.  string 和 array 的`at(index)`方法
 
-- `at(index)`，允许负值
+```
+
+```
