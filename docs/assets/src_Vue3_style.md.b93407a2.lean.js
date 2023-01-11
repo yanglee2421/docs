@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.919704f2.js";const _=JSON.parse('{"title":"1. scoped","description":"","frontmatter":{},"headers":[],"relativePath":"src/Vue3/style.md","lastUpdated":1673425398000}'),e={name:"src/Vue3/style.md"},p=l("",5),o=[p];function t(c,r,i,d,y,D){return n(),a("div",null,o)}const C=s(e,[["render",t]]);export{_ as __pageData,C as default};

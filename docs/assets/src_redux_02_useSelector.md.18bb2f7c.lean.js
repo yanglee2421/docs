@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./app.919704f2.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"src/redux/02_useSelector.md","lastUpdated":1673417300000}'),s={name:"src/redux/02_useSelector.md"};function a(c,o,n,_,d,p){return r(),t("div")}const u=e(s,[["render",a]]);export{i as __pageData,u as default};
