@@ -13,8 +13,8 @@ hero:
       link: /src/ECMAScript/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/swz0321/docs/
     - theme: alt
-      text: View on Gitee
-      link: https://github.com/vuejs/vitepress
+      text: 个人简历
+      link: /test/resume.md
 ---
