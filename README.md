@@ -100,3 +100,62 @@ export default defineConfig({
   },
 });
 ```
+
+## 表情符
+
+:tada:
+:100:
+
+## 卡片
+
+::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger STOP
+Danger zone, do not proceed
+:::
+
+::: details Click me to view the code
+
+```js
+console.log("Hello, VitePress!");
+```
+
+:::
+
+## Badge
+
+### Title <Badge type="info" text="default" />
+
+### Title <Badge type="tip" text="^1.9.0" />
+
+### Title <Badge type="warning" text="beta" />
+
+### Title <Badge type="danger" text="caution" />
+
+## code
+
+::: code-group
+
+```ts [use.ts]
+import {} from "vite"; // [!code --]
+import {} from "vite"; // [!code ++]
+import {} from "vite"; // [!code warning]
+import {} from "vite"; // [!code error]
+import {} from "vite"; // [!code focus]
+import {} from "vite"; // [!code hl]
+```
+
+```ts{1,3-4}
+export const a = "a";
+export { a };
+export default {};
+export function useHook() {}
+```
+
+:::

@@ -1,62 +1,58 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, DefaultTheme } from "vitepress";
 import { sidebar_es, sidebar_Preprocessor } from "./sidebar";
 export default defineConfig({
   // 打包
   base: "/docs/",
   outDir: "docs",
+  srcDir: "src",
   // html
   lang: "zh-CN",
   title: "Yang_Lee",
-  head: [["link", { rel: "shortcut icon", href: "vite.svg" }]],
+  head: [["link", { rel: "shortcut icon", href: "/vite.svg" }]],
   // 页面
   lastUpdated: true,
+  // markdown
+  markdown: { lineNumbers: true },
   themeConfig: {
-    logo: "vite.svg",
+    logo: "/vite.svg",
     siteTitle: "Yang_Lee",
     editLink: {
-      pattern: "https://github.com/swz0321/docs/:path",
+      pattern: "https://github.com/swz0321/docs/blob/master/:path",
     },
-    // lastUpdatedText: "",
-    socialLinks: [
-      { icon: "github", link: "https://github.com/Swz0321" },
-      // { icon: "twitter", link: "..." },
-      // You can also add custom icons by passing SVG as string:
-      {
-        icon: {
-          svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Dribbble</title><path d="M12...6.38z"/></svg>',
-        },
-        link: "...",
-      },
-    ],
-    nav: [
-      { text: "ECMAScript", link: "/src/ECMAScript/index.md" },
-      { text: "Preprocessor", link: "/src/Preprocessor/index.md" },
-      {
-        text: "JavaScript",
-        items: [
-          { text: "ECMAScript", link: "/item-1", items: [] },
-          { text: "Item B", link: "/item-2" },
-          { text: "Item C", link: "/item-3" },
-        ],
-      },
-    ],
-    sidebar: {
-      // "/": ,
-      "/data/": [
-        {
-          text: "开始",
-          items: [
-            { text: "简要", link: "/data/数据库.md" },
-            { text: "typeORM", link: "/data/typeorm.md" },
-          ],
-        },
-      ],
-      ...sidebar_es,
-      ...sidebar_Preprocessor,
-    },
-    footer: {
-      message: "Released under the MIT License.",
-      copyright: "Yang_Lee：xtcff082421@gmail.com",
-    },
+    socialLinks: [{ icon: "github", link: "https://github.com/Swz0321" }],
+    nav: nav(),
+    sidebar: sidebar(),
+    footer: footer(),
   },
 });
+// 右上角导航
+function nav(): DefaultTheme.NavItem[] {
+  return [
+    { text: "ECMAScript", link: "/ECMAScript/index.md" },
+    { text: "Preprocessor", link: "/Preprocessor/index.md" },
+    { text: "React", items: [] },
+    { text: "Vue", items: [] },
+    {
+      text: "Node",
+      items: [
+        { text: "express", link: "/item-3" },
+        { text: "nestjs", link: "/item-3" },
+        { text: "threejs", link: "/item-3" },
+      ],
+    },
+    { text: "HTML & CSS", link: "" },
+  ];
+}
+// 左边栏
+function sidebar(): DefaultTheme.Sidebar {
+  return {
+    ...sidebar_es,
+    ...sidebar_Preprocessor,
+  };
+}
+function footer(): DefaultTheme.Footer {
+  return {
+    message: "Released under the MIT License.",
+    copyright: "Yang_Lee：xtcff082421@gmail.com",
+  };
+}
