@@ -1,32 +1,37 @@
-# 初始化
+# Git
 
-- `git init`
-- `git init 文件夹`
-- `git clone 网址`
+## init & clone
 
-# 配置
+```powershell
+git init
+git init 文件夹
+git clone 仓库地址
+```
 
-- `git config --global user.name "用户名"`
-- `git config --global user.email "邮箱"`
-- `git config --global http.proxy http://127.0.0.1:7890`
-- `git config --list`
+## config
 
-# 暂存
+```powershell
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+git config --global http.proxy http://127.0.0.1:7890
+git config --list
+```
 
-- `git add .`
+## add & commit
 
-# 提交
+```powershell
+git add .
+git commit -m'提交信息'
+```
 
-- `git commit -m'提交信息'`
-
-# 删除
+## rm
 
 - `rm 仅删除工作区-不暂存.txt`
 - `git rm 删除工作区-且暂存.txt`
 - `git rm -f 强制删除工作区-且暂存.txt`
 - `git rm -cached 删除暂存区-且暂存.txt`
 
-# 状态
+## status、log & diff
 
 - `git status`
 - `git log`
@@ -34,15 +39,14 @@
 - `git diff`
 - `git diff 提交ID`
 
-# 重置
+## reset
 
 - `git checkout .`
 - `git reset`
 - `git reset --hard 提交ID`
 
-# 分支
+## branch & checkout
 
-- `git branch`
 - `git branch -r`
 - `git branch -a`
 - `git branch -vv`
@@ -53,14 +57,13 @@
 - `git checkout 分支`
 - `git checkout -b 分支`
 
-# 合并
+## merge
 
 - `git merge 指定分支`
 - `git merge --abbort`
 
-# 同步
+## remote、fetch & pull
 
-- `git remote`
 - `git remote -v`
 - `git remote add 源 地址`
 - `git remote remove 源`
@@ -74,7 +77,7 @@
 - `git push --set-upstream 源 分支`
 - `git push 源 -d 分支`
 
-# SSH
+## SSH
 
 - `ssh-keygen -t ed25519 -f filename`
 - `ssh`

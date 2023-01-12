@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./app.8e0b0815.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"es/02_primitive/05_BigInt.md","lastUpdated":null}'),r={name:"es/02_primitive/05_BigInt.md"};function n(s,i,o,_,c,p){return a(),e("div")}const l=t(r,[["render",n]]);export{m as __pageData,l as default};

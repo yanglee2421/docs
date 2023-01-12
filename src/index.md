@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /ECMAScript/
+      link: /es/
     - theme: alt
       text: View on GitHub
       link: https://github.com/swz0321/docs/

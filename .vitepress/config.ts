@@ -8,7 +8,7 @@ export default defineConfig({
   // html
   lang: "zh-CN",
   title: "Yang_Lee",
-  head: [["link", { rel: "shortcut icon", href: "/vite.svg" }]],
+  head: [["link", { rel: "shortcut icon", href: "/docs/vite.svg" }]],
   // 页面
   lastUpdated: true,
   // markdown
@@ -17,7 +17,7 @@ export default defineConfig({
     logo: "/vite.svg",
     siteTitle: "Yang_Lee",
     editLink: {
-      pattern: "https://github.com/swz0321/docs/blob/master/:path",
+      pattern: "https://github.com/yanglee2421/docs/blob/master/:path",
     },
     socialLinks: [{ icon: "github", link: "https://github.com/Swz0321" }],
     nav: nav(),
@@ -28,10 +28,16 @@ export default defineConfig({
 // 右上角导航
 function nav(): DefaultTheme.NavItem[] {
   return [
-    { text: "ECMAScript", link: "/ECMAScript/index.md" },
-    { text: "Preprocessor", link: "/Preprocessor/index.md" },
-    { text: "React", items: [] },
-    { text: "Vue", items: [] },
+    { text: "ECMAScript", link: "/es/index.md" },
+    { text: "Preprocessor", link: "/preprocessor/ts/01_type.md" },
+    {
+      text: "Framework",
+      items: [
+        { text: "React", link: "/es/index.md" },
+        { text: "Vue", link: "/es/index.md" },
+      ],
+    },
+
     {
       text: "Node",
       items: [
@@ -52,7 +58,7 @@ function sidebar(): DefaultTheme.Sidebar {
 }
 function footer(): DefaultTheme.Footer {
   return {
-    message: "Released under the MIT License.",
-    copyright: "Yang_Lee：xtcff082421@gmail.com",
+    message: "Yang_Lee的博客",
+    copyright: "联系作者：yanglee2421@outlook.com",
   };
 }

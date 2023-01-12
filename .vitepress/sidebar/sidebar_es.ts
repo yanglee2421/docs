@@ -3,38 +3,38 @@ namespace Type {
   export type nav_es = DefaultTheme.Sidebar;
 }
 export const sidebar_es: Type.nav_es = {
-  "/ECMAScript/": [
+  "/es/": [
     {
       text: "Primitive Value",
       collapsible: true,
       items: [
         {
           text: "undefined",
-          link: "/ECMAScript/02_primitiveValue/00_undefined.md",
+          link: "/es/02_primitive/00_undefined.md",
         },
         {
           text: "null",
-          link: "/ECMAScript/02_primitiveValue/01_null.md",
+          link: "/es/02_primitive/01_null.md",
         },
         {
           text: "boolean",
-          link: "/ECMAScript/02_primitiveValue/02_Boolean.md",
+          link: "/es/02_primitive/02_Boolean.md",
         },
         {
           text: "string",
-          link: "/ECMAScript/02_primitiveValue/03_String.md",
+          link: "/es/02_primitive/03_String.md",
         },
         {
           text: "number",
-          link: "/ECMAScript/02_primitiveValue/04_Number.md",
+          link: "/es/02_primitive/04_Number.md",
         },
         {
           text: "bigint",
-          link: "/ECMAScript/02_primitiveValue/05_BigInt.md",
+          link: "/es/02_primitive/05_BigInt.md",
         },
         {
           text: "symbol",
-          link: "/ECMAScript/02_primitiveValue/06_Symbol.md",
+          link: "/es/02_primitive/06_Symbol.md",
         },
       ],
     },
@@ -44,35 +44,35 @@ export const sidebar_es: Type.nav_es = {
       items: [
         {
           text: "AbortContrller",
-          link: "/ECMAScript/03_objects/AbortContrller.md",
+          link: "/es/03_objects/AbortContrller.md",
         },
-        { text: "Array", link: "/ECMAScript/03_objects/Array.md" },
-        { text: "Blob", link: "/ECMAScript/03_objects/Blob.md" },
-        { text: "Error", link: "/ECMAScript/03_objects/Error.md" },
-        { text: "Function", link: "/ECMAScript/03_objects/Function.md" },
-        { text: "Map", link: "/ECMAScript/03_objects/Map.md" },
-        { text: "Object", link: "/ECMAScript/03_objects/Object.md" },
-        { text: "Promise", link: "/ECMAScript/03_objects/Promise.md" },
-        { text: "RegExp", link: "/ECMAScript/03_objects/RegExp.md" },
-        { text: "Set", link: "/ECMAScript/03_objects/Set.md" },
+        { text: "Array", link: "/es/03_objects/Array.md" },
+        { text: "Blob", link: "/es/03_objects/Blob.md" },
+        { text: "Error", link: "/es/03_objects/Error.md" },
+        { text: "Function", link: "/es/03_objects/Function.md" },
+        { text: "Map", link: "/es/03_objects/Map.md" },
+        { text: "Object", link: "/es/03_objects/Object.md" },
+        { text: "Promise", link: "/es/03_objects/Promise.md" },
+        { text: "RegExp", link: "/es/03_objects/RegExp.md" },
+        { text: "Set", link: "/es/03_objects/Set.md" },
       ],
     },
     {
       text: "ESM",
       collapsible: true,
       items: [
-        { text: "AMD", link: "/ECMAScript/04_ESM/00_AMD.md" },
-        { text: "CommonJS", link: "/ECMAScript/04_ESM/01_CommonJS.md" },
-        { text: "ESM", link: "/ECMAScript/04_ESM/02_ESM.md" },
+        { text: "AMD", link: "/es/04_ESM/00_AMD.md" },
+        { text: "CommonJS", link: "/es/04_ESM/01_CommonJS.md" },
+        { text: "ESM", link: "/es/04_ESM/02_ESM.md" },
       ],
     },
     {
       text: "globalObject",
       collapsible: true,
       items: [
-        { text: "crypto", link: "/ECMAScript/05_globalObject/crypto.md" },
-        { text: "JSON", link: "/ECMAScript/05_globalObject/JSON.md" },
-        { text: "Math", link: "/ECMAScript/05_globalObject/Math.md" },
+        { text: "crypto", link: "/es/05_globalObject/crypto.md" },
+        { text: "JSON", link: "/es/05_globalObject/JSON.md" },
+        { text: "Math", link: "/es/05_globalObject/Math.md" },
       ],
     },
     {
@@ -81,23 +81,23 @@ export const sidebar_es: Type.nav_es = {
       items: [
         {
           text: "event_loop",
-          link: "/ECMAScript/01_Syntax/00_Event_Loop.md",
+          link: "/es/01_Syntax/00_Event_Loop.md",
         },
         {
           text: "operator",
-          link: "/ECMAScript/01_Syntax/01_operator.md",
+          link: "/es/01_Syntax/01_operator.md",
         },
         {
           text: "decisions",
-          link: "/ECMAScript/01_Syntax/02_decisions.md",
+          link: "/es/01_Syntax/02_decisions.md",
         },
         {
           text: "loop",
-          link: "/ECMAScript/01_Syntax/03_loop.md",
+          link: "/es/01_Syntax/03_loop.md",
         },
         {
           text: "class",
-          link: "/ECMAScript/01_Syntax/04_class.md",
+          link: "/es/01_Syntax/04_class.md",
         },
       ],
     },
