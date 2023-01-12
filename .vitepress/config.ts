@@ -33,7 +33,7 @@ function nav(): DefaultTheme.NavItem[] {
     {
       text: "Framework",
       items: [
-        { text: "React", link: "/es/index.md" },
+        { text: "React", link: "/framework/react/react/00_react-dom.md" },
         { text: "Vue", link: "/es/index.md" },
       ],
     },
@@ -54,6 +54,53 @@ function sidebar(): DefaultTheme.Sidebar {
   return {
     ...sidebar_es,
     ...sidebar_Preprocessor,
+    "/framework/react/": [
+      {
+        text: "react",
+        collapsible: true,
+        items: [
+          {
+            text: "react-dom",
+            link: "/framework/react/react/00_react-dom.md",
+          },
+          { text: "react", link: "/framework/react/react/01_react.md" },
+          { text: "hook", link: "/framework/react/react/02_hook.md" },
+        ],
+      },
+      {
+        text: "react-router",
+        collapsible: true,
+        items: [
+          {
+            text: "routes",
+            link: "/framework/react/react-router/00_routes.md",
+          },
+          {
+            text: "data router",
+            link: "/framework/react/react-router/01_datarouter.md",
+          },
+          {
+            text: "hook",
+            link: "/framework/react/react-router/02_hook.md",
+          },
+          {
+            text: "component",
+            link: "/framework/react/react-router/03_component.md",
+          },
+        ],
+      },
+      {
+        text: "react-redux",
+        collapsible: true,
+        items: [
+          {
+            text: "store",
+            link: "/framework/react/react-redux/02_store.md",
+          },
+          { text: "hook", link: "/framework/react/react-redux/03_hook.md" },
+        ],
+      },
+    ],
   };
 }
 function footer(): DefaultTheme.Footer {

@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as n,a as e}from"./app.8e0b0815.js";const u=JSON.parse('{"title":"1. scoped","description":"","frontmatter":{},"headers":[],"relativePath":"framework/vue3/style.md","lastUpdated":null}'),l={name:"framework/vue3/style.md"},p=e("",5),o=[p];function t(c,r,i,d,y,D){return n(),a("div",null,o)}const b=s(l,[["render",t]]);export{u as __pageData,b as default};
