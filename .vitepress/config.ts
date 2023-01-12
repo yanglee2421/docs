@@ -1,5 +1,4 @@
 import { defineConfig, DefaultTheme } from "vitepress";
-import { sidebar_es, sidebar_Preprocessor } from "./sidebar";
 export default defineConfig({
   // 打包
   base: "/docs/",
@@ -17,7 +16,7 @@ export default defineConfig({
     logo: "/vite.svg",
     siteTitle: "Yang_Lee",
     editLink: {
-      pattern: "https://github.com/yanglee2421/docs/blob/master/:path",
+      pattern: "https://github.com/yanglee2421/docs/blob/master/src/:path",
     },
     socialLinks: [{ icon: "github", link: "https://github.com/Swz0321" }],
     nav: nav(),
@@ -29,7 +28,7 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: "ECMAScript", link: "/es/index.md" },
-    { text: "Preprocessor", link: "/preprocessor/ts/01_type.md" },
+    { text: "Preprocessor", link: "/pps/ts/01_type.md" },
     {
       text: "Framework",
       items: [
@@ -52,8 +51,161 @@ function nav(): DefaultTheme.NavItem[] {
 // 左边栏
 function sidebar(): DefaultTheme.Sidebar {
   return {
-    ...sidebar_es,
-    ...sidebar_Preprocessor,
+    "/es/": [
+      {
+        text: "Primitive Value",
+        collapsible: true,
+        items: [
+          {
+            text: "undefined",
+            link: "/es/02_primitive/00_undefined.md",
+          },
+          {
+            text: "null",
+            link: "/es/02_primitive/01_null.md",
+          },
+          {
+            text: "boolean",
+            link: "/es/02_primitive/02_Boolean.md",
+          },
+          {
+            text: "string",
+            link: "/es/02_primitive/03_String.md",
+          },
+          {
+            text: "number",
+            link: "/es/02_primitive/04_Number.md",
+          },
+          {
+            text: "bigint",
+            link: "/es/02_primitive/05_BigInt.md",
+          },
+          {
+            text: "symbol",
+            link: "/es/02_primitive/06_Symbol.md",
+          },
+        ],
+      },
+      {
+        text: "Objects",
+        collapsible: true,
+        items: [
+          {
+            text: "AbortContrller",
+            link: "/es/03_objects/AbortContrller.md",
+          },
+          { text: "Array", link: "/es/03_objects/Array.md" },
+          { text: "Blob", link: "/es/03_objects/Blob.md" },
+          { text: "Error", link: "/es/03_objects/Error.md" },
+          { text: "Function", link: "/es/03_objects/Function.md" },
+          { text: "Map", link: "/es/03_objects/Map.md" },
+          { text: "Object", link: "/es/03_objects/Object.md" },
+          { text: "Promise", link: "/es/03_objects/Promise.md" },
+          { text: "RegExp", link: "/es/03_objects/RegExp.md" },
+          { text: "Set", link: "/es/03_objects/Set.md" },
+        ],
+      },
+      {
+        text: "ESM",
+        collapsible: true,
+        items: [
+          { text: "AMD", link: "/es/04_ESM/00_AMD.md" },
+          { text: "CommonJS", link: "/es/04_ESM/01_CommonJS.md" },
+          { text: "ESM", link: "/es/04_ESM/02_ESM.md" },
+        ],
+      },
+      {
+        text: "globalObject",
+        collapsible: true,
+        items: [
+          { text: "crypto", link: "/es/05_globalObject/crypto.md" },
+          { text: "JSON", link: "/es/05_globalObject/JSON.md" },
+          { text: "Math", link: "/es/05_globalObject/Math.md" },
+        ],
+      },
+      {
+        text: "Syntax",
+        collapsible: true,
+        items: [
+          {
+            text: "event_loop",
+            link: "/es/01_Syntax/00_Event_Loop.md",
+          },
+          {
+            text: "operator",
+            link: "/es/01_Syntax/01_operator.md",
+          },
+          {
+            text: "decisions",
+            link: "/es/01_Syntax/02_decisions.md",
+          },
+          {
+            text: "loop",
+            link: "/es/01_Syntax/03_loop.md",
+          },
+          {
+            text: "class",
+            link: "/es/01_Syntax/04_class.md",
+          },
+        ],
+      },
+    ],
+    "/pps/": [
+      {
+        text: "TypeScript",
+        collapsible: true,
+        items: [
+          {
+            text: "类型",
+            link: "/pps/ts/01_type.md",
+          },
+          {
+            text: "接口",
+            link: "/pps/ts/02_interface.md",
+          },
+          {
+            text: "泛型",
+            link: "/pps/ts/04_generic.md",
+          },
+          {
+            text: "内置泛型",
+            link: "/pps/ts/07_generic2.md",
+          },
+          {
+            text: "类",
+            link: "/pps/ts/03_class.md",
+          },
+          {
+            text: "声明文件",
+            link: "/pps/ts/06_declare.md",
+          },
+          {
+            text: "装饰器（beta）",
+            link: "/pps/ts/05_decorator.md",
+          },
+          {
+            text: "配置文件",
+            link: "/pps/ts/00_config.md",
+          },
+        ],
+      },
+      {
+        text: "Scss",
+        collapsible: true,
+        items: [
+          { text: "注释", link: "/pps/scss/00_comment.md" },
+          { text: "变量", link: "/pps/scss/01_variable.md" },
+          { text: "嵌套", link: "/pps/scss/02_nesting.md" },
+          { text: "指令", link: "/pps/scss/03_command.md" },
+          { text: "内置方法", link: "/pps/scss/04_function.md" },
+        ],
+      },
+      {
+        text: "Less",
+        collapsible: true,
+        items: [{ text: "xxx", link: "" }],
+      },
+    ],
     "/framework/react/": [
       {
         text: "react",
