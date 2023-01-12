@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.6af4ca14.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"h-c/c/伪元素.md","lastUpdated":null}'),c={name:"h-c/c/伪元素.md"};function r(o,s,n,_,p,d){return a(),t("div")}const m=e(c,[["render",r]]);export{l as __pageData,m as default};

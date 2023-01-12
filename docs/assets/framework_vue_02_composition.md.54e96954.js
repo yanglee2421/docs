@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./app.6af4ca14.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"framework/vue/02_composition.md","lastUpdated":null}'),a={name:"framework/vue/02_composition.md"};function r(s,n,c,i,p,_){return o(),t("div")}const f=e(a,[["render",r]]);export{d as __pageData,f as default};

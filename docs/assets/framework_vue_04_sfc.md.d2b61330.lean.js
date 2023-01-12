@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as n,a as l}from"./app.6af4ca14.js";const b=JSON.parse('{"title":"1. scoped","description":"","frontmatter":{},"headers":[],"relativePath":"framework/vue/04_sfc.md","lastUpdated":null}'),e={name:"framework/vue/04_sfc.md"},p=l("",5),o=[p];function c(r,t,i,d,D,y){return n(),a("div",null,o)}const u=s(e,[["render",c]]);export{b as __pageData,u as default};

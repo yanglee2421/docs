@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as e}from"./app.81697543.js";const F=JSON.parse('{"title":"AMD 模块化","description":"","frontmatter":{},"headers":[],"relativePath":"es/04_esm/00_AMD.md","lastUpdated":1673524129000}'),l={name:"es/04_esm/00_AMD.md"},o=e("",2),p=[o];function t(r,c,i,D,d,_){return n(),a("div",null,p)}const A=s(l,[["render",t]]);export{F as __pageData,A as default};

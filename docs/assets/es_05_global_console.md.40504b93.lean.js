@@ -1,1 +1,0 @@
-import{_ as e,c as a,o,a as i}from"./app.6af4ca14.js";const p=JSON.parse('{"title":"输出","description":"","frontmatter":{},"headers":[],"relativePath":"es/05_global/console.md","lastUpdated":1673524129000}'),d={name:"es/05_global/console.md"},c=i("",6),t=[c];function l(r,n,s,_,h,m){return o(),a("div",null,t)}const f=e(d,[["render",l]]);export{p as __pageData,f as default};
