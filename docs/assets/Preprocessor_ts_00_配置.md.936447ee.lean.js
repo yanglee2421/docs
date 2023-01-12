@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,a as l}from"./app.24c4ed12.js";const b=JSON.parse('{"title":"包含","description":"","frontmatter":{},"headers":[],"relativePath":"Preprocessor/ts/00_配置.md","lastUpdated":1673425398000}'),p={name:"Preprocessor/ts/00_配置.md"},o=l("",11),e=[o];function t(c,r,i,D,y,F){return a(),n("div",null,e)}const C=s(p,[["render",t]]);export{b as __pageData,C as default};

@@ -4,7 +4,7 @@
 
 1.  声明命令
 
-转到 [let、const](/src/ECMAScript/02_primitiveValue/00_undefined.md)
+转到 [let、const](/ECMAScript/02_primitiveValue/00_undefined.md)
 
 2.  解构赋值
 

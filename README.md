@@ -1,6 +1,6 @@
 # Yang_Lee Docs
 
-[Yang_Lee Docs](https://swz0321.github.io/docs)
+[Yang_Lee Docs](https://yanglee2421.github.io/docs/)
 基于 vitepress，后者基本用法如下
 
 ## set up

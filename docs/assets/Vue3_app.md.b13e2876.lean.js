@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as e}from"./app.24c4ed12.js";const C=JSON.parse('{"title":"createApp()","description":"","frontmatter":{},"headers":[],"relativePath":"Vue3/app.md","lastUpdated":1673425398000}'),l={name:"Vue3/app.md"},p=e("",22),o=[p];function r(c,i,t,d,u,h){return n(),a("div",null,o)}const D=s(l,[["render",r]]);export{C as __pageData,D as default};
