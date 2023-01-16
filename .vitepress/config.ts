@@ -34,16 +34,13 @@ function nav(): DefaultTheme.NavItem[] {
       items: [
         { text: "React", link: "/framework/react/react/00_react-dom.md" },
         { text: "Vue", link: "/es/index.md" },
+        { text: "threejs", link: "/framework/threejs/index.md" },
       ],
     },
-
+    { text: "Node", link: "/node/nodejs/01_path.md" },
     {
-      text: "Node",
-      items: [
-        { text: "express", link: "/item-3" },
-        { text: "nestjs", link: "/item-3" },
-        { text: "threejs", link: "/item-3" },
-      ],
+      text: "Toolkit",
+      link: "/toolkit/00_git.md",
     },
     { text: "HTML & CSS", link: "" },
   ];
@@ -253,11 +250,60 @@ function sidebar(): DefaultTheme.Sidebar {
         ],
       },
     ],
+    "/node/": [
+      {
+        text: "nodejs",
+        items: [
+          { text: "path", link: "/node/nodejs/01_path.md" },
+          { text: "fs", link: "/node/nodejs/02_fs.md" },
+          { text: "process", link: "/node/nodejs/03_process.md" },
+        ],
+      },
+      {
+        text: "express",
+        items: [
+          { text: "express", link: "/node/express/01_express.md" },
+          {
+            text: "jsonwebtoken",
+            link: "/node/express/02_jsonwebtoken.md",
+          },
+          { text: "typeorm", link: "/node/express/03_typeorm.md" },
+          {
+            text: "node-windows",
+            link: "/node/express/04_node-windows.md",
+          },
+        ],
+      },
+    ],
+    "/toolkit/": [
+      {
+        text: "通用",
+        collapsible: true,
+        items: [
+          { text: "git", link: "/toolkit/00_git.md" },
+          { text: "markdown", link: "/toolkit/01_markdown.md" },
+        ],
+      },
+      {
+        text: "包管理工具",
+        items: [
+          { text: "npm", link: "/toolkit/02_npm.md" },
+          { text: "yarn", link: "/toolkit/03_yarn.md" },
+        ],
+      },
+      {
+        text: "构建工具",
+        items: [
+          { text: "vite", link: "/toolkit/04_vite.md" },
+          { text: "webpack", link: "/toolkit/05_webpack.md" },
+        ],
+      },
+    ],
   };
 }
 function footer(): DefaultTheme.Footer {
   return {
-    message: "Yang_Lee的博客",
+    message: "Designed by Yang_Lee",
     copyright: "联系作者：yanglee2421@outlook.com",
   };
 }

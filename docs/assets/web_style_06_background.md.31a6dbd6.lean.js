@@ -1,0 +1,1 @@
+import{_ as a,c as e,o,a as r}from"./app.c3461bbe.js";const k=JSON.parse('{"title":"background","description":"","frontmatter":{},"headers":[],"relativePath":"web/style/06_background.md","lastUpdated":null}'),t={name:"web/style/06_background.md"},i=r("",2),n=[i];function c(l,d,_,s,u,b){return o(),e("div",null,n)}const p=a(t,[["render",c]]);export{k as __pageData,p as default};

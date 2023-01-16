@@ -13,7 +13,7 @@ hero:
       link: /es/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/swz0321/docs/
+      link: https://github.com/yanglee2421/docs/
     - theme: alt
       text: 个人简历
       link: /resume.md
