@@ -27,6 +27,10 @@ export function App() {
 
 :::
 
+::: tip
+用以实现传统路由的对象写法
+:::
+
 ## useNavigate
 
 ```ts
@@ -38,15 +42,19 @@ navigate(-1, {
 });
 ```
 
+::: tip
+用以获取路由导航器，使用编程式导航
+:::
+
 ## useOutlet
 
 ```tsx
 const outlet = useOutlet();
 ```
 
-::: tip
+::: details
 
-- 获取子路由 JSX
+- 用以获取子路由 JSX
 - Outlet 组件内部调用了这个钩子
 
 :::
@@ -64,11 +72,22 @@ interface location {
 }
 ```
 
+::: details
+
+1. 主要用于获取路由的 state 参数
+2. 这里的 pathname 是完整的 pathname
+
+:::
+
 ## useParams
 
 ```ts
 const params: Record<string, string> = useParams();
 ```
+
+::: details
+用于获取路由的 params 参数
+:::
 
 ## useSearchParams
 
@@ -85,15 +104,14 @@ interface setSearchParams {
 
 ::: details
 
-- 返回一个数组
-- 数组中的第一个元素：[URLSearchParams](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams)实例
-- 数组中的第二个元素：setSearchParams（类似 setXxxState）
+1. 用于获取路由的 query 参数
+2. 返回一个数组
+3. 数组中的第一个元素：[URLSearchParams](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams)实例
+4. 数组中的第二个元素：setSearchParams（类似 setXxxState）
 
 :::
 
 ## useMatches
-
-- 仅能在 data Router 下调用
 
 ```tsx
 const matches = useMatches();
@@ -106,3 +124,7 @@ interface match {
   data: unknown;
 }
 ```
+
+::: danger
+useMatches 仅能在 data Router 下调用
+:::

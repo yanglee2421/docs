@@ -15,6 +15,6 @@ export const routes: RouteObject[] = [
 ];
 ```
 
-::: warning
+::: danger
 handle 仅在 Data Router 下生效
 :::
