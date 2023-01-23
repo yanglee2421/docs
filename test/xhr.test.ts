@@ -17,3 +17,4 @@ xhr.onload = () => {
 // 挂载 body 参数并发送
 const body_xhr = JSON.stringify({});
 xhr.send(body_xhr);
+xhr.abort();
