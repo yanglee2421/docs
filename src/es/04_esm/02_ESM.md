@@ -81,3 +81,18 @@ import("./mod.js").then((mod) => {
   Array.isArray(mod.default); //true
 });
 ```
+
+## 别名
+
+::: code-group
+
+```js [mod.js]
+const a = {};
+export { a as b };
+```
+
+```js [use.js]
+import { b as a } from "mod";
+```
+
+:::
