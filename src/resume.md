@@ -2,10 +2,7 @@
 
 ## 个人信息
 
-| 姓名 |     |
-| :--: | :-: |
-
-###
+[找本人](mailto:yanglee2421@outlook.com)
 
 ## 专业技术
 
@@ -30,3 +27,7 @@
 ## 自我评价
 
 吃苦耐劳:sweat_drops:，接受加班:ok_hand:。
+
+## 踩坑记
+
+- 在`try`中`return Promise.reject()`不会触发`catch`，`await Promise.reject()`会

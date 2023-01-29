@@ -24,6 +24,7 @@ export default defineConfig({
     footer: footer(),
   },
 });
+
 // 右上角导航
 function nav(): DefaultTheme.NavItem[] {
   return [
@@ -33,7 +34,7 @@ function nav(): DefaultTheme.NavItem[] {
       text: "Framework",
       items: [
         { text: "React", link: "/framework/react/react/00_react-dom.md" },
-        { text: "Vue", link: "/es/index.md" },
+        // { text: "Vue", link: "/es/index.md" },
         { text: "threejs", link: "/framework/threejs/index.md" },
       ],
     },
@@ -45,6 +46,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: "HTML & CSS", link: "" },
   ];
 }
+
 // 左边栏
 function sidebar(): DefaultTheme.Sidebar {
   return {
@@ -301,6 +303,8 @@ function sidebar(): DefaultTheme.Sidebar {
     ],
   };
 }
+
+// 底栏
 function footer(): DefaultTheme.Footer {
   return {
     message: "Designed by Yang_Lee",
