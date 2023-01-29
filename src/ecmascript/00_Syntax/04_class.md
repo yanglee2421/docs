@@ -1,21 +1,5 @@
 # Class
 
-## 基本
-
-```js
-class Person {
-  name = "";
-  constructor(age) {
-    // 这个this指向实例
-    this.age = age;
-  }
-  // 这个方法在实例上
-  callAge: () => {};
-  // 这个方法在原型上
-  callName() {}
-}
-```
-
 ## 静态属性
 
 ```js
@@ -36,11 +20,15 @@ class Person {
   constructor(name) {
     this.name = name;
   }
+  call() {}
 }
 class Man extends Person {
   constructor(name, age) {
     super(name);
     this.age = age;
+  }
+  callAge() {
+    super.call();
   }
 }
 ```
@@ -65,3 +53,26 @@ const obj = {
   set name(value) {},
 };
 ```
+
+## Mix-ins
+
+::: code-group
+
+```js [mixin.js]
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
+
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
+```
+
+```js
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
+```
+
+:::
