@@ -1,1 +1,4 @@
-for (const i in { name: "张三", age: 18 });
+class Person {
+  static fun = () => console.log(this);
+}
+Person.fun();

@@ -16,9 +16,9 @@ export default defineConfig({
     logo: "/vite.svg",
     siteTitle: "Yang_Lee",
     editLink: {
-      pattern: "https://github.com/yanglee2421/docs/blob/master/src/:path",
+      pattern: "https://github.com/yanglee2421/docs/blob/master/:path",
     },
-    socialLinks: [{ icon: "github", link: "https://github.com/Swz0321" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/yanglee2421" }],
     nav: nav(),
     sidebar: sidebar(),
     footer: footer(),
@@ -28,60 +28,57 @@ export default defineConfig({
 // 右上角导航
 function nav(): DefaultTheme.NavItem[] {
   return [
-    { text: "ECMAScript", link: "/es/index.md" },
-    { text: "Preprocessor", link: "/pps/ts/01_type.md" },
-    {
+    { text: "ECMAScript", link: "/ecmascript/index.md" },
+    { text: "Preprocessor", link: "/pps/ts/type.md" },
+    { text: "React", link: "/react/react/00_react-dom.md" },
+    { text: "Toolkit", link: "/toolkit/00_git.md" },
+    { text: "Node", link: "/node/nodejs/01_path.md" },
+    { text: "CSS", link: "" },
+    /*   {
       text: "Framework",
       items: [
-        { text: "React", link: "/framework/react/react/00_react-dom.md" },
         // { text: "Vue", link: "/es/index.md" },
-        { text: "threejs", link: "/framework/threejs/index.md" },
+        { text: "threejs", link: "/threejs/index.md" },
       ],
-    },
-    { text: "Node", link: "/node/nodejs/01_path.md" },
-    {
-      text: "Toolkit",
-      link: "/toolkit/00_git.md",
-    },
-    { text: "HTML & CSS", link: "" },
+    }, */
   ];
 }
 
 // 左边栏
 function sidebar(): DefaultTheme.Sidebar {
   return {
-    "/es/": [
+    "/ecmascript/": [
       {
         text: "Primitive Value",
         collapsible: true,
         items: [
           {
             text: "undefined",
-            link: "/es/02_primitive/00_undefined.md",
+            link: "/ecmascript/01_primitive/00_undefined.md",
           },
           {
             text: "null",
-            link: "/es/02_primitive/01_null.md",
+            link: "/ecmascript/01_primitive/01_null.md",
           },
           {
             text: "boolean",
-            link: "/es/02_primitive/02_Boolean.md",
+            link: "/ecmascript/01_primitive/02_Boolean.md",
           },
           {
             text: "string",
-            link: "/es/02_primitive/03_String.md",
+            link: "/ecmascript/01_primitive/03_String.md",
           },
           {
             text: "number",
-            link: "/es/02_primitive/04_Number.md",
+            link: "/ecmascript/01_primitive/04_Number.md",
           },
           {
             text: "bigint",
-            link: "/es/02_primitive/05_BigInt.md",
+            link: "/ecmascript/01_primitive/05_BigInt.md",
           },
           {
             text: "symbol",
-            link: "/es/02_primitive/06_Symbol.md",
+            link: "/ecmascript/01_primitive/06_Symbol.md",
           },
         ],
       },
@@ -91,35 +88,56 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           {
             text: "AbortContrller",
-            link: "/es/03_objects/AbortContrller.md",
+            link: "/ecmascript/02_objects/AbortContrller.md",
           },
-          { text: "Array", link: "/es/03_objects/Array.md" },
-          { text: "Blob", link: "/es/03_objects/Blob.md" },
-          { text: "Error", link: "/es/03_objects/Error.md" },
-          { text: "Function", link: "/es/03_objects/Function.md" },
-          { text: "Map", link: "/es/03_objects/Map.md" },
-          { text: "Object", link: "/es/03_objects/Object.md" },
-          { text: "Promise", link: "/es/03_objects/Promise.md" },
-          { text: "RegExp", link: "/es/03_objects/RegExp.md" },
-          { text: "Set", link: "/es/03_objects/Set.md" },
+          {
+            text: "Array",
+            link: "/ecmascript/02_objects/Array.md",
+          },
+          {
+            text: "Blob",
+            link: "/ecmascript/02_objects/Blob.md",
+          },
+          {
+            text: "Error",
+            link: "/ecmascript/02_objects/Error.md",
+          },
+          {
+            text: "Function",
+            link: "/ecmascript/02_objects/Function.md",
+          },
+          { text: "Map", link: "/ecmascript/02_objects/Map.md" },
+          {
+            text: "Object",
+            link: "/ecmascript/02_objects/Object.md",
+          },
+          {
+            text: "Promise",
+            link: "/ecmascript/02_objects/Promise.md",
+          },
+          {
+            text: "RegExp",
+            link: "/ecmascript/02_objects/RegExp.md",
+          },
+          { text: "Set", link: "/ecmascript/02_objects/Set.md" },
         ],
       },
       {
         text: "ESM",
         collapsible: true,
         items: [
-          { text: "AMD", link: "/es/04_ESM/00_AMD.md" },
-          { text: "CommonJS", link: "/es/04_ESM/01_CommonJS.md" },
-          { text: "ESM", link: "/es/04_ESM/02_ESM.md" },
+          { text: "AMD", link: "/ecmascript/03_esm/AMD.md" },
+          { text: "CommonJS", link: "/ecmascript/03_esm/CommonJS.md" },
+          { text: "ESM", link: "/ecmascript/03_esm/ESM.md" },
         ],
       },
       {
-        text: "globalObject",
+        text: "Global Object",
         collapsible: true,
         items: [
-          { text: "crypto", link: "/es/05_globalObject/crypto.md" },
-          { text: "JSON", link: "/es/05_globalObject/JSON.md" },
-          { text: "Math", link: "/es/05_globalObject/Math.md" },
+          { text: "crypto", link: "/ecmascript/04_global/crypto.md" },
+          { text: "JSON", link: "/ecmascript/04_global/JSON.md" },
+          { text: "Math", link: "/ecmascript/04_global/Math.md" },
         ],
       },
       {
@@ -127,24 +145,24 @@ function sidebar(): DefaultTheme.Sidebar {
         collapsible: true,
         items: [
           {
-            text: "event_loop",
-            link: "/es/01_Syntax/00_Event_Loop.md",
-          },
-          {
-            text: "operator",
-            link: "/es/01_Syntax/01_operator.md",
+            text: "class",
+            link: "/ecmascript/00_Syntax/class.md",
           },
           {
             text: "decisions",
-            link: "/es/01_Syntax/02_decisions.md",
+            link: "/ecmascript/00_Syntax/decisions.md",
+          },
+          {
+            text: "event_loop",
+            link: "/ecmascript/00_Syntax/Event_Loop.md",
           },
           {
             text: "loop",
-            link: "/es/01_Syntax/03_loop.md",
+            link: "/ecmascript/00_Syntax/loop.md",
           },
           {
-            text: "class",
-            link: "/es/01_Syntax/04_class.md",
+            text: "operator",
+            link: "/ecmascript/00_Syntax/operator.md",
           },
         ],
       },
@@ -156,35 +174,35 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           {
             text: "类型",
-            link: "/pps/ts/01_type.md",
+            link: "/pps/ts/type.md",
           },
           {
             text: "接口",
-            link: "/pps/ts/02_interface.md",
+            link: "/pps/ts/interface.md",
           },
           {
             text: "泛型",
-            link: "/pps/ts/04_generic.md",
+            link: "/pps/ts/generic.md",
           },
           {
             text: "内置泛型",
-            link: "/pps/ts/07_generic2.md",
+            link: "/pps/ts/built-in-generic.md",
           },
           {
             text: "类",
-            link: "/pps/ts/03_class.md",
+            link: "/pps/ts/class.md",
           },
           {
             text: "声明文件",
-            link: "/pps/ts/06_declare.md",
+            link: "/pps/ts/declare.md",
           },
           {
             text: "装饰器（beta）",
-            link: "/pps/ts/05_decorator.md",
+            link: "/pps/ts/decorator.md",
           },
           {
             text: "配置文件",
-            link: "/pps/ts/00_config.md",
+            link: "/pps/ts/config.md",
           },
         ],
       },
@@ -205,17 +223,17 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [{ text: "xxx", link: "" }],
       },
     ],
-    "/framework/react/": [
+    "/react/": [
       {
         text: "react",
         collapsible: true,
         items: [
           {
             text: "react-dom",
-            link: "/framework/react/react/00_react-dom.md",
+            link: "/react/react/00_react-dom.md",
           },
-          { text: "react", link: "/framework/react/react/01_react.md" },
-          { text: "hook", link: "/framework/react/react/02_hook.md" },
+          { text: "react", link: "/react/react/01_react.md" },
+          { text: "hook", link: "/react/react/02_hook.md" },
         ],
       },
       {
@@ -224,19 +242,19 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           {
             text: "routes",
-            link: "/framework/react/react-router/00_routes.md",
+            link: "/react/react-router/00_routes.md",
           },
           {
             text: "data router",
-            link: "/framework/react/react-router/01_datarouter.md",
+            link: "/react/react-router/01_datarouter.md",
           },
           {
             text: "hook",
-            link: "/framework/react/react-router/02_hook.md",
+            link: "/react/react-router/02_hook.md",
           },
           {
             text: "component",
-            link: "/framework/react/react-router/03_component.md",
+            link: "/react/react-router/03_component.md",
           },
         ],
       },
@@ -246,9 +264,9 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           {
             text: "store",
-            link: "/framework/react/react-redux/02_store.md",
+            link: "/react/react-redux/02_store.md",
           },
-          { text: "hook", link: "/framework/react/react-redux/03_hook.md" },
+          { text: "hook", link: "/react/react-redux/03_hook.md" },
         ],
       },
     ],

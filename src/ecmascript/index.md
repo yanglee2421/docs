@@ -4,11 +4,11 @@
 
 1.  声明命令
 
-转到 [let、const](/es/02_primitive/00_undefined.md)
+转到 [let、const](/ecmascript/01_primitive/00_undefined.md#声明方式)
 
 2.  解构赋值
 
-转到 [解构赋值](/es/02_primitive/00_undefined.md#解构赋值)
+转到 [解构赋值](/ecmascript/01_primitive/00_undefined.md#解构赋值)
 
 3.  字符串处理
 
