@@ -1,6 +1,9 @@
-class Person {
-  id?: string;
-  constructor() {}
+function resFx(cb: () => void) {
+  const res = { cb };
+  return res;
 }
-const p = new Person();
-p.id;
+function cb() {
+  obj.cb();
+}
+
+const obj = resFx(cb);

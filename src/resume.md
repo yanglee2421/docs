@@ -2,7 +2,9 @@
 
 ## 个人信息
 
-[找本人](mailto:yanglee2421@outlook.com)
+- [Email](mailto:yanglee2421@outlook.com)
+- [Phone](tel:18872082421)
+- [短信](sms:18872082421?body=我是xxx)
 
 ## 专业技术
 
@@ -16,7 +18,7 @@
 8. 了解 `Node.js`，能使用 `Express` 进行接口开发，能使用 `Yarn` 包管理工具
 9. 会经常封装一些公用组件、公用函数以及公用 Hook 以提高开发效率
 10. 在项目中，对于代码优化、打包优化、请求优化等优化措施有大量实践
-11. 喜欢思考问题，并进行知识输出，撰写的技术文章收获超过 `1100` 的阅读量
+11. 喜欢思考问题，并进行知识输出，撰写的技术文章收获 `1200+` 阅读
 
 ## 工作经历
 
@@ -31,3 +33,6 @@
 ## 踩坑记
 
 - 在`try`中`return Promise.reject()`不会触发`catch`，`await Promise.reject()`会
+- `createHashRouter`的`basename`会被拼到 hash 而不是 path 中
+- `try...catch...finally`中`finally`的`return`会覆盖前两者的`return`或`throw`，即使前两者执行了`return`或`throw`，`finally`块也会执行
+- 函数内部若依赖于一些外部变量，那么函数提升可能会带来一些问题
