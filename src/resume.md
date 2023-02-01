@@ -4,7 +4,7 @@
 
 - [Email](mailto:yanglee2421@outlook.com)
 - [Phone](tel:18872082421)
-- [短信](sms:18872082421?body=我是xxx)
+- [短信](sms:18872082421)
 
 ## 专业技术
 
@@ -36,3 +36,8 @@
 - `createHashRouter`的`basename`会被拼到 hash 而不是 path 中
 - `try...catch...finally`中`finally`的`return`会覆盖前两者的`return`或`throw`，即使前两者执行了`return`或`throw`，`finally`块也会执行
 - 函数内部若依赖于一些外部变量，那么函数提升可能会带来一些问题
+- 原始类型是没有属性和方法的，但大部分原始值仍然表现得像有一样。当在原始值上访问属性时，JavaScript 自动将值装入包装器对象中，并访问该对象上的属性。例如，"foo".includes("f") 隐式创建了一个 String 包装对象，并在该对象上调用 String.prototype.includes()。
+- `Boolean`、`Number`、`BigInt`、`String`、`Symbol`被`new`调用时，返回一个与原始值对应的包装对象而非原始值本身
+- 隐式类型转换依赖于原始值包装对象
+- 包装对象浅等于对应的原始值
+- 不存在用来包装`undefined`和`null`的对象，故从它们身上访问属性或方法时，会抛出`TypeError`
