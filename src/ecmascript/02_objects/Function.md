@@ -29,9 +29,15 @@
 
 ## 适用场景
 
-- 在类里？Function
-- 非匿名函数？Function（尤其是在同一文件中被调用）
-- 对象的属性？，return 前需要执行语句？Function
-- 回调？Arrow Function
-- 匿名函数？Arrow Function
-- 对象属性？仅一句 return
+### 类中
+
+- 除需要静态 this 的场景外，一律使用 Function
+
+### 函数
+
+- 匿名函数一律使用 Arrow Function
+- 不依赖外部`let`、`const`、`var`声明的引用时，一律使用 Function
+
+### 对象属性
+
+- 除仅 return 的场景外，一律使用 Function

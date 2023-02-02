@@ -41,3 +41,6 @@
 - 隐式类型转换依赖于原始值包装对象
 - 包装对象浅等于对应的原始值
 - 不存在用来包装`undefined`和`null`的对象，故从它们身上访问属性或方法时，会抛出`TypeError`
+- github pages 默认使用 jekyll 进行部署，jekyll 会忽略`_`开头的文件，需要添加`_config.yml`文件指定要包含的文件
+- `_config.yml`要放到 github pages 的部署目录下
+- 也可以在部署目录下生成一个`.nojekyll`文件，以关闭 jeklly 部署

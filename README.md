@@ -159,3 +159,8 @@ export function useHook() {}
 ```
 
 :::
+
+```yml
+theme: jekyll-theme-slate
+include: [_plugin-vue_export-helper-c27b6911.js]
+```

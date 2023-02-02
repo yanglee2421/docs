@@ -1,5 +1,4 @@
-testFx();
-const a = "xxxx";
-function testFx() {
-  console.log("a", a);
-}
+textFx();
+const textFx = () => {
+  console.log("aaaa");
+};
