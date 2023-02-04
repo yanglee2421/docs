@@ -13,7 +13,7 @@ export default defineConfig({
   // markdown
   markdown: { lineNumbers: true },
   themeConfig: {
-    logo: "/vite.svg",
+    logo: "/react.svg",
     siteTitle: "Yang_Lee",
     editLink: {
       pattern: "https://github.com/yanglee2421/docs/blob/master/:path",

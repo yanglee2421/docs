@@ -3,7 +3,7 @@ layout: home
 hero:
   name: Yang_Lee Docs
   text: JavaScript开发者文档
-  tagline: 扶朕起来，朕还能学。。。
+  tagline: 很多人就是不看文档
   #   image:
   #     src: /logo.png
   #     alt: VitePress
@@ -15,6 +15,6 @@ hero:
       text: View on GitHub
       link: https://github.com/yanglee2421/docs/
     - theme: alt
-      text: 个人简历
+      text: 作者简历
       link: /resume.md
 ---

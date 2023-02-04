@@ -132,3 +132,4 @@
 - github pages 默认使用 jekyll 进行部署，jekyll 会忽略`_`开头的文件，需要添加`_config.yml`文件指定要包含的文件
 - `_config.yml`要放到 github pages 的部署目录下
 - 也可以在部署目录下生成一个`.nojekyll`文件，以关闭 jeklly 部署
+- CssModule 会编译伪类中的类名、`:global`指令里的类名不会被编译
