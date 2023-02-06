@@ -25,6 +25,12 @@
   2. padding-right
   3. padding-bottom
   4. padding-left
+- padding-inline
+  1. padding-inline-start
+  2. padding-inline-end
+- padding-block
+  1. padding-block-start
+  2. padding-block-end
 
 ## border
 
@@ -32,6 +38,12 @@
   1. border-width
   2. border-style
   3. border-color
+- border-inline
+  1. border-inline-start
+  2. border-inline-end
+- border-block
+  1. border-block-start
+  2. border-block-end
 
 ## border-radius
 
@@ -59,15 +71,21 @@
   2. margin-right
   3. margin-bottom
   4. margin-left
+- margin-inline
+  1. margin-inline-start
+  2. margin-inline-end
+- margin-block
+  1. margin-block-start
+  2. margin-block-end
 
 ## box-shadow
 
-- x 偏移
-- y 偏移
-- 模糊半径
-- 扩散半径
-- 颜色?
-- inset 关键字?
+1. x 偏移
+2. y 偏移
+3. 模糊半径
+4. 扩散半径
+5. 颜色?
+6. inset 关键字?
 
 ```css
 /* 多个阴影用,分隔 */

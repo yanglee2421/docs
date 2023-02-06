@@ -18,7 +18,7 @@
 8. 了解 `Node.js`，能使用 `Express` 进行接口开发，能使用 `Yarn` 包管理工具
 9. 会经常封装一些公用组件、公用函数以及公用 Hook 以提高开发效率
 10. 在项目中，对于代码优化、打包优化、请求优化等优化措施有大量实践
-11. 喜欢思考问题，并进行知识输出，撰写的技术文章已收获 `1300+` 阅读
+11. 喜欢思考问题，并进行知识输出，撰写的技术文章已收获 `1400+` 阅读
 
 ## 工作经历
 
@@ -133,3 +133,10 @@
 - `_config.yml`要放到 github pages 的部署目录下
 - 也可以在部署目录下生成一个`.nojekyll`文件，以关闭 jeklly 部署
 - CssModule 会编译伪类中的类名、`:global`指令里的类名不会被编译
+- `touchmove`事件在移动端（IOS 上没有）有一个默认行为，input 的内容可以被滑动，可以使用[pointer-events](https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events)、[touch-action](https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action)禁用它
+- form 标签可以用`FormData`类和`formdata`事件收集其中的数据
+- `input[type=reset]`可以将 form 中的 input 的 value 还原为其 value 属性上写定的值
+- 每当组件函数执行时，调用的 hook 数必须一致
+- border-box 的使用场合：需要给子元素设置 padding、border 或百分比的宽高
+- JS 可以使用`getComputedStyle()`访问到 CSS 为元素设置的样式
+- vue 中：只有 dom 更新才会触发 update 钩子，更新的 dom 属于哪个组件，哪个组件的 update 钩子就触发

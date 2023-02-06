@@ -8,6 +8,18 @@
 - justify-content
 - align-items
 
+## flex-item
+
+- flex
+  1. flex-grow
+  2. flex-shrink
+  3. flex-basis
+- aligin-self
+
+## 示例
+
+### flex-box
+
 ```css
 .flex-column {
   flex-flow: wrap row-reverse;
@@ -28,13 +40,7 @@
 }
 ```
 
-## flex-item
-
-- flex
-  1. flex-grow
-  2. flex-shrink
-  3. flex-basis
-- aligin-self
+### flex-item
 
 ```css
 .flex-1 {

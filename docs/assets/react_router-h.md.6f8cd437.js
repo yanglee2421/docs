@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./app.adef52ae.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"react/router-h.md","lastUpdated":1675255000000}'),a={name:"react/router-h.md"};function o(c,s,n,p,d,_){return r(),t("div")}const f=e(a,[["render",o]]);export{m as __pageData,f as default};

@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app.335117dc.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ecmascript/01_primitive/05_BigInt.md","lastUpdated":1675006511000}'),r={name:"ecmascript/01_primitive/05_BigInt.md"};function i(c,s,n,o,_,p){return a(),e("div")}const f=t(r,[["render",i]]);export{d as __pageData,f as default};

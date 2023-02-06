@@ -12,7 +12,7 @@ hero:
       text: Get Started
       link: /ecmascript/
     - theme: alt
-      text: View on GitHub
+      text: View on github
       link: https://github.com/yanglee2421/docs/
     - theme: alt
       text: 作者简历

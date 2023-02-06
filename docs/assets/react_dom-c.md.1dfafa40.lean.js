@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.335117dc.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"react/dom-c.md","lastUpdated":1675255000000}'),o={name:"react/dom-c.md"};function r(c,s,n,d,p,m){return a(),t("div")}const f=e(o,[["render",r]]);export{i as __pageData,f as default};

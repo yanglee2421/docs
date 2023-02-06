@@ -325,7 +325,7 @@ function sidebar(): DefaultTheme.Sidebar {
 // 底栏
 function footer(): DefaultTheme.Footer {
   return {
-    message: "Designed by Yang_Lee",
+    message: "Coded by Yang_Lee",
     copyright: "联系作者：yanglee2421@outlook.com",
   };
 }
