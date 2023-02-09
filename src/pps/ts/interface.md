@@ -36,3 +36,18 @@ class Person implements myInterface {
   }
 }
 ```
+
+## 函数签名
+
+- 对象也可能是一个函数或类，声明此类对象时需要为其提供对应的签名
+
+```ts
+interface myFx {
+  (param: number): void;
+  new (): {};
+}
+function fun(cb: myFx) {
+  cb(1);
+  const ins = new cb();
+}
+```

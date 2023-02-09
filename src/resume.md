@@ -15,7 +15,7 @@
 5. 了解 `Webpack、Vite`，能独立搭建符合规范的脚手架，对前端工程化有一定程度的理解和实践
 6. 熟悉 `Git` 分布式下的协作开发，熟悉 Git 常用命令
 7. 参与过`微信小程序`项目，对 `uni-app` 和 `H5 移动端`有一定的实操经验
-8. 了解 `Node.js`，能使用 `Express` 进行接口开发，能使用 `Yarn` 包管理工具
+8. 了解 `NodeJS`，曾使用 `NestJS` 进行接口开发，掌握`Npm`、`Yarn` 包管理工具
 9. 会经常封装一些公用组件、公用函数以及公用 Hook 以提高开发效率
 10. 在项目中，对于代码优化、打包优化、请求优化等优化措施有大量实践
 11. 喜欢思考问题，并进行知识输出，撰写的技术文章已收获 `1400+` 阅读
@@ -140,3 +140,14 @@
 - border-box 的使用场合：需要给子元素设置 padding、border 或百分比的宽高
 - JS 可以使用`getComputedStyle()`访问到 CSS 为元素设置的样式
 - vue 中：只有 dom 更新才会触发 update 钩子，更新的 dom 属于哪个组件，哪个组件的 update 钩子就触发
+- 除了已开启定位的元素外，`z-index`也对 flex-item 生效
+- fixed 定位并不总是相对于视口，当元素祖先的 transform、perspective、filter 或 backdrop-filter 属性非 none 时，容器由视口改为该祖先。
+- 不能从 React.MouseEvent 上直接访问 offsetX/offsetY、需通过 e.nativeEvent 先访问原生事件
+- 关于鼠标事件的坐标：client 系相对于视口、offset 系相对于盒元素、screen 系相对于屏幕、page 系相对于网页
+- 函数访问变量时，先找自身作用域、自身作用域没的找闭包、闭包也没有的找外层作用域
+- JSON 的两个方法仅适用于可序列化的数据，更合理的深克隆方案是[structuredClone](https://developer.mozilla.org/zh-CN/docs/web/api/structuredClone)
+- antd 的 Table 组件不能没有 rowkey
+- vue3 的 watch 和 watchEffect 提供了用于清除 effect 的 API
+- vue3 侦听器的执行时机：clearFn(sync)-->watcher(sync)-->clearFn(pre)-->watcher(pre)-->beforeUpdate-->clearFn(post)-->watcher(post)-->updated-->nextTick
+- antd：Modal 里套 Form 时，需要指定 forceRender
+- antd：Form.Item 会接管内部 Input 的 value，需要以 form.setFieldValue 改值

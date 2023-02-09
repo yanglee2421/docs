@@ -3,7 +3,7 @@
 ## falsy & truthy
 
 - JS 中有八个值，在进行布尔运算时视为 false
-- 除以上八个值外，其余值均为 thruthy
+- 除以下八个值外，其余值均为 thruthy
 
 ```js
 undefined;
@@ -28,11 +28,17 @@ boolean === true; //true
 
 ## 构造器
 
-- 原始类型不是`new`出来的
-- `new`出的是对象，不是原始类型
+- 返回一个 boolean 的包装对象
 
 ```js
 const boolean = new Boolean("用来生成布尔的值");
 boolean == true; //true
 boolean === true; //false
 ```
+
+::: danger
+
+1. 原始值不是`new`出来的
+2. 包装对象不完全等于原始值
+
+:::

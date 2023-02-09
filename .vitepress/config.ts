@@ -7,7 +7,11 @@ export default defineConfig({
   // html
   lang: "zh-CN",
   title: "Yang_Lee",
-  head: [["link", { rel: "shortcut icon", href: "/docs/vite.svg" }]],
+  head: [
+    ["link", { rel: "shortcut icon", href: "/docs/vite.svg" }],
+    ["meta", { name: "theme-color", content: "rgb(16, 185, 129)" }],
+    ["meta", { rel: "description", content: "Yang_Lee的JS开发者文档" }],
+  ],
   // 页面
   lastUpdated: true,
   // markdown
@@ -50,7 +54,7 @@ function sidebar(): DefaultTheme.Sidebar {
     "/ecmascript/": [
       {
         text: "Primitive Value",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "undefined",
@@ -84,7 +88,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "Objects",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "AbortContrller",
@@ -124,7 +128,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "ESM",
-        collapsible: true,
+        collapsed: false,
         items: [
           { text: "AMD", link: "/ecmascript/03_esm/AMD.md" },
           { text: "CommonJS", link: "/ecmascript/03_esm/CommonJS.md" },
@@ -133,7 +137,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "Global Object",
-        collapsible: true,
+        collapsed: false,
         items: [
           { text: "crypto", link: "/ecmascript/04_global/crypto.md" },
           { text: "JSON", link: "/ecmascript/04_global/JSON.md" },
@@ -142,7 +146,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "Syntax",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "class",
@@ -170,7 +174,7 @@ function sidebar(): DefaultTheme.Sidebar {
     "/pps/": [
       {
         text: "TypeScript",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "类型",
@@ -208,7 +212,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "Scss",
-        collapsible: true,
+        collapsed: false,
         items: [
           { text: "注释", link: "/pps/scss/00_comment.md" },
           { text: "变量", link: "/pps/scss/01_variable.md" },
@@ -219,14 +223,14 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "Less",
-        collapsible: true,
+        collapsed: false,
         items: [{ text: "xxx", link: "" }],
       },
     ],
     "/react/": [
       {
         text: "react",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "react-dom",
@@ -238,7 +242,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "react-router",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "routes",
@@ -260,7 +264,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "react-redux",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "store",
@@ -298,7 +302,7 @@ function sidebar(): DefaultTheme.Sidebar {
     "/toolkit/": [
       {
         text: "通用",
-        collapsible: true,
+        collapsed: false,
         items: [
           { text: "git", link: "/toolkit/00_git.md" },
           { text: "markdown", link: "/toolkit/01_markdown.md" },
