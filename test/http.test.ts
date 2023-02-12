@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createServer } from "node:http";
 const server = createServer((request, response) => {
   const str = request.url?.replace(/^[\/]{1}[\?]?/g, "");

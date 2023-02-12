@@ -189,7 +189,7 @@ function sidebar(): DefaultTheme.Sidebar {
             link: "/pps/ts/generic.md",
           },
           {
-            text: "内置泛型",
+            text: "内置工具",
             link: "/pps/ts/built-in-generic.md",
           },
           {
@@ -238,6 +238,9 @@ function sidebar(): DefaultTheme.Sidebar {
           },
           { text: "react", link: "/react/react/01_react.md" },
           { text: "hook", link: "/react/react/02_hook.md" },
+          { text: "apis", link: "/react/react-a.md" },
+          { text: "hooks", link: "/react/react-h.md" },
+          { text: "components", link: "/react/react-c.md" },
         ],
       },
       {
@@ -272,6 +275,24 @@ function sidebar(): DefaultTheme.Sidebar {
           },
           { text: "hook", link: "/react/react-redux/03_hook.md" },
         ],
+      },
+      {
+        text: "react-query",
+        items: [
+          {
+            text: "apis",
+            link: "/react/query-a.md",
+          },
+          {
+            text: "hooks",
+            link: "/react/query-h.md",
+          },
+          {
+            text: "components",
+            link: "/react/query-c.md",
+          },
+        ],
+        collapsed: false,
       },
     ],
     "/node/": [

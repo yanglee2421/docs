@@ -1,4 +1,4 @@
-# 内置泛型
+# 内置工具类型
 
 ## Record
 
@@ -80,9 +80,33 @@ type _res = Omit<_obj, _omit>;
 // returns type { name: string; age: number }
 ```
 
+## Parameters
+
+- 返回所传入的函数的 arguments 的类型
+
+```ts
+function fun(param: string) {}
+const param: Parameters<typeof fun>[0] = "";
+```
+
+::: warning
+返回的类型是一个 tuple
+:::
+
+## ConstructorParameters
+
+- 返回所传入的类的构造函数的 arguments 的类型
+
+```ts
+class Fun {
+  constructor(private readonly name: string) {}
+}
+const param: ConstructorParameters<typeof Fun>[0] = "";
+```
+
 ## ReturnType
 
-- 获取传入的函数的类型的返回类型
+- 返回所传入的函数的返回值的类型
 
 ```ts
 const func = (params: unknown) => {

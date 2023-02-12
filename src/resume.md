@@ -151,3 +151,4 @@
 - vue3 侦听器的执行时机：clearFn(sync)-->watcher(sync)-->clearFn(pre)-->watcher(pre)-->beforeUpdate-->clearFn(post)-->watcher(post)-->updated-->nextTick
 - antd：Modal 里套 Form 时，需要指定 forceRender
 - antd：Form.Item 会接管内部 Input 的 value，需要以 form.setFieldValue 改值
+- http：browser 端的 get 不支持 body，server 端则普遍支持（node 上的 fetch 除外）
