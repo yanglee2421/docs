@@ -143,12 +143,13 @@
 - 除了已开启定位的元素外，`z-index`也对 flex-item 生效
 - fixed 定位并不总是相对于视口，当元素祖先的 transform、perspective、filter 或 backdrop-filter 属性非 none 时，容器由视口改为该祖先。
 - 不能从 React.MouseEvent 上直接访问 offsetX/offsetY、需通过 e.nativeEvent 先访问原生事件
-- 关于鼠标事件的坐标：client 系相对于视口、offset 系相对于盒元素、screen 系相对于屏幕、page 系相对于网页
+- MouseEvent：client 系相对于视口、offset 系相对于盒元素、screen 系相对于屏幕、page 系相对于网页
 - 函数访问变量时，先找自身作用域、自身作用域没的找闭包、闭包也没有的找外层作用域
 - JSON 的两个方法仅适用于可序列化的数据，更合理的深克隆方案是[structuredClone](https://developer.mozilla.org/zh-CN/docs/web/api/structuredClone)
-- antd 的 Table 组件不能没有 rowkey
-- vue3 的 watch 和 watchEffect 提供了用于清除 effect 的 API
-- vue3 侦听器的执行时机：clearFn(sync)-->watcher(sync)-->clearFn(pre)-->watcher(pre)-->beforeUpdate-->clearFn(post)-->watcher(post)-->updated-->nextTick
+- antd：Table 不能没有 rowkey
+- vue3：watch、watchEffect 提供了用于清除 effect 的 API
+- vue3：watch 执行栈：clearFn(sync)-->watcher(sync)-->clearFn(pre)-->watcher(pre)-->beforeUpdate-->clearFn(post)-->watcher(post)-->updated-->nextTick
 - antd：Modal 里套 Form 时，需要指定 forceRender
 - antd：Form.Item 会接管内部 Input 的 value，需要以 form.setFieldValue 改值
 - http：browser 端的 get 不支持 body，server 端则普遍支持（node 上的 fetch 除外）
+- browser：dom 的 id 可以当变量在控制台输出 dom（默认行为）

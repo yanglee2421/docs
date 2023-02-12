@@ -1,6 +1,3 @@
-interface param {
-  url: string;
-}
 export async function useFetch<T = any>() {
   const controller = new AbortController();
   const { signal } = controller;

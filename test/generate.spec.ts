@@ -12,12 +12,12 @@ function* generate() {
   console.log("timeout");
 }
 
-function generateHandler(g) {
+function generateHandler(g: ReturnType<typeof generate>) {
   const { value, done } = g.next();
   if (!done) value.then(() => generateHandler(g));
 }
 
-function timeout(wait) {
+function timeout(wait: number) {
   return new Promise((resolve) => setTimeout(resolve, wait));
 }
 
