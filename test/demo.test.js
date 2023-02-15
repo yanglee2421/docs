@@ -1,25 +1,17 @@
-/**
- * async、await简易原理
- * @returns a generate instance
- */
-function* generate() {
-  console.log(3);
-  yield timeout(1000);
-  console.log(2);
-  yield timeout(1000);
-  console.log(1);
-  yield timeout(1000);
-  console.log("timeout");
-}
+const a = {
+  i: 1,
+  toString() {
+    return this.i++;
+  },
+};
 
-function generateHandler(g) {
-  const { value, done } = g.next();
-  if (!done) value.then(() => generateHandler(g));
+if (a == 1 && a == 2 && a == 3) {
+  console.log("Hello World!");
 }
+// by stackoverflow
 
-function timeout(wait) {
-  return new Promise((resolve) => setTimeout(resolve, wait));
-}
+function add(...restParams) {}
 
-const g = generate();
-generateHandler(g);
+console.log(curry(1)(2)(3));
+console.log(curry(1, 2)(3));
+console.log(curry(1, 2, 3));

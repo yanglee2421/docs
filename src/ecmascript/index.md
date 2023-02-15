@@ -399,6 +399,9 @@ console.log(b); // 1000000
 
 2.  string 和 array 的`at(index)`方法
 
-```
-
+```ts
+const arr = [];
+const str = "";
+arr.at(-1);
+str.at(-1);
 ```
