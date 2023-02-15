@@ -151,3 +151,6 @@ if (a) {
   const a = 1;
 }
 ```
+
+- yarn3 安装的依赖由于是压缩的无法直接被 typescript 识别
+- `==`运算符将对象转化为基本类型时，会调用`@toPrimitive`、`valueOf`、`toString`

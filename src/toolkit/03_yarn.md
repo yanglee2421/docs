@@ -60,3 +60,14 @@ yarn global list --depth 0
 ```powershell
 yarn upgrade
 ```
+
+## V3
+
+```powershell
+# 使用yarn3来初始化一个项目
+yarn init -2
+# typescript无法识别yarn3依赖类型的问题
+# 1. VScode安装ZipFS插件
+# 2. 执行以下命令
+yarn dlx @yarnpkg/sdks vscode
+```
