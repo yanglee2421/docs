@@ -1,17 +1,37 @@
-const a = {
-  i: 1,
-  toString() {
-    return this.i++;
-  },
-};
+class Promise0 {
+  constructor(callback) {
+    callback(
+      (param) => this.commitFulfilled(param),
+      (param) => this.commitRejected(param)
+    );
+  }
 
-if (a == 1 && a == 2 && a == 3) {
-  console.log("Hello World!");
+  commitFulfilled(param) {
+    queueMicrotask(() => {
+      const result = this.onFulfilled?.(param);
+      this.nextFulfilled?.(result);
+    });
+  }
+  commitRejected(param) {
+    queueMicrotask(() => {
+      const reason = this.onRejected?.(param);
+      this.nextRejected?.(reason);
+    });
+  }
+
+  then(onFulfilled, onRejected) {
+    this.onFulfilled = onFulfilled;
+    this.onRejected = onRejected;
+    return new Promise0((nextFulfilled, nextRejected) => {
+      this.nextFulfilled = nextFulfilled;
+      this.nextRejected = nextRejected;
+    });
+  }
+  catch(onRejected) {
+    return this.then(() => {}, onRejected);
+  }
 }
-// by stackoverflow
 
-function add(...restParams) {}
-
-console.log(curry(1)(2)(3));
-console.log(curry(1, 2)(3));
-console.log(curry(1, 2, 3));
+new Promise0((res) => setTimeout(() => res("结果"), 2000))
+  .then((res) => console.log(1, res))
+  .then((res) => console.log(1, res));
