@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.84242b02.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"react/redux-a.md","lastUpdated":1676192016000}'),r={name:"react/redux-a.md"};function c(o,s,n,d,p,_){return a(),t("div")}const f=e(r,[["render",c]]);export{m as __pageData,f as default};
