@@ -49,6 +49,7 @@ git diff 提交ID
 git checkout .
 git reset
 git reset --hard 提交ID
+git revert 提交ID
 ```
 
 ## branch & checkout
@@ -58,11 +59,13 @@ git branch -r
 git branch -a
 git branch -vv
 git branch 分支
+# 删除本地分支
 git branch -d 分支
+# 删除本地远程分支
 git branch -dr 源/分支
 git branch --set-upstream-to=源/分支
 git checkout 分支
-git checkout -b 分支
+git checkout -b 新分支
 ```
 
 ## merge
@@ -86,6 +89,7 @@ git pull 源 分支
 git push
 git push -u 源 分支
 git push --set-upstream 源 分支
+# 删除远程分支
 git push 源 -d 分支
 ```
 

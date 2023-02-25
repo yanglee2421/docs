@@ -158,3 +158,5 @@ if (a) {
 - React 中`props.children`的`props`不能值接修改，但可以使用`React.cloneElement`的二参复制一个具有不同`props`的元素
 - 微信开发者工具测试蓝牙情况时，相比正式版小程序会有更大的响应延迟
 - `new URL`第二个参数`/`及后的部分会被舍弃
+- 不能在 render 执行时，读写 ref.current
+- `white-space:pre-line`类似`pre`标签
