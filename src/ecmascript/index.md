@@ -249,12 +249,10 @@ str.match(reg).groups; //{ number: '123', chinese: '一二三' }
 - 先行断言 & 后行断言
 
 ```js
-//先行
-const reg = /1(?=2)/; //仅匹配1，但1的后面必须跟2
-const reg2 = /1(?!2)/; //仅匹配1，但1的后面不能跟2
-//后行
-const reg3 = /1(?<=2)/; //仅匹配1，但1的前面必须是2
-const reg4 = /1(?<!2)/; //仅匹配1，但1的前面不能是2
+// 匹配test，test前必是front，test后必是back
+/(?<=front)test(?=back)/;
+// 匹配test，test前不是front，test后不是back
+/(?<!front)test(?!back)/;
 ```
 
 - Unicode 转义符
