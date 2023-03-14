@@ -22,9 +22,9 @@ err.name; //"Error"
 
 ## 实例方法
 
-## Demo
-
 - [toString](#tostring)
+
+## 案例
 
 ### message
 

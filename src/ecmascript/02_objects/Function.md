@@ -1,20 +1,43 @@
 # Function
 
-## bind
+## 实例方法
 
-- 返回值：改变 this 指向后的 this
-- 一参：你所指定的 this
-- 其余参数作为实参传给返回的函数
+- [bind](#bind)
+- [call](#call)
+- [apply](#apply)
 
-## call
+## 案例
 
-- 一参：返回的函数
-- 其余参数作为实参传给返回的函数
+### bind
 
-## apply
+```js
+function fun(param1, params2) {
+  console.log(this, params);
+}
+const obj = {};
+const fx = fun.bind(obj, "params1", "params2");
+fx();
+```
 
-- 二参要写成一个数组
-- 其余与 call 相同
+### call
+
+```js
+function fun(param1, params2) {
+  console.log(this, params);
+}
+const obj = {};
+fun.call(obj, "params1", "params2");
+```
+
+### apply
+
+```js
+function fun(param1, params2) {
+  console.log(this, params);
+}
+const obj = {};
+fun.apply(obj, ["params1", "params2"]);
+```
 
 ## arguments
 
@@ -25,19 +48,9 @@
 
 - 静态 this：this 永远指向创建它的作用域里的 this
 - 没有 arguments：使用 restProps 替代 arguments
-- 适合作为回调或匿名函数
+- 没有 constructor：不能被 new 关字键调用
 
 ## 适用场景
 
-### 类中
-
-- 除需要静态 this 的场景外，一律使用 Function
-
-### 函数
-
-- 匿名函数一律使用 Arrow Function
-- 不依赖外部`let`、`const`、`var`声明的引用时，一律使用 Function
-
-### 对象属性
-
-- 除仅 return 的场景外，一律使用 Function
+- 需要 this 指针 ？Function : Arrow Function
+- 需要函数提升 ？Function : Arrow Function

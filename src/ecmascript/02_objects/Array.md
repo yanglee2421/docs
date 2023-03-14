@@ -30,24 +30,37 @@ arr.length; //returns 0
 
 ### 返回的不是数组
 
-#### includes
-
-#### entries
-
-#### every
-
-#### reduce
-
-#### indexOf
+- at
+- forEach
+- includes
+- push、pop
+- shift、unshift
+- find、findLast
+- findIndex、findLastIndex
+- indexOf、lastIndexOf
+- some、every
+- reduce、reduceRight
+- join
+- entries
 
 ### 返回新数组
 
-#### flat
-
-#### flatMap
-
-#### concat
+- splice
+- slice
+- filter
+- map
+- from
+- flat、flatMap
+- concat
 
 ### 返回原数组
 
-#### copyWithin
+- sort
+- reverse
+- copyWithin
+
+## 案例
+
+### at
+
+### some、every
