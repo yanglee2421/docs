@@ -160,3 +160,4 @@ if (a) {
 - `new URL`第二个参数`/`及后的部分会被舍弃
 - 不能在 render 执行时，读写 ref.current
 - `white-space:pre-line`类似`pre`标签
+- `Error`的`constructor`可以输入第二个参数

@@ -3,16 +3,55 @@
 ## 构造器
 
 ```js
-new Error("可读的错误信息");
+// 简写
+const err = new Error("可读的错误信息");
+err.message; //"可读的错误信息"
+
+// 完整写法
+const err01 = new Error("msg", { cause: "cause" });
+err.message; //"msg"
+err.cause; //"cause"
+err.name; //"Error"
 ```
 
 ## 实例属性
+
+- [message](#message)
+- [cause](#cause)
+- [name](#name)
+
+## 实例方法
+
+## Demo
+
+- [toString](#tostring)
 
 ### message
 
 ```js
 const err = new Error("错误信息");
 err.message; //"错误信息"
+```
+
+### cause
+
+```js
+const err = new Error("错误信息", { cause: "原因" });
+err.cause; //"原因"
+```
+
+### name
+
+```js
+const terr = new TypeError("xxx");
+err.name; //"TypeError"
+```
+
+### toString
+
+```js
+const err = new Error("msg");
+err.toString();
 ```
 
 ## try...catch...finally & throw
@@ -23,12 +62,14 @@ try {
 } catch (err) {
   /**
    * 若try后的代码块中没有抛出错误，则这个代码块不执行
-   * err为try后的代码块中被throw关键字抛出的信息，】
+   * err为try后的代码块中被throw关键字抛出的信息，
    * err可以不是Error对象
    * err可以省略，省略时只保留一个catch关键字
    */
   console.error(err.message);
 } finally {
+  // 此处的return视为整个try...catch...finally语句的return
+  // 即使try块或catch块中已经return或throw，finally块依然会被执行
   console.log("不管catch执不执行，这里都执行");
 }
 ```
