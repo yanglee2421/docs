@@ -26,6 +26,15 @@ npm un
 npm uninstall -g
 ```
 
+## 发布
+
+```powershell
+#Login in npm
+npm login
+#Publish your package
+npm publish --access public
+```
+
 ## 查看包版本
 
 ```powershell
