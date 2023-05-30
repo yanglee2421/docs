@@ -4,13 +4,13 @@ NextJs13 版本对 API 进行了较大的改动（例如 App Router），本文�
 
 ## 与 React App 的区别
 
-1. 部分代码运行在 server side，另一部分则运行在 client side
-2. 基于文件的 router
+1. 大部分代码运行在服务端（server side），另一部分则运行在客户端（client side）
+2. 基于文件的 routes（页面路由和api路由都基于文件系统）
 3. components 分 server 和 client 两种（在 app router 下默认全视为 srever component，client component 需要使用"use client"显示声明）
 4. 支持 server side data fetch
 5. 支持 Server Side Render 和 Static Site Generate
 
-## Pages Router
+## Pages Routes
 
 ### 路径
 
@@ -215,3 +215,125 @@ NextJs 支持在组件中通过 useEffect 钩子在 client side 发起网络请�
 ### SWR
 
 [SWR](https://swr.vercel.app)一个由 NextJs 官方提供的用于 client side data fetching 的网络请求库，类似 react-query，也可以直接使用 react-query。
+
+## App & Doc
+
+pages目录下有两个特殊的文件，\_app.tsx和\_document.tsx。其中，_document.tsx文件用来来控制HTML模板；\_app.tsx用来控制React根元素。
+
+### Head
+
+Head组件是一个由NextJs提供的用于配置html head内容的内置组件。
+
+Head组件接收到的children元素会被渲染到真正的head标签中，无论Head组件本身出现在哪个位置。
+
+它允许用户动态绑定head中的内容。
+
+Head组件会将它的children与当前head中的内容进行合并，以防止某些特殊情况（例如两个title元素同时出现在head中、两个meta元素的name属性是相同的）。
+
+~~~tsx
+import Head from "next/head";
+
+export default function Page() {
+  return (
+    <>
+      <Head>
+        <title>Document title</title>
+      </Head>
+    </>
+  );
+}
+
+~~~
+
+### _app.tsx
+
+_app.tsx是pages目录下的一个特殊文件，它控制着所有路由的根，可以通过它来进行一些配置（例如：安装redux、配置全局context等）。
+
+它接收的props中一定包含Component和pageProps，分别表示当前路由对应到的页面Component及其Props内容。
+
+~~~tsx
+import '@/styles/globals.css'
+import type { AppProps } from 'next/app'
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
+
+~~~
+
+### _docment.tsx
+
+_document.tsx是\_app.tsx的外壳，它用来控制整个HTMl文档的结构。
+
+~~~tsx
+import { Html, Head, Main, NextScript } from 'next/document'
+
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
+}
+
+~~~
+
+### Image
+
+Image组件继承自img标签，除img上的属性外，还支持：尺寸优化（自动转化成webp/avif格式）、布局优化（防止因图片加载出现的偏移）、加载优化（仅图片出现在视口中时才加载图片）、弹性优化（按需调整图像大小）。
+
+## API Routes
+
+NextJs作为server运行在NodeJs中，这使得它被允许用来提供REST API。
+
+### Controller
+
+控制器的表现行为基本与路由一致，根路径为pages/api目录。
+
+### Method
+
+默认情况下，handler会响应URI匹配到的所有请求（GET、POST、DELETE、PUT等）。可以通过req的method属性来判断接收到的是哪种请求。
+
+~~~ts
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from "next";
+
+interface Data {
+  name: string;
+}
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  if (req.method?.toLocaleLowerCase() !== "get") return;
+  res.status(200).json({ name: "John Doe" });
+}
+
+~~~
+
+### Dynamic
+
+与pages路由中的动态路由基本一致，需要注意：params和searchparams都是通过req.query来接收的。
+
+~~~ts
+import { NextApiHandler } from "next";
+
+const handler: NextApiHandler = (req, res) => {
+  const { id } = req.query;
+  // when URI is '/parents/xxx' returns 'xxx'
+  return res.json({ id });
+};
+
+export default handler;
+
+~~~
+
+
+
+
+

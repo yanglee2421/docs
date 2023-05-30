@@ -1,10 +1,11 @@
 import { defineConfig, DefaultTheme } from "vitepress";
 export default defineConfig({
-  // 打包
+  // Build
   base: "/docs/",
   outDir: "docs",
   srcDir: "src",
-  // html
+
+  // HTML Document
   lang: "zh-CN",
   title: "Yang_Lee",
   head: [
@@ -12,10 +13,11 @@ export default defineConfig({
     ["meta", { name: "theme-color", content: "rgb(16, 185, 129)" }],
     ["meta", { rel: "description", content: "Yang_Lee的JS开发者文档" }],
   ],
-  // 页面
-  lastUpdated: true,
-  // markdown
+
+  // Markdown
   markdown: { lineNumbers: true },
+
+  // Viteperss theme
   themeConfig: {
     logo: "/react.svg",
     siteTitle: "Yang_Lee",
@@ -27,19 +29,23 @@ export default defineConfig({
     sidebar: sidebar(),
     footer: footer(),
   },
+
+  // Whether show last update time
+  lastUpdated: true,
 });
 
-// 右上角导航
+// Header menu
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: "ECMAScript", link: "/ecmascript/index.md" },
+    { text: "React", link: "/react/react-hook-form.md" },
     { text: "Preprocessor", link: "/pps/ts/type.md" },
     { text: "Toolkit", link: "/toolkit/00_git.md" },
     { text: "Node", link: "/node/nodejs/01_path.md" },
   ];
 }
 
-// 左边栏
+// Aside bar
 function sidebar(): DefaultTheme.Sidebar {
   return {
     "/ecmascript/": [
@@ -162,6 +168,10 @@ function sidebar(): DefaultTheme.Sidebar {
         ],
       },
     ],
+    "/react": [
+      { text: "react-hook-form", link: "/react/react-hook-form.md" },
+      { text: "NextJs", link: "/react/NextJs.md" },
+    ],
     "/pps/": [
       {
         text: "TypeScript",
@@ -232,7 +242,6 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           { text: "express", link: "/node/express/01_express.md" },
           { text: "typeorm", link: "/node/express/03_typeorm.md" },
-          { text: "NextJs", link: "/node/NextJs.md" },
         ],
       },
     ],
