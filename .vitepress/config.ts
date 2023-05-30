@@ -8,7 +8,7 @@ export default defineConfig({
   lang: "zh-CN",
   title: "Yang_Lee",
   head: [
-    ["link", { rel: "shortcut icon", href: "/docs/vite.svg" }],
+    ["link", { rel: "shortcut icon", href: "/docs/react.svg" }],
     ["meta", { name: "theme-color", content: "rgb(16, 185, 129)" }],
     ["meta", { rel: "description", content: "Yang_Lee的JS开发者文档" }],
   ],
@@ -34,17 +34,8 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     { text: "ECMAScript", link: "/ecmascript/index.md" },
     { text: "Preprocessor", link: "/pps/ts/type.md" },
-    { text: "React", link: "/react/react/00_react-dom.md" },
     { text: "Toolkit", link: "/toolkit/00_git.md" },
     { text: "Node", link: "/node/nodejs/01_path.md" },
-    { text: "CSS", link: "" },
-    /*   {
-      text: "Framework",
-      items: [
-        // { text: "Vue", link: "/es/index.md" },
-        { text: "threejs", link: "/threejs/index.md" },
-      ],
-    }, */
   ];
 }
 
@@ -227,74 +218,6 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [{ text: "xxx", link: "" }],
       },
     ],
-    "/react/": [
-      {
-        text: "react",
-        collapsed: false,
-        items: [
-          {
-            text: "react-dom",
-            link: "/react/react/00_react-dom.md",
-          },
-          { text: "react", link: "/react/react/01_react.md" },
-          { text: "hook", link: "/react/react/02_hook.md" },
-          { text: "apis", link: "/react/react-a.md" },
-          { text: "hooks", link: "/react/react-h.md" },
-          { text: "components", link: "/react/react-c.md" },
-        ],
-      },
-      {
-        text: "react-router",
-        collapsed: false,
-        items: [
-          {
-            text: "routes",
-            link: "/react/react-router/00_routes.md",
-          },
-          {
-            text: "data router",
-            link: "/react/react-router/01_datarouter.md",
-          },
-          {
-            text: "hook",
-            link: "/react/react-router/02_hook.md",
-          },
-          {
-            text: "component",
-            link: "/react/react-router/03_component.md",
-          },
-        ],
-      },
-      {
-        text: "react-redux",
-        collapsed: false,
-        items: [
-          {
-            text: "store",
-            link: "/react/react-redux/02_store.md",
-          },
-          { text: "hook", link: "/react/react-redux/03_hook.md" },
-        ],
-      },
-      {
-        text: "react-query",
-        items: [
-          {
-            text: "apis",
-            link: "/react/query-a.md",
-          },
-          {
-            text: "hooks",
-            link: "/react/query-h.md",
-          },
-          {
-            text: "components",
-            link: "/react/query-c.md",
-          },
-        ],
-        collapsed: false,
-      },
-    ],
     "/node/": [
       {
         text: "nodejs",
@@ -308,15 +231,8 @@ function sidebar(): DefaultTheme.Sidebar {
         text: "express",
         items: [
           { text: "express", link: "/node/express/01_express.md" },
-          {
-            text: "jsonwebtoken",
-            link: "/node/express/02_jsonwebtoken.md",
-          },
           { text: "typeorm", link: "/node/express/03_typeorm.md" },
-          {
-            text: "node-windows",
-            link: "/node/express/04_node-windows.md",
-          },
+          { text: "NextJs", link: "/node/NextJs.md" },
         ],
       },
     ],
@@ -338,10 +254,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "构建工具",
-        items: [
-          { text: "vite", link: "/toolkit/04_vite.md" },
-          { text: "webpack", link: "/toolkit/05_webpack.md" },
-        ],
+        items: [{ text: "webpack", link: "/toolkit/05_webpack.md" }],
       },
     ],
   };

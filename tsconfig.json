@@ -1,12 +1,12 @@
 {
-  "include": ["src"],
+  "include": [".vitepress/**/*.ts"],
   "compilerOptions": {
     // Private
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": { "@/*": ["src/*"] },
 
-    // Build
+    // Initialized by vite
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
@@ -14,7 +14,7 @@
 
     // Bundler
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "isolatedModules": true,
     "resolveJsonModule": true,
 
