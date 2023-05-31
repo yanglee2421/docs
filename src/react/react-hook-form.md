@@ -49,8 +49,6 @@ export function Form() {
 
 ~~~
 
-
-
 ## register
 
 useForm返回的register用于在对应的表单中注册字段（支持校验、嵌套字段、数组字段）。
@@ -197,8 +195,6 @@ export function ItemTell(props: ItemEmailProps) {
 }
 
 ~~~
-
-
 
 ## Yup
 
