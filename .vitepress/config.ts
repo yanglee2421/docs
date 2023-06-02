@@ -169,8 +169,9 @@ function sidebar(): DefaultTheme.Sidebar {
       },
     ],
     "/react": [
-      { text: "react-hook-form", link: "/react/react-hook-form.md" },
+      { text: "Material UI", link: "/react/material-ui.md" },
       { text: "NextJs", link: "/react/NextJs.md" },
+      { text: "react-hook-form", link: "/react/react-hook-form.md" },
     ],
     "/pps/": [
       {
