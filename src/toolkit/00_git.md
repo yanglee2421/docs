@@ -42,7 +42,7 @@ git rm -cached filename
 ```powershell
 git status
 git add .
-git commit -m'提交信息'
+git commit -m 'commit msg'
 ```
 
 ## Tag
@@ -112,25 +112,16 @@ push流程：branch --> remote/branch --> 远程branch
 fetch流程：远程branch --> remote/branch
 
 ```powershell
-# 列出分支
 git branch
-# 列出remote/branch
 git branch -r
-# 列出所有分支
 git branch -a
-# 列出映射关系
 git branch -vv
-# 创建一个branch
 git branch branchName
-# 删除一个branch
 git branch -d branchName
-# 删除remote/branch
 git branch -dr remoteName/branchName
-# 创建映射关系
 git branch --set-upstream-to=remoteName/branchName
-# 切换到指定branch
+
 git checkout branchName
-# 创建一个新branch，并切换到该branch
 git checkout -b branchName
 ```
 
@@ -148,29 +139,21 @@ git merge --abbort
 ## Remote
 
 ```powershell
-# 列出remote
 git remote
-# 列出所有remote
 git remote -v
-# 添加一个remote
 git remote add remoteName gitUrl
-# 移除一个remote
 git remote remove remoteName
-# 重命名一个remote
 git remote rename prevName neoName
-# 拉取默认remote上的commit，并更新到本机上的remote/branch
+
 git fetch
-# 拉取指定remote上的commit，并更新到本机上的remote/branch
 git fetch remoteName
-# 拉取与当前branch映射的远程branch上的commit到当前branch
+
 git pull
 git pull remoteName branchName
-# 推送当前branch到与其映射的远程branch
+
 git push
-# 推送并与其建立映射关系
 git push -u remoteName branchName
 git push --set-upstream remoteName branchName
-# 删除指定remote上的指定branch
 git push remoteName -d branchName
 ```
 
@@ -179,6 +162,5 @@ git push remoteName -d branchName
 ```powershell
 # 生成一个SSH密钥
 ssh-keygen -t ed25519 -f filename
-# 测试SSH连接
-ssh
+ssh usr@sshUrl
 ```
