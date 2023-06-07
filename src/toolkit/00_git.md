@@ -35,10 +35,14 @@ git commit -m'提交信息'
 ## rm
 
 ```powershell
-rm 仅删除工作区-不暂存.txt
-git rm 删除工作区-且暂存.txt
-git rm -f 强制删除工作区-且暂存.txt
-git rm -cached 删除暂存区-且暂存.txt
+# 仅删除工作区-不暂存
+rm filename
+# 删除工作区-且暂存
+git rm filename
+# 强制删除工作区-且暂存
+git rm -f filename
+# 删除暂存区-且暂存
+git rm -cached filename
 ```
 
 ## Log
@@ -48,6 +52,8 @@ git log
 git log -a --graph --abbrev-commit --pretty=oneline
 git diff
 git diff commitId
+# 以列表形式查看指定文件的历史修改记录
+git blame filename
 ```
 
 ## Reset
