@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /ecmascript/
+      link: /get-started.md
     - theme: alt
       text: View on github
       link: https://github.com/yanglee2421/docs/
