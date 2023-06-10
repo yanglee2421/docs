@@ -133,7 +133,7 @@ merge用于将目标分支上的commit导入到当前分支。
 # 将指定分支上的提交记录合并到当前分支
 git merge branchName
 # 中断合并
-git merge --abbort
+git merge --abort
 ~~~
 
 ## Remote

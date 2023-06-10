@@ -1,5 +1,7 @@
 # Axios
 
+axios几乎是npm上最受欢迎的库，它可以在浏览器、node、React Native等多个场景中处理http请求。
+
 ## create
 
 ```ts
