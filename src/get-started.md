@@ -2,7 +2,7 @@
 
 代码整洁之道，
 
-## SOLID原则
+## SOLID 原则
 
 首先不得不提一下五大原则，分别是：
 
@@ -20,22 +20,22 @@
 4. 接口隔离：使用多个小接口而不是一个复杂的大接口。
 5. 依赖倒转：函数之间的依赖性不能太强。
 
-__NOTE：__ 可以不懂，但一定记住，哪天写代码写多了抽风了自然就懂了。
+**NOTE：** 可以不懂，但一定记住，哪天写代码写多了抽风了自然就懂了。
 
 ## 命名
 
 起名是件大事，真的是件大事。
 
-### 文件夹的命名
+### 文件和文件夹
 
 格式如下：
 
-1. 不能有大写字母。
+1. 不能有大写字母（mac 系统下的 git 默认不区分大小写，这容易引发一些问题）。
 2. 优先使用单词的复数形式。
 3. 复合单词间用一个中划线分隔。
-4. 目录型文件夹的根路径下要有一个index文件。
+4. 目录型文件夹的根路径下要有一个 index 文件。
 
-### CSS的命名（BEM命名法）
+### CSS 的命名（BEM 命名法）
 
 格式如下：
 
@@ -43,22 +43,22 @@ __NOTE：__ 可以不懂，但一定记住，哪天写代码写多了抽风了�
 2. 修饰符名与其它名称之间用两个中划线分隔。
 3. 复合单词间用一个中划线分隔。
 
-~~~scss
+```scss
 .block--modifier__element--modifier {
   flex: 1;
   overflow: hidden;
 }
-~~~
+```
 
 ### 函数的命名
 
-首先是在框架中使用的hooks函数，格式如下：
+首先是在框架中使用的 hooks 函数，格式如下：
 
-1. use开头。
+1. use 开头。
 2. 小驼峰。
 3. 参数和返回值都是可有可无的。
 
-~~~ts
+```ts
 /**
  * Hook functions used within the framework
  * @params optional
@@ -67,17 +67,17 @@ __NOTE：__ 可以不懂，但一定记住，哪天写代码写多了抽风了�
 function useFunc() {
   // do something
 }
-~~~
+```
 
-__NOTE：__ hooks函数的调用条件是有要求的，React中组件函数每次执行时，调用的hook的数量必须一致。Vue中的hooks必须在setup函数中调用。
+**NOTE：** hooks 函数的调用条件是有要求的，React 中组件函数每次执行时，调用的 hook 的数量必须一致。Vue 中的 hooks 必须在 setup 函数中调用。
 
 第二种，适配器型函数，格式如下：
 
-1. to开头。
+1. to 开头。
 2. 小驼峰。
 3. 参数和返回值都是必须的。
 
-~~~ts
+```ts
 /**
  * Used for processing data,
  * returning processed data without changing the original data
@@ -88,17 +88,17 @@ function toFunc(params) {
   // do something
   return params;
 }
-~~~
+```
 
-__NOTE：__ 适配器型函数用于对数据进行格式处理，把收集到的表单数据处理成接口要求的格式再发送。
+**NOTE：** 适配器型函数用于对数据进行格式处理，把收集到的表单数据处理成接口要求的格式再发送。
 
 第三种，事件函数，格式如下：
 
-1. handle开头。
+1. handle 开头。
 2. 小驼峰。
 3. 参数是可选的，返回值则一定没有。
 
-~~~ts
+```ts
 /**
  * Used to perform some operations,
  * such as dom events
@@ -108,18 +108,18 @@ __NOTE：__ 适配器型函数用于对数据进行格式处理，把收集到�
 function handleFunc(params) {
   // do something
 }
-~~~
+```
 
-__NOTE：__ 事件函数用于为页面元素绑定handler。
+**NOTE：** 事件函数用于为页面元素绑定 handler。
 
 第四种，网络请求函数，格式如下：
 
 1. 全小写。
 2. 单词间使用下划线分隔。
-3. 优先使用接口URI的最后一段作为名称
-4. RESTful风格的接口添加请求网式作为前缀
+3. 优先使用接口 URI 的最后一段作为名称
+4. RESTful 风格的接口添加请求网式作为前缀
 
-~~~ts
+```ts
 /**
  * Used to send network requests,
  * Its prefix is consistent with the request method
@@ -135,23 +135,23 @@ async function get_some() {}
 async function post_some() {}
 async function delete_some() {}
 async function put_some() {}
-~~~
+```
 
 ### 变量的命名
 
-1. 布尔类型：以is开头，小驼峰。
-2. 数组：单词的复数形式，或者以Arr结尾，小驼峰。
+1. 布尔类型：以 is 开头，小驼峰。
+2. 数组：单词的复数形式，或者以 Arr 结尾，小驼峰。
 3. 对象：优先选择对应类名的小驼峰形式。
-4. 集合：以Set结尾，小驼峰。
-5. 映射：以Map结尾，小驼峰。
+4. 集合：以 Set 结尾，小驼峰。
+5. 映射：以 Map 结尾，小驼峰。
 6. 类：大驼峰。
-7. 上下文：以Ctx开头，大驼峰。
+7. 上下文：以 Ctx 开头，大驼峰。
 
 ### 类型的命名
 
 1. 接口：优先选择实例对象的命名，大驼峰。
 2. 别名：优先选择实例对象的命名，大驼峰。
-3. 泛型：以T开头，T后面的部分要能体现出这个泛型被用于什么数据且保持大驼峰（TProps、TData、TError）。
+3. 泛型：以 T 开头，T 后面的部分要能体现出这个泛型被用于什么数据且保持大驼峰（TProps、TData、TError）。
 
 ## 函数声明
 
@@ -170,9 +170,4 @@ async function put_some() {}
 2. 回调函数。
 3. 仅一句`return`语句。
 
-__NOTE：__ 具体使用那种方式，最终取决于是否需要`this`指针。
-
-
-
-
-
+**NOTE：** 具体使用那种方式，最终取决于是否需要`this`指针。

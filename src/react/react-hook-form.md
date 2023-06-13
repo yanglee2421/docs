@@ -62,9 +62,11 @@ useForm返回的register用于在对应的表单中注册字段（支持校验�
 | ref      | React.Ref | 收集input实例，以支持error时的focus |
 | name     | string    | input的name属性                     |
 
-register通过它返回的对象接管了对input身上props（仅以上四个）的操作，这使得在大部分input（除checkbox、radio、file、submit、image、reset、button外）、select和textarea中，它都能像上例中情况一样直接使用。
+`register`通过它返回的对象接管了对input身上props（仅以上四个）的操作，这使得在大部分input（除radio、submit、image、reset、button外）、select和textarea中，它都能像上例中情况一样直接使用。
 
 自定义组件（尤其是props与register返回的对象不能对应的），则往往不适用。
+
+__NOTE：__ `registery`通过非受控组件的方式捕获`input`。它能在一定程序上自动识别`input`的`type`以自动选择关注`input`的那个属性作为`field`的`value`。例如：当`type`为`checkbox`时，会关注`checked`而非`value`，当`type`为`file`时，会关注`file`而非`value`。
 
 ## useController
 
@@ -146,6 +148,8 @@ export function Checkbox(props: CheckboxProps) {
   );
 }
 ~~~
+
+__NOTE：__ 与`register`不同，`field`通过受控组件的方式来捕获`input`。这意味着，在`type`为`checkbox`的情况下，它会收集`input`的`checked`会为`value`。注意：无论是`register`还是`field`，都不支持`type`为`radio`的情况。
 
 ## Controller
 
