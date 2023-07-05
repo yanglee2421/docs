@@ -122,6 +122,14 @@ function Component() {
 
 ### getStaticProps & getStaticPaths
 
+这个两个API注重SSG场景，具体表现为：
+
+1. getStaticPaths在生产构建时调用，服务运行时不会被调用。
+2. getStaticPaths用于限制动态路由的范围。
+3. getStaticProps在渲染HTML时调用，生产构建过程中调用不能失败，运行时则可以失败。
+4. getStaticProps若在运行过程中失败，会返回上次成功的渲染结果，不会返回500。
+5. getStaticProps渲染出的HTML会被服务器缓存，需要返回页面时，若缓存未过期，会直接返回缓存，不会渲染HTML，不会被调用。
+
 ```tsx
 import type {
   InferGetStaticPropsType,
@@ -172,7 +180,16 @@ export const getStaticProps: GetStaticProps<TData> = async () => {
 async function get_demo() {}
 ```
 
+__NOTE：__ 在动态路由页面中使用时，必须同时指定getStaticPaths和getStaticProps。
+
 ### getServerSideProps
+
+与前者不同，这个API更注重SSR场景，具体表现在：
+
+1. 每次返回页面时都会渲染新的HTML，渲染HTML时它会被调用。
+2. 渲染出的HTML不会被服务器缓存，可以通过设置响应头让浏览器缓存它。
+3. 通过参数上下文中的`res`设置响应头。
+4. 执行过程中发生错误时，NextJs会返回500页面，而不是上一次的渲染结果。
 
 ```tsx
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
