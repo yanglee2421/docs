@@ -2,7 +2,7 @@
   "include": [".vitepress/**/*.ts"],
   "compilerOptions": {
     // Private
-    "types": ["vite/client"],
+    "types": [],
     "baseUrl": ".",
     "paths": { "@/*": ["src/*"] },
 
