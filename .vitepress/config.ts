@@ -223,11 +223,6 @@ function sidebar(): DefaultTheme.Sidebar {
           { text: "内置方法", link: "/pps/scss/04_function.md" },
         ],
       },
-      {
-        text: "Less",
-        collapsed: false,
-        items: [{ text: "xxx", link: "" }],
-      },
     ],
     "/node/": [
       {
@@ -253,6 +248,7 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           { text: "git", link: "/toolkit/00_git.md" },
           { text: "markdown", link: "/toolkit/01_markdown.md" },
+          { text: "docker", link: "/toolkit/06_docker.md" },
         ],
       },
       {
