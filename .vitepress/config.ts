@@ -243,23 +243,24 @@ function sidebar(): DefaultTheme.Sidebar {
     ],
     "/toolkit/": [
       {
-        text: "通用",
+        text: "Common",
         collapsed: false,
         items: [
           { text: "git", link: "/toolkit/00_git.md" },
           { text: "markdown", link: "/toolkit/01_markdown.md" },
           { text: "docker", link: "/toolkit/06_docker.md" },
+          { text: "linux", link: "/toolkit/07_linux.md" },
         ],
       },
       {
-        text: "包管理工具",
+        text: "Package Manger",
         items: [
           { text: "npm", link: "/toolkit/02_npm.md" },
           { text: "yarn", link: "/toolkit/03_yarn.md" },
         ],
       },
       {
-        text: "构建工具",
+        text: "Build",
         items: [{ text: "webpack", link: "/toolkit/05_webpack.md" }],
       },
     ],
