@@ -1,5 +1,21 @@
 # Linux
 
+## WSL
+
+以下命令依次为：
+
+1. 安装分发版
+2. 查看状态
+3. 列出已安装的分发版
+4. 注销已安装的分发版
+
+```powershell
+wsl --install
+wsl --status
+wsl --list
+wsl --unregister ubuntu
+```
+
 ## Commands
 
 1. ssh user@127.0.0.1
@@ -22,7 +38,52 @@
 18. useradd
 19. sudo
 20. adduser
-21.
+21. su
+22. exit
+23. passwd
+24. apt
+25. finger
+26. man
+27. whatis
+28. whereis
+29. wget
+30. curl
+31. zip
+32. unzip
+33. less
+34. head
+35. tail
+36. cmp
+37. diff
+38. sort
+39. find
+40. chmod
+41. chown
+42. ifconfig
+43. ip address
+44. grep
+45. awk
+46. resolvectl
+47. ping
+48. traceroute
+49. netstat
+50. ss
+51. iptables
+52. ufw
+53. uname
+54. neofetch
+55. cal
+56. free
+57. df
+58. ps
+59. top
+60. htop
+61. kill
+62. pkill
+63. systemctl
+64. history
+65. reboot
+66. shutdown
 
 ```bash
 ssh user@127.0.0.1
@@ -42,4 +103,5 @@ rm -r
 rmdir
 ln
 clear
+su
 ```
