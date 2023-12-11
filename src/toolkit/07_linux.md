@@ -16,6 +16,12 @@ wsl --list
 wsl --unregister ubuntu
 ```
 
+## IP Forward
+
+```bash
+sysctl -w net.ipv4.ip_forward=1
+```
+
 ## Commands
 
 1. ssh user@127.0.0.1
