@@ -1,13 +1,8 @@
 # Yang_Lee Docs
 
-[Yang_Lee Docs](https://yanglee2421.github.io/docs/)
-基于 vitepress，后者基本用法如下
-
 ## set up
 
-- 依次在 powershell 命令行执行如下：
-
-```powershell
+```bash
 pnpm add -D vitepress vue
 mkdir docs
 cd docs
