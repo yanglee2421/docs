@@ -8,27 +8,22 @@
 - 依次在 powershell 命令行执行如下：
 
 ```powershell
-# desktop/
-mkdir my-docs
-cd my-docs
-# desktop/my-docs
-yarn init -y
-yarn add -D vitepress vue
+pnpm add -D vitepress vue
 mkdir docs
 cd docs
 # desktop/my-docs/docs
 new-item index.md
 cd ../
 # desktop/my-docs
-yarn vitepress dev docs
+pnpm exec vitepress dev docs
 ```
 
 ## cli
 
 ```powershell
-yarn vitepress dev docs
-yarn vitepress build docs
-yarn vitepress preview docs
+vitepress dev docs
+vitepress build docs
+vitepress preview docs
 ```
 
 ## config
