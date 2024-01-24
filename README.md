@@ -15,7 +15,7 @@ pnpm exec vitepress dev docs
 
 ## cli
 
-```powershell
+```bash
 vitepress dev docs
 vitepress build docs
 vitepress preview docs
@@ -23,10 +23,10 @@ vitepress preview docs
 
 ## config
 
-```powershell
-# desktop/my-docs/docs
+```bash
+# root-dir/docs
 cd .vitepress
-# desktop/my-docs/docs/.vitepress
+# root-dir/docs/.vitepress
 new-item config.ts
 ```
 
