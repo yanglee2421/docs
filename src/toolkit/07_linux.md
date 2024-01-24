@@ -22,6 +22,14 @@ wsl --unregister ubuntu
 sysctl -w net.ipv4.ip_forward=1
 ```
 
+## Install NodeJs
+
+[nodesource]()
+
+```bash
+
+```
+
 ## Commands
 
 1. ssh user@127.0.0.1
