@@ -22,12 +22,28 @@ wsl --unregister ubuntu
 sysctl -w net.ipv4.ip_forward=1
 ```
 
-## Install NodeJs
+## NodeJs
 
-[nodesource]()
+[nodesource](https://github.com/nodesource/distributions?tab=readme-ov-file#ubuntu-versions)
+[pnpm](https://pnpm.io/installation#on-posix-systems)
 
 ```bash
+# Install LTS by nodesource
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
 
+# Uninstall nodejs if installed by nodesource
+apt-get purge nodejs &&\
+rm -r /etc/apt/sources.list.d/nodesource.list &&\
+rm -r /etc/apt/keyrings/nodesource.gpg
+
+# Install LTS by pnpm
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+pnpm env use -g lts
+pnpm env ls
+pnpm env ls --remote
+pnpm env add -g 18
+pnpm env rm -g lts
 ```
 
 ## Commands
