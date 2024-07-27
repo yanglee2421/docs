@@ -235,10 +235,7 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: "express",
-        items: [
-          { text: "express", link: "/node/express/01_express.md" },
-          { text: "typeorm", link: "/node/express/03_typeorm.md" },
-        ],
+        items: [{ text: "express", link: "/node/express/01_express.md" }],
       },
     ],
     "/toolkit/": [

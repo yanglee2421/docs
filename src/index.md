@@ -10,13 +10,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /get-started.md
+      link: /ecmascript
     - theme: alt
       text: View on github
       link: https://github.com/yanglee2421/docs/
-    - theme: alt
-      text: 作者简历
-      link: /resume.md
 features:
   - icon: 📝
     title: Focus on Your Content
