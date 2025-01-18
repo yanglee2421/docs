@@ -2,6 +2,8 @@
 
 only windows
 
+[Android Studio Command Line Tools](https://developer.android.google.cn/studio?hl=zh-cn)
+
 ## Installation
 
 ```powershell
