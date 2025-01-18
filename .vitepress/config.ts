@@ -1,4 +1,4 @@
-import { defineConfig, DefaultTheme } from "vitepress";
+import { DefaultTheme, defineConfig } from "vitepress";
 export default defineConfig({
   // Build
   base: "/docs/",
@@ -9,8 +9,8 @@ export default defineConfig({
   lang: "zh-CN",
   title: "Yang_Lee",
   head: [
-    ["link", { rel: "shortcut icon", href: "/docs/react.svg" }],
-    ["meta", { name: "theme-color", content: "rgb(16, 185, 129)" }],
+    ["link", { rel: "shortcut icon", href: "/docs/symbol-inverted.svg" }],
+    ["meta", { name: "theme-color", content: "#6366f1" }],
     ["meta", { rel: "description", content: "Yang_Lee的JS开发者文档" }],
   ],
 
@@ -19,8 +19,8 @@ export default defineConfig({
 
   // Viteperss theme
   themeConfig: {
-    logo: "/react.svg",
-    siteTitle: "Yang_Lee",
+    logo: "/symbol-inverted.svg",
+    siteTitle: "DOCS.IO",
     editLink: {
       pattern: "https://github.com/yanglee2421/docs/blob/master/:path",
     },
@@ -38,10 +38,8 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: "ECMAScript", link: "/ecmascript/index.md" },
-    { text: "React", link: "/react/react-hook-form.md" },
-    { text: "Preprocessor", link: "/pps/ts/type.md" },
     { text: "Toolkit", link: "/toolkit/00_git.md" },
-    { text: "Node", link: "/node/nodejs/01_path.md" },
+    { text: "Environment", link: "/env/react-native.md" },
   ];
 }
 
@@ -168,97 +166,33 @@ function sidebar(): DefaultTheme.Sidebar {
         ],
       },
     ],
-    "/react": [
-      { text: "Material UI", link: "/react/material-ui.md" },
-      { text: "NextJs", link: "/react/NextJs.md" },
-      { text: "react-hook-form", link: "/react/react-hook-form.md" },
-    ],
-    "/pps/": [
-      {
-        text: "TypeScript",
-        collapsed: false,
-        items: [
-          {
-            text: "类型",
-            link: "/pps/ts/type.md",
-          },
-          {
-            text: "接口",
-            link: "/pps/ts/interface.md",
-          },
-          {
-            text: "泛型",
-            link: "/pps/ts/generic.md",
-          },
-          {
-            text: "内置工具",
-            link: "/pps/ts/built-in-generic.md",
-          },
-          {
-            text: "类",
-            link: "/pps/ts/class.md",
-          },
-          {
-            text: "声明文件",
-            link: "/pps/ts/declare.md",
-          },
-          {
-            text: "装饰器（beta）",
-            link: "/pps/ts/decorator.md",
-          },
-          {
-            text: "配置文件",
-            link: "/pps/ts/config.md",
-          },
-        ],
-      },
-      {
-        text: "Scss",
-        collapsed: false,
-        items: [
-          { text: "注释", link: "/pps/scss/00_comment.md" },
-          { text: "变量", link: "/pps/scss/01_variable.md" },
-          { text: "嵌套", link: "/pps/scss/02_nesting.md" },
-          { text: "指令", link: "/pps/scss/03_command.md" },
-          { text: "内置方法", link: "/pps/scss/04_function.md" },
-        ],
-      },
-    ],
-    "/node/": [
-      {
-        text: "nodejs",
-        items: [
-          { text: "path", link: "/node/nodejs/01_path.md" },
-          { text: "fs", link: "/node/nodejs/02_fs.md" },
-          { text: "process", link: "/node/nodejs/03_process.md" },
-        ],
-      },
-      {
-        text: "express",
-        items: [{ text: "express", link: "/node/express/01_express.md" }],
-      },
-    ],
     "/toolkit/": [
       {
-        text: "Common",
-        collapsed: false,
+        text: "Command Line Interface",
         items: [
           { text: "git", link: "/toolkit/00_git.md" },
-          { text: "markdown", link: "/toolkit/01_markdown.md" },
+          { text: "npm", link: "/toolkit/02_npm.md" },
+          { text: "yarn", link: "/toolkit/03_yarn.md" },
+          { text: "pnpm", link: "/toolkit/pnpm.md" },
           { text: "docker", link: "/toolkit/06_docker.md" },
+        ],
+      },
+      {
+        text: "Others",
+        collapsed: false,
+        items: [
+          { text: "markdown", link: "/toolkit/01_markdown.md" },
           { text: "linux", link: "/toolkit/07_linux.md" },
         ],
       },
+    ],
+    "/env/": [
       {
-        text: "Package Manger",
+        text: "Environment",
         items: [
-          { text: "npm", link: "/toolkit/02_npm.md" },
-          { text: "yarn", link: "/toolkit/03_yarn.md" },
+          { text: "React Native", link: "/env/react-native.md" },
+          { text: "Electron", link: "/env/electron.md" },
         ],
-      },
-      {
-        text: "Build",
-        items: [{ text: "webpack", link: "/toolkit/05_webpack.md" }],
       },
     ],
   };
@@ -266,8 +200,10 @@ function sidebar(): DefaultTheme.Sidebar {
 
 // 底栏
 function footer(): DefaultTheme.Footer {
+  const FullYear = new Date().getFullYear();
+
   return {
     message: "Coded by Yang_Lee",
-    copyright: "联系作者：yanglee2421@outlook.com",
+    copyright: "&copy;" + FullYear + " by Lee",
   };
 }

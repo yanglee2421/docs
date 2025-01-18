@@ -1,9 +1,9 @@
 ---
 layout: home
 hero:
-  name: Yang_Lee Docs
-  text: JavaScript开发者文档
-  tagline: 很多人就是不看文档
+  name: DOCS.IO
+  text: Frontend Handbook
+  tagline: ECMAScript,JavaScript,TypeScript
   #   image:
   #     src: /logo.png
   #     alt: VitePress
