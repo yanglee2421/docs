@@ -9,6 +9,7 @@ Windows
 ```powershell
 # run as admin
 corepack enable
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 
 Linux
